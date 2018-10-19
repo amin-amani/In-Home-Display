@@ -29,6 +29,8 @@ GPIOB->ODR|=((g&1)<<1);
 GPIOB->ODR|=((u16)(b&1)<<14);
 
 }
+//=======================================================================================================
+
 void SetRGBColor(char r,char g,char b,int refreshTime)
 {
 static unsigned long int roundRobin=0;
