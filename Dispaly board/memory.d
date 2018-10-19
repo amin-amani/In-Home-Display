@@ -1,0 +1,11 @@
+memory.o: eeprom\memory.c
+memory.o: eeprom\memory.h
+memory.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h
+memory.o: C:\Keil\ARM\RV31\INC\stdbool.h
+memory.o: eeprom\eeprom.h
+memory.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_flash.h
+memory.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h
+memory.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_conf.h
+memory.o: C:\Keil\ARM\INC\ST\STM32F10x\cortexm3_macro.h
+memory.o: eeprom\..//CRC//lib_crc.h
+memory.o: C:\Keil\ARM\RV31\INC\stdio.h
