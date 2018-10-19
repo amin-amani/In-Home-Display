@@ -10,14 +10,10 @@
 #include "SSD1306//SSD1306.h" 
 #include "SSD1306//font7X10.h"
 #include "SSD1306//font5X7.h"
-//#include "ssd1306//ssd1306.h"
 #include "eeprom//memory.h"
+#include "ds3231//ds3231.h"
 
 
-
-unsigned  char r=0,g=0,b=0;
-int step=0;
-int i;
 // Tile bitmap
 static const uint8_t bmp_tile[] = {
 		0x38,0x44,0x82,0x29,0x11,0x29,0x82,0x44,0x38,0x44,0x82,0x11,0x29,0x11,
@@ -26,7 +22,10 @@ static const uint8_t bmp_tile[] = {
 		0x00,0x01,0x01,0x01,0x00,0x00
 };
 //----------------------------------------------------------------------------------
-char temp_main[100];
+char temp_main[60];
+int i;
+HRF_date_TypeDef CurrentDate;
+
 //uint8_t LCD_PixelMode = LCD_PSET;
 //=========================================================================================================================
 int main(){
@@ -36,6 +35,7 @@ jtag_Disable();
 RGBInit();
 send_string("hello\n");
 SSD1306_InitGPIO();
+DS3231Init();
 
 
 	// Initialize display
@@ -92,52 +92,22 @@ SSD1306_InitGPIO();
 	// Stop scrolling
 //	SSD1306_ScrollStop();
 //SetRGB(1,1,1);
-delay_ms(1000);
+//delay_ms(1000);
+//		CurrentDate.seconds=0;
+//	  	CurrentDate.minutes=0;
+//	    CurrentDate.hours=0;
+//		CurrentDate.date=19;
+//	    CurrentDate.month=10;
+//	    CurrentDate.year=18;
+//		DS3231_WriteDateRAW(&CurrentDate);
 
 while(1){
-		//delay_ms(300);
-	//	send_string("salam\n");
-		 SetRGBColor(r,g,b,50);
-		 if(i++>15000){
-		 if(step==0)b++;
-		 if(b==255 && step==0){step++;}
-		 if(step==1)b--;
-		 if(b==0 && step==1){step++;}
-		 if(step==2)r++;
-		 if(r==255 && step==2 ){step++;}
-		 if(step==3)r--;
-		 if(r==0 && step==3){step++;}
-		 if(step==4)g++;
-		 if(g==255 && step==4 ){step++;}
-		 if(step==5){g--;}
-		  if(g==0 && step==5){step++;}
-		  if(step==6){r++;}
-		  if(r==255 && step==6){step++;}
-		  if(step==7){g++;}
-		  if(g==255 && step==7 ){step++;}
-		  if(step==8){r--;}
-		  if(r==0 && step==8 ){step++;}
-		   if(step==9){b++;}
-		  if(b==255 && step==9 ){step++;}
-		   if(step==10){r++;}
-		  if(r==255 && step==10 ){step++;}
-		   if(step==11){g--;}
-		  if(g==0 && step==11 ){step=0;r=0;g=0;b=0;}
+DS3231_ReadDate(&CurrentDate);
+	sprintf(temp_main,"%d %d %d\n",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds) ;
+	//SetRGB(0,1,0);
+		delay_ms(300);
+		send_string(temp_main);
 
-
-
-		  
-
-
-
-
-
-			
-
-
-		i=0; 
-		 }
-		 	
 		
 
 

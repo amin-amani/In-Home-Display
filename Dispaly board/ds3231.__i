@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\ST\STM32F10x" -o "ds3231.o" --omf_browse "ds3231.crf" --depend "ds3231.d" "DS3231\DS3231.c"
