@@ -7,6 +7,9 @@
 #define I2C1_SLAVE_ADDRESS7    0x00
 #define I2C_PageSize           16
 
+#define EEPROM_HW_ADDRESS      0x50   /* E0 = E1 = E2 = 0 */
+#define I2C_EE             I2C1//interface number
+
 #define DS3231_addr     0xD0 // I2C 7-bit slave address shifted for 1 bit to the left
 #define DS3231_seconds  0x00 // DS3231 seconds address
 #define DS3231_control  0x0E // DS3231 control register address

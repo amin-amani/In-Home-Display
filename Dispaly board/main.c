@@ -35,7 +35,7 @@ jtag_Disable();
 RGBInit();
 send_string("hello\n");
 SSD1306_InitGPIO();
-DS3231Init();
+//DS3231Init();
 
 
 	// Initialize display
@@ -100,13 +100,22 @@ DS3231Init();
 //	    CurrentDate.month=10;
 //	    CurrentDate.year=18;
 //		DS3231_WriteDateRAW(&CurrentDate);
-
+I2C_Configuration();
+send_string("itc init ok\n");
+//I2C_EE_ByteWrite(0x01,175);
+//I2C_EE_ByteWrite(0x02,178);
+send_string("i2c write ok\n");
+	 
 while(1){
-DS3231_ReadDate(&CurrentDate);
-	sprintf(temp_main,"%d %d %d\n",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds) ;
+//	DS3231_ReadDate(&CurrentDate);
+//	sprintf(temp_main,"%d %d %d\n",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds) ;
+//	delay_ms(300);
+//	send_string(temp_main);
+
+		sprintf(temp_main,"D0=%d D1=%d\n",I2C_EE_ByteRead(1),I2C_EE_ByteRead(2)) ;
 	//SetRGB(0,1,0);
-		delay_ms(300);
-		send_string(temp_main);
+	delay_ms(300);
+	send_string(temp_main);
 
 		
 
