@@ -1,0 +1,11 @@
+dht22.o: DHT22\dht22.c
+dht22.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_rcc.h
+dht22.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h
+dht22.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_conf.h
+dht22.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h
+dht22.o: C:\Keil\ARM\INC\ST\STM32F10x\cortexm3_macro.h
+dht22.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_gpio.h
+dht22.o: C:\Keil\ARM\RV31\INC\stdio.h
+dht22.o: DHT22\dht22.h
+dht22.o: DHT22\..//delay//delay.h
+dht22.o: DHT22\..//serial//serial.h

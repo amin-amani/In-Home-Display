@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\ST\STM32F10x" -o "pcd8544.o" --omf_browse "pcd8544.crf" --depend "pcd8544.d" "pcd8544\PCD8544.c"
