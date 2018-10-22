@@ -3,1017 +3,673 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-G:\aa proj\In-Home-Display\Dispaly board\template.uvproj
-Project File Date:  10/12/2018
+D:\current Projects\in home dispaly\In-Home-Display\Dispaly board\template.uvproj
+Project File Date:  10/20/2018
 
 <h2>Output:</h2>
 Build target 'Target 1'
-compiling STM32_Init.c...
-assembling STM32F10x.s...
 compiling main.c...
-main.c(100): warning:  #223-D: function "SetRGBColor" declared implicitly
-compiling SystemInit.c...
-systemInit\SystemInit.c(222): warning:  #223-D: function "delay_ms" declared implicitly
-compiling serial.c...
-compiling delay.c...
-compiling lib_crc.c...
-compiling adc.c...
-compiling eeprom.c...
-eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
-compiling memory.c...
-eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
-compiling SSD1306.c...
+main.c(28): warning:  #223-D: function "getkey3" declared implicitly
+main.c(117): warning:  #223-D: function "I2C_Configuration" declared implicitly
 linking...
-Program Size: Code=9134 RO-data=1294 RW-data=24 ZI-data=2144  
+Program Size: Code=11682 RO-data=1314 RW-data=16 ZI-data=2144  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(30): warning:  #223-D: function "getkey3" declared implicitly
+main.c(127): warning:  #223-D: function "I2C_Configuration" declared implicitly
+linking...
+Program Size: Code=11722 RO-data=1314 RW-data=20 ZI-data=2236  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(31): warning:  #223-D: function "getkey3" declared implicitly
+main.c(39): error:  #20: identifier "InputCurent" is undefined
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(40): error:  #65: expected a ";"
+main.c(129): warning:  #223-D: function "I2C_Configuration" declared implicitly
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(31): warning:  #223-D: function "getkey3" declared implicitly
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(40): error:  #65: expected a ";"
+main.c(129): warning:  #223-D: function "I2C_Configuration" declared implicitly
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(31): warning:  #223-D: function "getkey3" declared implicitly
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(129): warning:  #223-D: function "I2C_Configuration" declared implicitly
+linking...
+Program Size: Code=18780 RO-data=1772 RW-data=40 ZI-data=2240  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 4 Warning(s).
 Build target 'Target 1'
-compiling main.c...
-compiling SystemInit.c...
-systemInit\SystemInit.c(226): warning:  #223-D: function "delay_ms" declared implicitly
 linking...
-Program Size: Code=8502 RO-data=1294 RW-data=24 ZI-data=2144  
+Program Size: Code=18780 RO-data=1772 RW-data=40 ZI-data=2240  
 FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
+"template.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Target 1'
-compiling main.c...
 linking...
-Program Size: Code=8502 RO-data=1294 RW-data=24 ZI-data=2144  
+Program Size: Code=18780 RO-data=1772 RW-data=40 ZI-data=2240  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-linking...
-Program Size: Code=8502 RO-data=1294 RW-data=24 ZI-data=2144  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(96): error:  #20: identifier "DS3231_addr" is undefined
-main.c(100): error:  #20: identifier "DS3231_seconds" is undefined
+main.c(31): warning:  #223-D: function "getkey3" declared implicitly
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(60): error:  #20: identifier "temp_main" is undefined
+main.c(150): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(21): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 Target not created
 Build target 'Target 1'
 compiling main.c...
-linking...
-Program Size: Code=8966 RO-data=1294 RW-data=24 ZI-data=2144  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling STM32_Init.c...
-assembling STM32F10x.s...
-compiling main.c...
-compiling SystemInit.c...
-systemInit\SystemInit.c(226): warning:  #223-D: function "delay_ms" declared implicitly
-compiling serial.c...
-compiling delay.c...
-compiling lib_crc.c...
-compiling adc.c...
-compiling eeprom.c...
-eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
-compiling memory.c...
-eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
-compiling SSD1306.c...
-linking...
-Program Size: Code=8966 RO-data=1294 RW-data=24 ZI-data=2144  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-linking...
-Program Size: Code=10786 RO-data=1314 RW-data=24 ZI-data=2144  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-linking...
-Program Size: Code=10790 RO-data=1314 RW-data=24 ZI-data=2144  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-linking...
-Program Size: Code=10818 RO-data=1314 RW-data=32 ZI-data=2144  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(390): error:  #65: expected a ";"
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(40): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(40): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(73): error:  #147: declaration is incompatible with "char temp_main[20]" (declared at line 16)
+main.c(151): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 Target not created
 Build target 'Target 1'
 compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(40): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(40): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(151): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=11378 RO-data=1314 RW-data=32 ZI-data=2208  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-linking...
-Program Size: Code=11386 RO-data=1314 RW-data=32 ZI-data=2208  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(390): warning:  #69-D: integer conversion resulted in truncation
-main.c(391): error:  #167: argument of type "DS3231_date_TypeDef" is incompatible with parameter of type "DS3231_date_TypeDef *"
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(390): warning:  #69-D: integer conversion resulted in truncation
-linking...
-Program Size: Code=11422 RO-data=1314 RW-data=32 ZI-data=2208  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(390): warning:  #69-D: integer conversion resulted in truncation
-linking...
-Program Size: Code=11422 RO-data=1314 RW-data=32 ZI-data=2208  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(390): warning:  #69-D: integer conversion resulted in truncation
-linking...
-Program Size: Code=11422 RO-data=1314 RW-data=32 ZI-data=2208  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-linking...
-Program Size: Code=11422 RO-data=1314 RW-data=32 ZI-data=2208  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-linking...
-Program Size: Code=11422 RO-data=1314 RW-data=32 ZI-data=2208  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(394): error:  #41: expression must have arithmetic or pointer type
-main.c(396): error:  #136: struct "<unnamed>" has no field "hours"
-main.c(396): error:  #136: struct "<unnamed>" has no field "minutes"
-main.c(396): error:  #136: struct "<unnamed>" has no field "seconds"
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(394): error:  #41: expression must have arithmetic or pointer type
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(394): error:  #41: expression must have arithmetic or pointer type
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(394): error:  #41: expression must have arithmetic or pointer type
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(394): error:  #167: argument of type "HRF_date_TypeDef **" is incompatible with parameter of type "HRF_date_TypeDef *"
-main.c(394): error:  #41: expression must have arithmetic or pointer type
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(394): error:  #41: expression must have arithmetic or pointer type
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(394): error:  #167: argument of type "HRF_date_TypeDef" is incompatible with parameter of type "HRF_date_TypeDef *"
-main.c(394): error:  #41: expression must have arithmetic or pointer type
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(394): error:  #167: argument of type "HRF_date_TypeDef **" is incompatible with parameter of type "HRF_date_TypeDef *"
-main.c(394): error:  #41: expression must have arithmetic or pointer type
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(395): error:  #44: expression must have pointer type
-main.c(395): error:  #44: expression must have pointer type
-main.c(395): error:  #44: expression must have pointer type
-Target not created
-Build target 'Target 1'
-compiling main.c...
-linking...
-Program Size: Code=11362 RO-data=1314 RW-data=24 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-compiling DS3231.c...
-linking...
-Program Size: Code=11362 RO-data=1314 RW-data=24 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(42): warning:  #223-D: function "DsInit" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(2): error:  #20: identifier "DS3231_date_TypeDef" is undefined
-DS3231\DS3231.c(7): warning:  #223-D: function "I2C_AcknowledgeConfig" declared implicitly
-DS3231\DS3231.c(7): error:  #20: identifier "I2C1" is undefined
-DS3231\DS3231.c(7): error:  #20: identifier "ENABLE" is undefined
-DS3231\DS3231.c(9): warning:  #223-D: function "I2C_GenerateSTART" declared implicitly
-DS3231\DS3231.c(11): warning:  #223-D: function "I2C_CheckEvent" declared implicitly
-DS3231\DS3231.c(11): error:  #20: identifier "I2C_EVENT_MASTER_MODE_SELECT" is undefined
-DS3231\DS3231.c(13): warning:  #223-D: function "I2C_Send7bitAddress" declared implicitly
-DS3231\DS3231.c(13): error:  #20: identifier "DS3231_addr" is undefined
-DS3231\DS3231.c(13): error:  #20: identifier "I2C_Direction_Transmitter" is undefined
-DS3231\DS3231.c(15): error:  #20: identifier "I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED" is undefined
-DS3231\DS3231.c(17): warning:  #223-D: function "I2C_SendData" declared implicitly
-DS3231\DS3231.c(17): error:  #20: identifier "DS3231_seconds" is undefined
-DS3231\DS3231.c(19): error:  #20: identifier "I2C_EVENT_MASTER_BYTE_TRANSMITTED" is undefined
-DS3231\DS3231.c(25): error:  #20: identifier "I2C_Direction_Receiver" is undefined
-DS3231\DS3231.c(27): error:  #20: identifier "I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED" is undefined
-DS3231\DS3231.c(31): error:  #20: identifier "I2C_EVENT_MASTER_BYTE_RECEIVED" is undefined
-DS3231\DS3231.c(32): warning:  #223-D: function "I2C_ReceiveData" declared implicitly
-DS3231\DS3231.c(35): error:  #20: identifier "DISABLE" is undefined
-DS3231\DS3231.c(36): warning:  #223-D: function "I2C_GenerateSTOP" declared implicitly
-DS3231\DS3231.c(38): error:  #20: identifier "I2C_EVENT_MASTER_BYTE_RECEIVED" is undefined
-DS3231\DS3231.c(39): warning:  #223-D: function "I2C_ReceiveData" declared implicitly
-DS3231\DS3231.c(41): warning:  #223-D: function "memcpy" declared implicitly
-DS3231\DS3231.c(44): error:  #20: identifier "DS3231_date_TypeDef" is undefined
-DS3231\DS3231.c(48): warning:  #223-D: function "memcpy" declared implicitly
-DS3231\DS3231.c(50): warning:  #223-D: function "I2C_AcknowledgeConfig" declared implicitly
-DS3231\DS3231.c(50): error:  #20: identifier "I2C1" is undefined
-DS3231\DS3231.c(50): error:  #20: identifier "ENABLE" is undefined
-DS3231\DS3231.c(52): warning:  #223-D: function "I2C_GenerateSTART" declared implicitly
-DS3231\DS3231.c(54): warning:  #223-D: function "I2C_CheckEvent" declared implicitly
-DS3231\DS3231.c(54): error:  #20: identifier "I2C_EVENT_MASTER_MODE_SELECT" is undefined
-DS3231\DS3231.c(56): warning:  #223-D: function "I2C_Send7bitAddress" declared implicitly
-DS3231\DS3231.c(56): error:  #20: identifier "DS3231_addr" is undefined
-DS3231\DS3231.c(56): error:  #20: identifier "I2C_Direction_Transmitter" is undefined
-DS3231\DS3231.c(58): error:  #20: identifier "I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED" is undefined
-DS3231\DS3231.c(60): warning:  #223-D: function "I2C_SendData" declared implicitly
-DS3231\DS3231.c(60): error:  #20: identifier "DS3231_seconds" is undefined
-DS3231\DS3231.c(62): error:  #20: identifier "I2C_EVENT_MASTER_BYTE_TRANSMITTED" is undefined
-DS3231\DS3231.c(70): warning:  #223-D: function "I2C_GenerateSTOP" declared implicitly
-DS3231\DS3231.c(74): error:  #20: identifier "HRF_date_TypeDef" is undefined
-DS3231\DS3231.c(75): error:  #20: identifier "DS3231_date_TypeDef" is undefined
-DS3231\DS3231.c(79): error:  #132: expression must have pointer-to-struct-or-union type
-DS3231\DS3231.c(80): error:  #132: expression must have pointer-to-struct-or-union type
-DS3231\DS3231.c(81): error:  #132: expression must have pointer-to-struct-or-union type
-DS3231\DS3231.c(82): error:  #132: expression must have pointer-to-struct-or-union type
-DS3231\DS3231.c(83): error:  #132: expression must have pointer-to-struct-or-union type
-Target not created
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\ds3231.h(16): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(17): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(18): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(19): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(20): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(21): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(22): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(23): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(24): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(25): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(26): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(27): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(28): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(29): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(30): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(31): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(32): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(33): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(34): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(35): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(36): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(41): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(42): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(43): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(44): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(45): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(46): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(47): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(52): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(53): error:  #20: identifier "uint8_t" is undefined
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(42): warning:  #223-D: function "DsInit" declared implicitly
-compiling DS3231.c...
-DS3231\ds3231.h(18): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(19): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(20): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(21): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(22): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(23): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(24): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(25): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(26): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(27): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(28): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(29): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(30): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(31): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(32): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(33): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(34): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(35): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(36): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(37): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(38): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(43): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(44): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(45): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(46): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(47): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(48): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(49): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(54): error:  #20: identifier "uint8_t" is undefined
-DS3231\ds3231.h(55): error:  #20: identifier "uint8_t" is undefined
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(42): warning:  #223-D: function "DsInit" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11366 RO-data=1314 RW-data=24 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11366 RO-data=1314 RW-data=24 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-linking...
-Program Size: Code=11366 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-linking...
-Program Size: Code=11366 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(263): error:  #20: identifier "I2C_EE" is undefined
-DS3231\DS3231.c(269): error:  #20: identifier "EEPROM_HW_ADDRESS" is undefined
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(306): error:  #20: identifier "I2C_EE" is undefined
-DS3231\DS3231.c(315): error:  #20: identifier "EEPROM_HW_ADDRESS" is undefined
-Target not created
-Build target 'Target 1'
-compiling main.c...
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11778 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(113): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-linking...
-Program Size: Code=11850 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=11850 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(113): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-linking...
-Program Size: Code=11794 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(104): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(114): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11942 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=20616 RO-data=1780 RW-data=44 ZI-data=2204  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 5 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(104): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(114): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(40): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(40): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(152): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=11938 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=20876 RO-data=1780 RW-data=44 ZI-data=2204  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(40): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(40): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(152): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=20876 RO-data=1780 RW-data=44 ZI-data=2204  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(40): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(40): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(152): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=20876 RO-data=1780 RW-data=44 ZI-data=2204  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(153): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=20880 RO-data=1780 RW-data=44 ZI-data=2204  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(153): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=20872 RO-data=1780 RW-data=44 ZI-data=2204  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(39): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(153): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=20872 RO-data=1780 RW-data=44 ZI-data=2204  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(153): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=21130 RO-data=1778 RW-data=32 ZI-data=2208  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 3 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(105): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(116): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(153): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=11974 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=21130 RO-data=1778 RW-data=32 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(154): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=21138 RO-data=1778 RW-data=32 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(154): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=21138 RO-data=1778 RW-data=32 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(154): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=21130 RO-data=1778 RW-data=32 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(155): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=21138 RO-data=1778 RW-data=32 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(155): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=16088 RO-data=1500 RW-data=32 ZI-data=2208  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 3 Warning(s).
 Build target 'Target 1'
 linking...
-Program Size: Code=11974 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=16088 RO-data=1500 RW-data=32 ZI-data=2208  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(116): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(155): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=11966 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(116): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11966 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(116): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11966 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(116): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-linking...
-Program Size: Code=12022 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(116): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12022 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=16100 RO-data=1500 RW-data=32 ZI-data=2208  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 3 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-main.c(116): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(155): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=12022 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=21150 RO-data=1778 RW-data=32 ZI-data=2208  
 FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(157): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=21826 RO-data=1778 RW-data=32 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(157): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=21826 RO-data=1778 RW-data=32 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(157): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=21826 RO-data=1778 RW-data=32 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(157): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=21826 RO-data=1778 RW-data=32 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(157): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=21826 RO-data=1778 RW-data=32 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(158): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=21862 RO-data=1778 RW-data=32 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(97): warning:  #223-D: function "OnStartButtonPresed" declared implicitly
+main.c(99): warning:  #223-D: function "OnStopButtonPresed" declared implicitly
+main.c(101): warning:  #223-D: function "OnUpButtonPresed" declared implicitly
+main.c(103): warning:  #223-D: function "OnDownButtonPresed" declared implicitly
+main.c(105): warning:  #223-D: function "OnPlusButtonPresed" declared implicitly
+main.c(107): warning:  #223-D: function "OnMinusButtonPresed" declared implicitly
+main.c(196): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+template.axf: Error: L6218E: Undefined symbol OnDownButtonPresed (referred from main.o).
+template.axf: Error: L6218E: Undefined symbol OnMinusButtonPresed (referred from main.o).
+template.axf: Error: L6218E: Undefined symbol OnPlusButtonPresed (referred from main.o).
+template.axf: Error: L6218E: Undefined symbol OnStartButtonPresed (referred from main.o).
+template.axf: Error: L6218E: Undefined symbol OnStopButtonPresed (referred from main.o).
+template.axf: Error: L6218E: Undefined symbol OnUpButtonPresed (referred from main.o).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(97): error:  #20: identifier "SelectedItem" is undefined
+main.c(235): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(234): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=22066 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=22066 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(134): error:  #20: identifier "StartButton" is undefined
+main.c(136): error:  #20: identifier "StopButton" is undefined
+main.c(138): error:  #20: identifier "UPButton" is undefined
+main.c(234): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(134): error:  #20: identifier "StartButton" is undefined
+main.c(137): error:  #20: identifier "UPButton" is undefined
+main.c(233): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(134): error:  #20: identifier "StartButton" is undefined
+main.c(231): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(230): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=22114 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=22114 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Target 1'
 compiling STM32_Init.c...
-assembling STM32F10x.s...
-compiling main.c...
-main.c(116): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling SystemInit.c...
-systemInit\SystemInit.c(226): warning:  #223-D: function "delay_ms" declared implicitly
-compiling serial.c...
-compiling delay.c...
-compiling lib_crc.c...
-compiling adc.c...
-compiling eeprom.c...
-eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
-compiling memory.c...
-eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
-compiling SSD1306.c...
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
 linking...
-Program Size: Code=12022 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=22118 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(230): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=22122 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(143): warning:  #223-D: function "OnSetButtonPresed" declared implicitly
+main.c(232): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+template.axf: Error: L6218E: Undefined symbol OnSetButtonPresed (referred from main.o).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(142): error:  #20: identifier "UpButton" is undefined
+main.c(232): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(232): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+linking...
+Program Size: Code=22134 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(232): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=22058 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(167): warning:  #223-D: function "adc_init" declared implicitly
+main.c(233): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=22854 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(64): warning:  #223-D: function "read_adc" declared implicitly
+main.c(64): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(168): warning:  #223-D: function "adc_init" declared implicitly
+main.c(234): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=22894 RO-data=1778 RW-data=40 ZI-data=2208  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
-linking...
-Program Size: Code=12138 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
 compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(32): warning:  #223-D: function "getkey3" declared implicitly
+main.c(64): warning:  #223-D: function "read_adc" declared implicitly
+main.c(168): warning:  #223-D: function "adc_init" declared implicitly
+main.c(234): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=12082 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
-linking...
-Program Size: Code=12082 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=23210 RO-data=1778 RW-data=40 ZI-data=2208  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 5 Warning(s).
 Build target 'Target 1'
-compiling STM32_Init.c...
-assembling STM32F10x.s...
 compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling SystemInit.c...
-systemInit\SystemInit.c(226): warning:  #223-D: function "delay_ms" declared implicitly
-compiling serial.c...
-compiling delay.c...
-compiling lib_crc.c...
-compiling adc.c...
-compiling eeprom.c...
-eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
-compiling memory.c...
-eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
-compiling SSD1306.c...
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
+main.c(31): error:  #29: expected an expression
+main.c(31): error:  #20: identifier "i" is undefined
+main.c(31): warning:  #223-D: function "read_adc" declared implicitly
+main.c(32): error:  #20: identifier "lm335_offsetFactor" is undefined
+main.c(33): error:  #20: identifier "lm335_divideFactor" is undefined
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(70): warning:  #223-D: function "read_adc" declared implicitly
+main.c(174): warning:  #223-D: function "adc_init" declared implicitly
+main.c(240): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(22): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(33): error:  #29: expected an expression
+main.c(33): error:  #20: identifier "i" is undefined
+main.c(33): warning:  #223-D: function "read_adc" declared implicitly
+main.c(34): error:  #20: identifier "lm335_offsetFactor" is undefined
+main.c(35): error:  #20: identifier "lm335_divideFactor" is undefined
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(72): warning:  #223-D: function "read_adc" declared implicitly
+main.c(176): warning:  #223-D: function "adc_init" declared implicitly
+main.c(242): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(24): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(33): warning:  #223-D: function "read_adc" declared implicitly
+main.c(34): error:  #20: identifier "lm335_offsetFactor" is undefined
+main.c(35): error:  #20: identifier "lm335_divideFactor" is undefined
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(72): warning:  #223-D: function "read_adc" declared implicitly
+main.c(176): warning:  #223-D: function "adc_init" declared implicitly
+main.c(242): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(24): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(36): warning:  #223-D: function "getkey3" declared implicitly
+main.c(68): warning:  #223-D: function "read_adc" declared implicitly
+main.c(68): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(172): warning:  #223-D: function "adc_init" declared implicitly
+main.c(238): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(24): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=12082 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=23986 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(36): warning:  #223-D: function "getkey3" declared implicitly
+main.c(67): warning:  #223-D: function "read_adc" declared implicitly
+main.c(69): warning:  #181-D: argument is incompatible with corresponding format string conversion
+main.c(173): warning:  #223-D: function "adc_init" declared implicitly
+main.c(239): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(24): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23994 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(36): warning:  #223-D: function "getkey3" declared implicitly
+main.c(67): warning:  #223-D: function "read_adc" declared implicitly
+main.c(173): warning:  #223-D: function "adc_init" declared implicitly
+main.c(239): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(24): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23678 RO-data=1778 RW-data=40 ZI-data=2208  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 8 Warning(s).
 Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
+compiling main.c...
+main.c(32): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(36): warning:  #223-D: function "getkey3" declared implicitly
+main.c(67): warning:  #223-D: function "read_adc" declared implicitly
+main.c(173): warning:  #223-D: function "adc_init" declared implicitly
+main.c(239): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(24): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=12082 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=24518 RO-data=1778 RW-data=40 ZI-data=2208  
 FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
+"template.axf" - 0 Error(s), 8 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
+main.c(32): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(36): warning:  #223-D: function "getkey3" declared implicitly
+main.c(67): warning:  #223-D: function "read_adc" declared implicitly
+main.c(173): warning:  #223-D: function "adc_init" declared implicitly
+main.c(239): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(24): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=12082 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=23694 RO-data=1778 RW-data=40 ZI-data=2208  
 FromELF: creating hex file...
-"template.axf" - 0 Error(s), 5 Warning(s).
+"template.axf" - 0 Error(s), 8 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(269): error:  #22: invalid hexadecimal number
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
-DS3231\DS3231.c(316): error:  #22: invalid hexadecimal number
-DS3231\DS3231.c(342): error:  #22: invalid hexadecimal number
+main.c(32): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(36): warning:  #223-D: function "getkey3" declared implicitly
+main.c(67): warning:  #223-D: function "read_adc" declared implicitly
+main.c(173): warning:  #223-D: function "adc_init" declared implicitly
+main.c(239): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(24): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=24538 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(36): warning:  #223-D: function "getkey3" declared implicitly
+main.c(67): warning:  #223-D: function "read_adc" declared implicitly
+main.c(63): warning:  #550-D: variable "temp" was set but never used
+main.c(173): warning:  #223-D: function "adc_init" declared implicitly
+main.c(239): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(24): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=22918 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(32): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(36): warning:  #223-D: function "getkey3" declared implicitly
+main.c(67): warning:  #223-D: function "read_adc" declared implicitly
+main.c(69): error:  #20: identifier "CurrentDate" is undefined
+main.c(63): warning:  #550-D: variable "temp" was set but never used
+main.c(174): warning:  #223-D: function "adc_init" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(24): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 Target not created
 Build target 'Target 1'
 compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(175): warning:  #223-D: function "adc_init" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=12082 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=23254 RO-data=1778 RW-data=40 ZI-data=2208  
 FromELF: creating hex file...
-"template.axf" - 0 Error(s), 5 Warning(s).
+"template.axf" - 0 Error(s), 8 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-main.c(115): error:  #65: expected a ";"
-Target not created
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(175): warning:  #223-D: function "adc_init" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23254 RO-data=1778 RW-data=40 ZI-data=2208  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 8 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(175): warning:  #223-D: function "adc_init" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=12066 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=23254 RO-data=1778 RW-data=40 ZI-data=2208  
 FromELF: creating hex file...
-"template.axf" - 0 Error(s), 2 Warning(s).
+"template.axf" - 0 Error(s), 8 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(175): warning:  #223-D: function "adc_init" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=12066 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=23254 RO-data=1778 RW-data=40 ZI-data=2208  
 FromELF: creating hex file...
-"template.axf" - 0 Error(s), 5 Warning(s).
+"template.axf" - 0 Error(s), 8 Warning(s).
 Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
 linking...
-Program Size: Code=12066 RO-data=1314 RW-data=16 ZI-data=2216  
+Program Size: Code=23254 RO-data=1778 RW-data=40 ZI-data=2208  
 FromELF: creating hex file...
-"template.axf" - 0 Error(s), 5 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
-linking...
-Program Size: Code=12066 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
-linking...
-Program Size: Code=12066 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
-linking...
-Program Size: Code=12066 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(304): warning:  #223-D: function "send_string" declared implicitly
-DS3231\DS3231.c(362): warning:  #223-D: function "send_string" declared implicitly
-linking...
-Program Size: Code=12286 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11950 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11934 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11934 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11838 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(307): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11882 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-linking...
-Program Size: Code=11898 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 2 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(309): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(320): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(332): error:  #65: expected a ";"
-DS3231\DS3231.c(342): warning:  #12-D: parsing restarts here after previous syntax error
-DS3231\DS3231.c(347): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(360): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(372): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(384): warning:  #223-D: function "delay_ms" declared implicitly
-Target not created
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(309): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(320): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(334): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(347): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(360): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(372): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(384): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12094 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(309): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(320): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(334): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(347): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(360): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(372): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(384): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12130 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(309): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(320): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(334): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(347): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(360): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(372): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(384): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12130 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 11 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(309): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(320): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(334): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(347): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(360): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(372): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(384): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12130 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 11 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(309): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(320): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(334): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(347): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(360): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(372): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(384): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12130 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 11 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(310): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(321): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(348): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(361): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(373): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12138 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(310): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(321): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(348): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(361): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(373): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(388): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12138 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(310): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(321): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(348): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(361): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(373): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(387): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12138 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(310): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(321): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(348): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(361): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(373): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(387): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12138 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 11 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(310): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(321): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(348): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(361): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(373): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(387): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12138 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 11 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(310): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(321): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(348): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(361): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(373): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(397): error:  #20: identifier "I2Cx" is undefined
-Target not created
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(310): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(321): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(348): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(361): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(373): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12154 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(310): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(321): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(348): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(361): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(373): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12154 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(310): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(321): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(348): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(361): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(373): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12154 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 11 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(310): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(321): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(348): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(361): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(373): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12154 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 11 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(103): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(115): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(310): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(321): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(348): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(361): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(373): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=12154 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 11 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(299): warning:  #223-D: function "delay_ms" declared implicitly
-linking...
-Program Size: Code=11966 RO-data=1314 RW-data=16 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 2 Warning(s).
+"template.axf" - 0 Error(s), 0 Warning(s).

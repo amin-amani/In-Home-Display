@@ -519,42 +519,27 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>DHT22</GroupName>
-          <Files>
-            <File>
-              <FileName>dht22.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\DHT22\dht22.c</FilePath>
-            </File>
-            <File>
-              <FileName>dht22.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\DHT22\dht22.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>SSD1306</GroupName>
           <Files>
             <File>
-              <FileName>PCD8544.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\pcd8544\PCD8544.c</FilePath>
-            </File>
-            <File>
-              <FileName>PCD8544.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\pcd8544\PCD8544.h</FilePath>
-            </File>
-            <File>
               <FileName>font5x7.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\pcd8544\font5x7.h</FilePath>
+              <FilePath>.\SSD1306\font5x7.h</FilePath>
             </File>
             <File>
               <FileName>font7x10.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\pcd8544\font7x10.h</FilePath>
+              <FilePath>.\SSD1306\font7x10.h</FilePath>
+            </File>
+            <File>
+              <FileName>SSD1306.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SSD1306\SSD1306.c</FilePath>
+            </File>
+            <File>
+              <FileName>SSD1306.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SSD1306\SSD1306.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -2185,9 +2185,9 @@
 //   </e>
 // </e> End of USART Configuration
 #define __USART_SETUP             1                       //  0
-#define __USART_USED              0x01                    //  1
+#define __USART_USED              0x05                    //  1
 #define __USART_DETAILS           0x00					  //  2
-#define __USART_INTERRUPTS        0x02					  //  3
+#define __USART_INTERRUPTS        0x06					  //  3
 #define __USART1_BAUDRATE         115200					  //  4
 #define __USART1_DATABITS         0x00000000
 #define __USART1_STOPBITS         0x00000000
@@ -2206,13 +2206,13 @@
 #define __USART2_CR1              0x00000020
 #define __USART2_CR2              0x00000000
 #define __USART2_CR3              0x00000000
-#define __USART3_BAUDRATE         9600                    // 22
+#define __USART3_BAUDRATE         115200                    // 22
 #define __USART3_DATABITS         0x00000000
 #define __USART3_STOPBITS         0x00000000
 #define __USART3_PARITY           0x00000000
 #define __USART3_FLOWCTRL         0x00000000
 #define __USART3_REMAP            0x00000000
-#define __USART3_CR1              0x00000000
+#define __USART3_CR1              0x00000020
 #define __USART3_CR2              0x00000000
 #define __USART3_CR3              0x00000000
 
@@ -4439,7 +4439,7 @@
 #define __GPIO_SETUP              1
 #define __GPIO_USED               0x03
 #define __GPIOA_CRL               0x00000040
-#define __GPIOA_CRH               0x00040000
+#define __GPIOA_CRH               0x00444004
 #define __GPIOB_CRL               0x00000040
 #define __GPIOB_CRH               0x00000000
 #define __GPIOC_CRL               0x33003003

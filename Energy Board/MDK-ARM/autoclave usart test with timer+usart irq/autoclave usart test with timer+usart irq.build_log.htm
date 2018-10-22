@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: AA Q, Q, LIC=MGX30-BMEC3-XA0DC-7RXD4-ZEPBY-WLHV2
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.24.1
+Middleware:      RL-ARM Real-Time Library Version V4.13
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DARMCM1.DLL V1.18.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TARMCM1.DLL V1.13.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Amin\Downloads\freezed version of 2.01\freezed version of 2.01\MDK-ARM\autoclave usart test with timer+usart irq.uvproj
+Project File Date:  10/21/2018
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'autoclave usart test with timer+usart irq'
+compiling main.c...
+../Src/main.c(25): warning:  #1295-D: Deprecated declaration a2dconfig - give arg types
+  void a2dconfig();
+../Src/main.c(26): warning:  #1295-D: Deprecated declaration readVoltage - give arg types
+  int readVoltage();
+../Src/main.c(27): warning:  #1295-D: Deprecated declaration readCurrent - give arg types
+  int readCurrent();
+../Src/main.c(29): warning:  #1295-D: Deprecated declaration intrrupt - give arg types
+  void intrrupt();
+../Src/main.c(530): warning:  #1-D: last line of file ends without a newline
+  }
+../Src/main.c(243): warning:  #177-D: function "MX_TIM14_Init"  was declared but never referenced
+  static void MX_TIM14_Init(void)
+../Src/main.c(278): warning:  #177-D: function "MX_TIM16_Init"  was declared but never referenced
+  static void MX_TIM16_Init(void)
+../Src/main.c: 7 warnings, 0 errors
+linking...
+Program Size: Code=11768 RO-data=232 RW-data=64 ZI-data=1328  
+FromELF: creating hex file...
+"autoclave usart test with timer+usart irq\autoclave usart test with timer+usart irq.axf" - 0 Error(s), 7 Warning(s).
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
