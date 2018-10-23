@@ -66,18 +66,18 @@ float temp;
 static unsigned long int roundRobinLcd=0;
  if(roundRobinLcd++>refereshTime)
  {
-		   temp=read_adc();
+	temp=read_adc();
 	SSD1306_Fill(0x00);
 	DS3231_ReadDate(&CurrentDate);
-		sprintf(temp_main,"Time %2d:%2d:%2d",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
+	sprintf(temp_main,"Time %2d:%2d:%2d",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
 	LCD_PutStr(1,5,temp_main,fnt7x10,( uint8_t *)fdata);
 	sprintf(temp_main,"I=%2.2f",InputCurrent);
 	LCD_PutStr(1,20,temp_main,fnt7x10,( uint8_t *)fdata);
 	sprintf(temp_main,"V=%3.2f",InputVoltage);
-		LCD_PutStr(1,35,temp_main,fnt7x10,( uint8_t *)fdata);
-			sprintf(temp_main,"P=%3.2f",InputVoltage*InputCurrent*0.9);
-		LCD_PutStr(1,50,temp_main,fnt7x10,( uint8_t *)fdata);
-
+	LCD_PutStr(1,35,temp_main,fnt7x10,( uint8_t *)fdata);
+	sprintf(temp_main,"P=%3.2f",InputVoltage*InputCurrent*0.9);
+	LCD_PutStr(1,50,temp_main,fnt7x10,( uint8_t *)fdata);
+	
 	SSD1306_Flush();
 	roundRobinLcd=0;
 
