@@ -543,6 +543,21 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>DS3231</GroupName>
+          <Files>
+            <File>
+              <FileName>DS3231.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DS3231\DS3231.c</FilePath>
+            </File>
+            <File>
+              <FileName>DS3231.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DS3231\DS3231.h</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>

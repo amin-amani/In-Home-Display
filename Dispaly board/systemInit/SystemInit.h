@@ -4,12 +4,10 @@
 #define AnyKeyPressed ((GPIOA->IDR&0x1ff)!=0x1ff)
 //#define ModeButton GPIOA->IDR&(1<<3)>>3
 #define DownButton  !((GPIOA->IDR&(1<<11))>>11) //ok
-#define MinusButton !((GPIOA->IDR&(1<<2))>>2) //ok
-#define SetButton   !((GPIOA->IDR&(1<<3))>>3) //hit down!
-#define PlusButton  !((GPIOA->IDR&(1<<4))>>4)  //ok
-#define UPButton    !((GPIOA->IDR&(1<<8))>>8)
-#define StopButton  !((GPIOA->IDR&(1<<6))>>6)
-#define StartButton !((GPIOA->IDR&(1<<7))>>7)
+#define MinusButton !((GPIOA->IDR&(1<<12))>>12) //ok
+#define UpButton   !((GPIOA->IDR&(1<<13))>>13) //hit down!
+#define PlusButton  !((GPIOA->IDR&(1<<8))>>8)  //ok
+
 
 #define BuzzerOn GPIOB->ODR|=(1<<13)
 #define BuzzerOff GPIOB->ODR&=~(1<<13)

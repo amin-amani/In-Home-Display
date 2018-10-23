@@ -3,6 +3,21 @@
 #define RGB_G_PIN       1
 #define RGB_B_PIN       14
 //=======================================================================================================
+void BuzerInit()
+{
+
+
+	GPIO_InitTypeDef PORT;
+  	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+	
+	PORT.GPIO_Mode = GPIO_Mode_Out_PP;
+	PORT.GPIO_Pin =GPIO_Pin_13;
+	PORT.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOB,&PORT);
+
+
+}
+//=======================================================================================================
 void RGBInit()
 {
 

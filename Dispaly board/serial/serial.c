@@ -170,6 +170,11 @@ int getkey2 (void) {
   while (!(USART2->SR & USART_FLAG_RXNE));
   return ((int)(USART2->DR & 0x1FF));
 }
+ int getkey3 (void) {
+  while (!(USART3->SR & USART_FLAG_RXNE));
+  return ((int)(USART3->DR & 0x1FF));
+}
+
 
 
 
