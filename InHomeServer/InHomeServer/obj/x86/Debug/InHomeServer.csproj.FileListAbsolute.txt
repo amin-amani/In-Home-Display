@@ -6,3 +6,11 @@ D:\current Projects\in home dispaly\In-Home-Display\InHomeServer\InHomeServer\ob
 D:\current Projects\in home dispaly\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.exe
 D:\current Projects\in home dispaly\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.pdb
 D:\current Projects\in home dispaly\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.Form1.resources
+G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.exe
+G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.pdb
+G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\bin\Debug\InHomeServer.exe
+G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\bin\Debug\InHomeServer.pdb
+G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.csprojResolveAssemblyReference.cache
+G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.Form1.resources
+G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.Properties.Resources.resources
+G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.csproj.GenerateResource.Cache

@@ -3,21 +3,7 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-D:\current Projects\in home dispaly\In-Home-Display\Dispaly board\template.uvproj
+G:\aa proj\In-Home-Display\Dispaly board\template.uvproj
 Project File Date:  10/20/2018
 
 <h2>Output:</h2>
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(175): warning:  #223-D: function "adc_init" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23254 RO-data=1778 RW-data=40 ZI-data=2208  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 8 Warning(s).
