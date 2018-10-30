@@ -135,10 +135,10 @@ while (i!=0);
 
 
 int sendchar (int ch) {
-   if (ch == '\n')  {
-      while (!(USART1->SR & USART_FLAG_TXE));
-      USART1->DR = '\r';
-   }
+//   if (ch == '\n')  {
+//      while (!(USART1->SR & USART_FLAG_TXE));
+//      USART1->DR = '\r';
+//   }
    while (!(USART1->SR & USART_FLAG_TXE));
    return (USART1->DR = (ch & 0x0FF));
 }

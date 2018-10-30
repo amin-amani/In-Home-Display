@@ -3,7 +3,7 @@
 <title>Static Call Graph - [G:\aa proj\In-Home-Display\Dispaly board\template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image G:\aa proj\In-Home-Display\Dispaly board\template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 791]: Last Updated: Tue Oct 30 15:32:53 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 791]: Last Updated: Tue Oct 30 21:45:24 2018
 <BR><P>
 <H3>Maximum Stack Usage =        504 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -619,12 +619,12 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_udir
 </UL>
 
-<P><STRONG><a name="[8f]"></a>sendchar</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, serial.o(.text))
+<P><STRONG><a name="[8f]"></a>sendchar</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, serial.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_static_string
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_string
 </UL>
 
-<P><STRONG><a name="[150]"></a>getkey</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, serial.o(.text), UNUSED)
+<P><STRONG><a name="[150]"></a>getkey</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, serial.o(.text), UNUSED)
 
 <P><STRONG><a name="[91]"></a>sendchar2</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, serial.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_string2
@@ -658,7 +658,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendchar2
 </UL>
 
-<P><STRONG><a name="[93]"></a>sendbyte</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, serial.o(.text), UNUSED)
+<P><STRONG><a name="[93]"></a>sendbyte</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, serial.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_bytes
 </UL>
 
@@ -1139,12 +1139,12 @@ Global Symbols
 <P><STRONG><a name="[f0]"></a>_scanf_really_real</STRONG> (Thumb, 676 bytes, Stack size 120 bytes, scanf_fp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = _scanf_really_real &rArr; _fp_value &rArr; _btod_etento &rArr; _btod_emul &rArr; _e2e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_narrow
-<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_infnan
+<BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_infnan
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_hex_real
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_locale
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_value
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_is_digit
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_narrow
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_real
 </UL>
@@ -1255,17 +1255,17 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_tofloat
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ldexp
+<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ldexp
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_tofloat
 </UL>
 
 <P><STRONG><a name="[fb]"></a>_scanf_really_hex_real</STRONG> (Thumb, 782 bytes, Stack size 80 bytes, scanf_hexfp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = _scanf_really_hex_real &rArr; __support_ldexp &rArr; ldexp &rArr; __aeabi_cdcmpeq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_narrow
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__support_ldexp
+<BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__support_ldexp
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_chval
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_narrow
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_hex_real
 </UL>
@@ -1755,8 +1755,8 @@ Global Symbols
 <P><STRONG><a name="[111]"></a>__aeabi_cdcmpeq</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, deqf.o(x$fpl$deqf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_cdcmpeq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_tofloat
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ldexp
+<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ldexp
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_tofloat
 </UL>
 
 <P><STRONG><a name="[11a]"></a>_dcmpeq</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, deqf.o(x$fpl$deqf), UNUSED)

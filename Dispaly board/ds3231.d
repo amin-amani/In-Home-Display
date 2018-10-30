@@ -30,3 +30,4 @@ ds3231.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_usart.h
 ds3231.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_wwdg.h
 ds3231.o: C:\Keil\ARM\RV31\INC\stdio.h
 ds3231.o: C:\Keil\ARM\RV31\INC\string.h
+ds3231.o: C:\Keil\ARM\RV31\INC\stdint.h

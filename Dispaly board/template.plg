@@ -15,11 +15,7 @@ main.c(34): warning:  #940-D: missing return statement at end of non-void functi
 main.c(38): warning:  #223-D: function "getkey3" declared implicitly
 main.c(69): warning:  #223-D: function "read_adc" declared implicitly
 main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(176): warning:  #223-D: function "adc_init" declared implicitly
-main.c(242): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(249): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(268): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
 main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
 main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
 main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
@@ -35,13 +31,75 @@ compiling memory.c...
 eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
 compiling SSD1306.c...
 compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+compiling sha1.c...
 linking...
-Program Size: Code=23674 RO-data=1778 RW-data=40 ZI-data=2216  
+Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
 FromELF: creating hex file...
-"template.axf" - 0 Error(s), 18 Warning(s).
+"template.axf" - 0 Error(s), 15 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.h(68): warning:  #1295-D: Deprecated declaration disconnect - give arg types
+mysql\mysql.h(73): warning:  #1295-D: Deprecated declaration wait_for_client_limit - give arg types
+mysql\mysql.h(74): warning:  #1295-D: Deprecated declaration read_packet_limit - give arg types
+mysql\mysql.h(76): warning:  #1295-D: Deprecated declaration get_columns - give arg types
+mysql\mysql.h(77): warning:  #1295-D: Deprecated declaration get_next_row - give arg types
+mysql\mysql.h(78): warning:  #1295-D: Deprecated declaration free_columns_buffer - give arg types
+mysql\mysql.h(79): warning:  #1295-D: Deprecated declaration free_row_buffer - give arg types
+mysql\mysql.h(80): warning:  #1295-D: Deprecated declaration show_results - give arg types
+mysql\mysql.h(81): warning:  #1295-D: Deprecated declaration clear_ok_packet - give arg types
+mysql\mysql.h(99): warning:  #1295-D: Deprecated declaration wait_for_client - give arg types
+mysql\mysql.h(101): warning:  #1295-D: Deprecated declaration read_packet - give arg types
+mysql\mysql.h(102): warning:  #1295-D: Deprecated declaration parse_handshake_packet - give arg types
+mysql\mysql.h(103): warning:  #1295-D: Deprecated declaration check_ok_packet - give arg types
+mysql\mysql.h(115): warning:  #1295-D: Deprecated declaration get_fields - give arg types
+mysql\mysql.c(97): warning:  #177-D: variable "connected" was declared but never referenced
+mysql\mysql.c(98): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(99): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(176): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(178): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(178): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(172): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(172): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(202): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(206): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(206): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(245): warning:  #223-D: function "parse_error_packet" declared implicitly
+mysql\mysql.c(267): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(294): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(295): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(333): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(337): error:  #268: declaration may not appear after executable statement in block
+mysql\mysql.c(326): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(372): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(386): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(429): warning:  #550-D: variable "count" was set but never used
+mysql\mysql.c(497): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(499): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(499): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(532): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+mysql\mysql.c(533): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+mysql\mysql.c(555): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(557): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(490): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(677): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(691): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(691): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(716): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(732): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(732): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(747): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(783): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(783): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+mysql\mysql.c(865): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(865): error:  #144: a value of type "int" cannot be used to initialize an entity of type "char *"
+mysql\mysql.c(894): error:  #268: declaration may not appear after executable statement in block
+mysql\mysql.c(994): warning:  #177-D: variable "res" was declared but never referenced
+mysql\mysql.c(1031): warning:  #940-D: missing return statement at end of non-void function "mysql_write"
+Target not created
 Build target 'Target 1'
 compiling STM32_Init.c...
 assembling STM32F10x.s...
@@ -50,798 +108,1526 @@ main.c(34): warning:  #940-D: missing return statement at end of non-void functi
 main.c(38): warning:  #223-D: function "getkey3" declared implicitly
 main.c(69): warning:  #223-D: function "read_adc" declared implicitly
 main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(177): warning:  #111-D: statement is unreachable
-main.c(178): warning:  #223-D: function "adc_init" declared implicitly
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+compiling sha1.c...
+compiling mysql.c...
+mysql\mysql.h(68): warning:  #1295-D: Deprecated declaration disconnect - give arg types
+mysql\mysql.h(73): warning:  #1295-D: Deprecated declaration wait_for_client_limit - give arg types
+mysql\mysql.h(74): warning:  #1295-D: Deprecated declaration read_packet_limit - give arg types
+mysql\mysql.h(76): warning:  #1295-D: Deprecated declaration get_columns - give arg types
+mysql\mysql.h(77): warning:  #1295-D: Deprecated declaration get_next_row - give arg types
+mysql\mysql.h(78): warning:  #1295-D: Deprecated declaration free_columns_buffer - give arg types
+mysql\mysql.h(79): warning:  #1295-D: Deprecated declaration free_row_buffer - give arg types
+mysql\mysql.h(80): warning:  #1295-D: Deprecated declaration show_results - give arg types
+mysql\mysql.h(81): warning:  #1295-D: Deprecated declaration clear_ok_packet - give arg types
+mysql\mysql.h(99): warning:  #1295-D: Deprecated declaration wait_for_client - give arg types
+mysql\mysql.h(101): warning:  #1295-D: Deprecated declaration read_packet - give arg types
+mysql\mysql.h(102): warning:  #1295-D: Deprecated declaration parse_handshake_packet - give arg types
+mysql\mysql.h(103): warning:  #1295-D: Deprecated declaration check_ok_packet - give arg types
+mysql\mysql.h(115): warning:  #1295-D: Deprecated declaration get_fields - give arg types
+mysql\mysql.c(42): error:  #20: identifier "DEST_PORT" is undefined
+mysql\mysql.c(46): error:  #36: the #if for this directive is missing
+mysql\mysql.c(89): warning:  #177-D: variable "connected" was declared but never referenced
+mysql\mysql.c(90): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(91): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(168): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(170): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(170): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(164): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(164): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(194): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(198): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(198): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(237): warning:  #223-D: function "parse_error_packet" declared implicitly
+mysql\mysql.c(259): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(286): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(287): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(325): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(329): error:  #268: declaration may not appear after executable statement in block
+mysql\mysql.c(318): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(364): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(378): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(421): warning:  #550-D: variable "count" was set but never used
+mysql\mysql.c(489): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(491): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(491): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(524): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+mysql\mysql.c(525): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+mysql\mysql.c(547): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(549): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(482): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(669): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(683): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(683): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(708): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(724): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(724): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(739): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(775): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(775): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+mysql\mysql.c(857): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(857): error:  #144: a value of type "int" cannot be used to initialize an entity of type "char *"
+mysql\mysql.c(886): error:  #268: declaration may not appear after executable statement in block
+mysql\mysql.c(986): warning:  #177-D: variable "res" was declared but never referenced
+mysql\mysql.c(1023): warning:  #940-D: missing return statement at end of non-void function "mysql_write"
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.h(73): warning:  #1295-D: Deprecated declaration wait_for_client_limit - give arg types
+mysql\mysql.h(74): warning:  #1295-D: Deprecated declaration read_packet_limit - give arg types
+mysql\mysql.c(42): error:  #20: identifier "DEST_PORT" is undefined
+mysql\mysql.c(46): error:  #36: the #if for this directive is missing
+mysql\mysql.c(89): warning:  #177-D: variable "connected" was declared but never referenced
+mysql\mysql.c(90): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(91): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(168): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(170): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(170): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(164): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(164): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(194): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(198): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(198): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(237): warning:  #223-D: function "parse_error_packet" declared implicitly
+mysql\mysql.c(259): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(286): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(287): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(325): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(329): error:  #268: declaration may not appear after executable statement in block
+mysql\mysql.c(318): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(364): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(378): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(421): warning:  #550-D: variable "count" was set but never used
+mysql\mysql.c(489): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(491): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(491): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(524): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+mysql\mysql.c(525): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+mysql\mysql.c(547): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(549): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(482): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(669): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(683): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(683): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(708): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(724): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(724): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(739): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(775): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(775): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+mysql\mysql.c(857): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(857): error:  #144: a value of type "int" cannot be used to initialize an entity of type "char *"
+mysql\mysql.c(886): error:  #268: declaration may not appear after executable statement in block
+mysql\mysql.c(986): warning:  #177-D: variable "res" was declared but never referenced
+mysql\mysql.c(1023): warning:  #940-D: missing return statement at end of non-void function "mysql_write"
+Target not created
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+compiling sha1.c...
+compiling mysql.c...
+linking...
+Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 15 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+C:\Keil\ARM\RV31\INC\stdint.h(37): error:  #256: invalid redeclaration of type name "int8_t" (declared at line 30 of "SSD1306//SSD1306.h")
+ds3231//ds3231.h(19): error:  #256: invalid redeclaration of type name "int8_t" (declared at line 37 of "C:\Keil\ARM\RV31\INC\stdint.h")
+main.c(35): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(39): warning:  #223-D: function "getkey3" declared implicitly
+main.c(70): warning:  #223-D: function "read_adc" declared implicitly
+main.c(66): warning:  #550-D: variable "temp" was set but never used
 main.c(244): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(251): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(255): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(270): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling SystemInit.c...
-systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
-compiling serial.c...
-compiling delay.c...
-compiling lib_crc.c...
-compiling adc.c...
-compiling eeprom.c...
-eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
-compiling memory.c...
-eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
-compiling SSD1306.c...
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23442 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 19 Warning(s).
-Build target 'Target 1'
-compiling STM32_Init.c...
-assembling STM32F10x.s...
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(176): error:  #137: expression must be a modifiable lvalue
-main.c(179): warning:  #111-D: statement is unreachable
-main.c(180): warning:  #223-D: function "adc_init" declared implicitly
-main.c(246): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(257): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling SystemInit.c...
-systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
-compiling serial.c...
-compiling delay.c...
-compiling lib_crc.c...
-compiling adc.c...
-compiling eeprom.c...
-eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
-compiling memory.c...
-eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
-compiling SSD1306.c...
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling STM32_Init.c...
-assembling STM32F10x.s...
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(179): warning:  #111-D: statement is unreachable
-main.c(180): warning:  #223-D: function "adc_init" declared implicitly
-main.c(246): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(257): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling SystemInit.c...
-systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
-compiling serial.c...
-compiling delay.c...
-compiling lib_crc.c...
-compiling adc.c...
-compiling eeprom.c...
-eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
-compiling memory.c...
-eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
-compiling SSD1306.c...
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23466 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 19 Warning(s).
-Build target 'Target 1'
-compiling STM32_Init.c...
-assembling STM32F10x.s...
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(179): warning:  #111-D: statement is unreachable
-main.c(180): warning:  #223-D: function "adc_init" declared implicitly
-main.c(246): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(257): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling SystemInit.c...
-systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
-compiling serial.c...
-compiling delay.c...
-compiling lib_crc.c...
-compiling adc.c...
-compiling eeprom.c...
-eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
-compiling memory.c...
-eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
-compiling SSD1306.c...
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23462 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 19 Warning(s).
-Build target 'Target 1'
-compiling STM32_Init.c...
-assembling STM32F10x.s...
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(250): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(254): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(269): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling SystemInit.c...
-systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
-compiling serial.c...
-compiling delay.c...
-compiling lib_crc.c...
-compiling adc.c...
-compiling eeprom.c...
-eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
-compiling memory.c...
-eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
-compiling SSD1306.c...
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23630 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 17 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(339): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(496): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23650 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(492): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23610 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(250): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(266): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23522 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(266): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23506 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(270): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23546 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(335): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(492): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23546 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(251): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(271): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(340): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(497): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23586 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 13 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=23586 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(340): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(497): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23586 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(275): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23618 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(275): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23602 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(341): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(498): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23610 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(275): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23626 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(341): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(498): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23626 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling STM32_Init.c...
-assembling STM32F10x.s...
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(256): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling SystemInit.c...
-systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
-compiling serial.c...
-compiling delay.c...
-compiling lib_crc.c...
-compiling adc.c...
-compiling eeprom.c...
-eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
-compiling memory.c...
-eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
-compiling SSD1306.c...
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(341): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(498): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23594 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 17 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=23594 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(256): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23590 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(341): warning:  #223-D: function "sendchar" declared implicitly
-DS3231\DS3231.c(498): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23590 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(395): error:  #20: identifier "pBuffer" is undefined
-DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 3 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(461): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(543): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23518 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(461): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(543): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23518 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(273): warning:  #224-D: the format string requires additional arguments
-main.c(273): error:  #18: expected a ")"
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(17): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(27): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 Target not created
 Build target 'Target 1'
 compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(461): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(543): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(544): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23514 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 5 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(415): error:  #20: identifier "ReadAddr" is undefined
-DS3231\DS3231.c(448): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(464): error:  #268: declaration may not appear after executable statement in block
-DS3231\DS3231.c(464): warning:  #940-D: missing return statement at end of non-void function "I2C_EE_ByteRead"
-DS3231\DS3231.c(464): error:  #67: expected a "}"
-DS3231\DS3231.c(530): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(531): warning:  #1-D: last line of file ends without a newline
+C:\Keil\ARM\RV31\INC\stdint.h(37): error:  #256: invalid redeclaration of type name "int8_t" (declared at line 30 of "SSD1306//SSD1306.h")
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(245): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 Target not created
 Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(415): error:  #20: identifier "ReadAddr" is undefined
-DS3231\DS3231.c(448): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(530): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(531): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(448): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(530): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(531): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 5 Warning(s).
-Build target 'Target 1'
 compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23514 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23506 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23322 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(254): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23330 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(254): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 10 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(418): error:  #20: identifier "address" is undefined
-DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(418): error:  #20: identifier "address" is undefined
-DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(254): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 11 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(254): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
-main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
-main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 11 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 12 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling DS3231.c...
-DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
-DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 12 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(254): warning:  #69-D: integer conversion resulted in truncation
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(254): warning:  #69-D: integer conversion resulted in truncation
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 8 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
-main.c(38): warning:  #223-D: function "getkey3" declared implicitly
-main.c(69): warning:  #223-D: function "read_adc" declared implicitly
-main.c(65): warning:  #550-D: variable "temp" was set but never used
-main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
-main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
-main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(245): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
 Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(245): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling sha1.c...
+mysql\sha1.h(34): error:  #20: identifier "uint32_t" is undefined
+mysql\sha1.h(36): error:  #20: identifier "uint32_t" is undefined
+mysql\sha1.h(37): error:  #20: identifier "uint32_t" is undefined
+Target not created
+Build target 'Target 1'
+compiling main.c...
+C:\Keil\ARM\RV31\INC\stdint.h(37): error:  #256: invalid redeclaration of type name "int8_t" (declared at line 30 of "SSD1306//SSD1306.h")
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(245): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling sha1.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+ds3231//ds3231.h(19): error:  #256: invalid redeclaration of type name "int8_t" (declared at line 37 of "C:\Keil\ARM\RV31\INC\stdint.h")
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(245): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SSD1306.c...
+Target not created
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(245): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+compiling sha1.c...
+compiling mysql.c...
+linking...
+Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 15 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(247): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(173): warning:  #177-D: variable "sha" was declared but never referenced
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(180): error:  #20: identifier "password" is undefined
+main.c(249): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(249): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=24442 RO-data=1794 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(254): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+compiling sha1.c...
+compiling mysql.c...
+linking...
+Program Size: Code=24494 RO-data=1794 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 15 Warning(s).
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(254): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+compiling sha1.c...
+compiling mysql.c...
+linking...
+Program Size: Code=24590 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 15 Warning(s).
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(254): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+compiling sha1.c...
+compiling mysql.c...
+mysql\mysql.c(3): error:  #20: identifier "uint16_t" is undefined
+mysql\mysql.c(5): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(7): warning:  #1-D: last line of file ends without a newline
+mysql\mysql.c(7): warning:  #940-D: missing return statement at end of non-void function "mysql_write"
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.h(27): warning:  #1-D: last line of file ends without a newline
+mysql\mysql.c(25): error:  #20: identifier "uint16_t" is undefined
+mysql\mysql.c(27): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(29): warning:  #1-D: last line of file ends without a newline
+mysql\mysql.c(29): warning:  #940-D: missing return statement at end of non-void function "mysql_write"
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(27): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(29): warning:  #1-D: last line of file ends without a newline
+mysql\mysql.c(29): warning:  #940-D: missing return statement at end of non-void function "mysql_write"
+linking...
+Program Size: Code=24590 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(25): error:  #20: identifier "DEST_PORT" is undefined
+mysql\mysql.c(29): error:  #36: the #if for this directive is missing
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(60): warning:  #1-D: last line of file ends without a newline
+mysql\mysql.c(60): warning:  #940-D: missing return statement at end of non-void function "mysql_write"
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(29): error:  #36: the #if for this directive is missing
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(60): warning:  #1-D: last line of file ends without a newline
+mysql\mysql.c(60): warning:  #940-D: missing return statement at end of non-void function "mysql_write"
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(60): warning:  #1-D: last line of file ends without a newline
+mysql\mysql.c(60): warning:  #940-D: missing return statement at end of non-void function "mysql_write"
+linking...
+template.axf: Error: L6200E: Symbol buffer multiply defined (by mysql.o and memory.o).
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(60): warning:  #1-D: last line of file ends without a newline
+mysql\mysql.c(60): warning:  #940-D: missing return statement at end of non-void function "mysql_write"
+linking...
+Program Size: Code=24590 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(60): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=24590 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+linking...
+Program Size: Code=24590 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling serial.c...
+linking...
+Program Size: Code=24570 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(76): error:  #20: identifier "columns_read" is undefined
+mysql\mysql.c(79): error:  #20: identifier "num_cols" is undefined
+mysql\mysql.c(80): warning:  #223-D: function "get_lcb_len" declared implicitly
+mysql\mysql.c(81): error:  #20: identifier "columns" is undefined
+mysql\mysql.c(81): warning:  #223-D: function "read_string" declared implicitly
+mysql\mysql.c(70): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.h(41): error:  #20: identifier "column_names" is undefined
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(80): warning:  #223-D: function "get_lcb_len" declared implicitly
+mysql\mysql.c(81): warning:  #223-D: function "read_string" declared implicitly
+mysql\mysql.c(70): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.h(40): error:  #20: identifier "column_names" is undefined
+mysql\mysql.h(40): warning:  #1295-D: Deprecated declaration get_columns - give arg types
+mysql\mysql.h(41): error:  #20: identifier "row_values" is undefined
+mysql\mysql.h(41): warning:  #1295-D: Deprecated declaration get_next_row - give arg types
+mysql\mysql.h(42): warning:  #1295-D: Deprecated declaration free_columns_buffer - give arg types
+mysql\mysql.h(43): warning:  #1295-D: Deprecated declaration free_row_buffer - give arg types
+mysql\mysql.h(44): warning:  #1295-D: Deprecated declaration show_results - give arg types
+mysql\mysql.h(45): warning:  #1295-D: Deprecated declaration clear_ok_packet - give arg types
+mysql\mysql.h(46): error:  #20: identifier "column_names" is undefined
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(80): warning:  #223-D: function "get_lcb_len" declared implicitly
+mysql\mysql.c(81): warning:  #223-D: function "read_string" declared implicitly
+mysql\mysql.c(70): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.h(58): warning:  #1295-D: Deprecated declaration get_columns - give arg types
+mysql\mysql.h(59): warning:  #1295-D: Deprecated declaration get_next_row - give arg types
+mysql\mysql.h(60): warning:  #1295-D: Deprecated declaration free_columns_buffer - give arg types
+mysql\mysql.h(61): warning:  #1295-D: Deprecated declaration free_row_buffer - give arg types
+mysql\mysql.h(62): warning:  #1295-D: Deprecated declaration show_results - give arg types
+mysql\mysql.h(63): warning:  #1295-D: Deprecated declaration clear_ok_packet - give arg types
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(80): warning:  #223-D: function "get_lcb_len" declared implicitly
+mysql\mysql.c(81): warning:  #223-D: function "read_string" declared implicitly
+mysql\mysql.c(81): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+mysql\mysql.c(70): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(80): warning:  #223-D: function "get_lcb_len" declared implicitly
+mysql\mysql.c(81): warning:  #223-D: function "read_string" declared implicitly
+mysql\mysql.c(81): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+mysql\mysql.c(70): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(80): warning:  #223-D: function "get_lcb_len" declared implicitly
+mysql\mysql.c(70): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+template.axf: Error: L6218E: Undefined symbol get_lcb_len (referred from mysql.o).
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(74): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(97): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(77): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(97): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(97): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24570 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(108): warning:  #223-D: function "read_string" declared implicitly
+mysql\mysql.c(108): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+mysql\mysql.c(97): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(102): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(102): error:  #144: a value of type "int" cannot be used to initialize an entity of type "char *"
+mysql\mysql.c(103): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(118): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(102): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(102): error:  #144: a value of type "int" cannot be used to initialize an entity of type "char *"
+mysql\mysql.c(118): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(102): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(102): error:  #144: a value of type "char" cannot be used to initialize an entity of type "char *"
+mysql\mysql.c(118): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(103): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(119): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+template.axf: Error: L6218E: Undefined symbol mem_malloc (referred from mysql.o).
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(103): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(119): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(103): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(122): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(153): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(166): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(103): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(125): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(153): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(166): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(103): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(153): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(166): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(103): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(183): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(196): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(103): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(129): error:  #268: declaration may not appear after executable statement in block
+mysql\mysql.c(131): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(209): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(222): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(103): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(129): error:  #268: declaration may not appear after executable statement in block
+mysql\mysql.c(209): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(222): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(103): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(210): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(223): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(80): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(125): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(232): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(245): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(125): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(232): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(245): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(91): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(93): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(93): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+mysql\mysql.c(170): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(277): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(290): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(93): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(93): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+mysql\mysql.c(170): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(277): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(290): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(170): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(277): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(290): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(65): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(68): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(81): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(94): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(206): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(313): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(326): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(67): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(68): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(81): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(81): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(94): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(206): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(313): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(326): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(68): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(69): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(81): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(81): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(94): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(206): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(313): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(326): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(68): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(81): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(81): error:  #513: a value of type "int" cannot be assigned to an entity of type "unsigned char *"
+mysql\mysql.c(94): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(206): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(313): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(326): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(68): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(206): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(313): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(326): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+template.axf: Error: L6218E: Undefined symbol data_rec (referred from mysql.o).
+template.axf: Error: L6218E: Undefined symbol mem_free (referred from mysql.o).
+template.axf: Error: L6218E: Undefined symbol pack_len (referred from mysql.o).
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(68): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(206): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(313): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(326): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+template.axf: Error: L6218E: Undefined symbol mem_free (referred from mysql.o).
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(206): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(313): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(326): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(253): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(360): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(373): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(77): error:  #20: identifier "SHA1Context" is undefined
+mysql\mysql.c(89): warning:  #223-D: function "SHA1Reset" declared implicitly
+mysql\mysql.c(90): warning:  #223-D: function "SHA1Input" declared implicitly
+mysql\mysql.c(91): warning:  #223-D: function "SHA1Result" declared implicitly
+mysql\mysql.c(348): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(455): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(468): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(348): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(455): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(468): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(104): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(140): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(160): warning:  #223-D: function "store_int" declared implicitly
+mysql\mysql.c(164): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(97): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(454): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(500): error:  #159: declaration is incompatible with previous "store_int" (declared at line 160)
+mysql\mysql.c(561): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(574): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(106): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(140): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(160): warning:  #223-D: function "store_int" declared implicitly
+mysql\mysql.c(164): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(97): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(454): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(500): error:  #159: declaration is incompatible with previous "store_int" (declared at line 160)
+mysql\mysql.c(561): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(574): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(130): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(140): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(160): warning:  #223-D: function "store_int" declared implicitly
+mysql\mysql.c(164): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(97): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(454): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(500): error:  #159: declaration is incompatible with previous "store_int" (declared at line 160)
+mysql\mysql.c(561): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(574): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(134): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(140): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(160): warning:  #223-D: function "store_int" declared implicitly
+mysql\mysql.c(164): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(97): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(454): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(500): error:  #159: declaration is incompatible with previous "store_int" (declared at line 160)
+mysql\mysql.c(561): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(574): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(140): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(160): warning:  #223-D: function "store_int" declared implicitly
+mysql\mysql.c(161): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(164): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(97): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(454): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(500): error:  #159: declaration is incompatible with previous "store_int" (declared at line 160)
+mysql\mysql.c(561): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(574): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(140): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(160): warning:  #223-D: function "store_int" declared implicitly
+mysql\mysql.c(162): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(164): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(97): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(454): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(500): error:  #159: declaration is incompatible with previous "store_int" (declared at line 160)
+mysql\mysql.c(561): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(574): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(140): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(160): warning:  #223-D: function "store_int" declared implicitly
+mysql\mysql.c(162): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(164): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(97): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(454): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(500): error:  #159: declaration is incompatible with previous "store_int" (declared at line 160)
+mysql\mysql.c(561): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(574): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(140): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(162): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(164): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(97): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(454): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(562): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(575): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(163): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(185): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(187): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(120): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(477): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(585): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(598): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(84): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(98): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(99): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(211): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(233): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(235): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(168): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(525): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(633): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(646): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(84): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(98): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(211): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(233): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(235): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(168): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(525): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(633): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(646): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+template.axf: Error: L6218E: Undefined symbol mem_free (referred from mysql.o).
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(84): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(211): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(233): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(235): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(168): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(525): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(633): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(646): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(77): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(83): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(86): warning:  #223-D: function "read_packet" declared implicitly
+mysql\mysql.c(87): error:  #268: declaration may not appear after executable statement in block
+mysql\mysql.c(87): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(76): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(122): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(249): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(271): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(273): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(206): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(387): error:  #159: declaration is incompatible with previous "read_packet" (declared at line 86)
+mysql\mysql.c(563): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(671): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(684): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(78): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(84): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(87): warning:  #223-D: function "read_packet" declared implicitly
+mysql\mysql.c(88): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(76): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(123): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(250): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(272): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(274): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(207): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(388): error:  #159: declaration is incompatible with previous "read_packet" (declared at line 87)
+mysql\mysql.c(564): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(672): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(685): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(84): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(87): warning:  #223-D: function "read_packet" declared implicitly
+mysql\mysql.c(88): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(76): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(123): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(250): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(272): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(274): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(207): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(388): error:  #159: declaration is incompatible with previous "read_packet" (declared at line 87)
+mysql\mysql.c(564): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(672): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(685): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(84): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(88): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(76): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(123): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(250): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(272): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(274): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(207): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(388): error:  #77-D: this declaration has no storage class or type specifier
+mysql\mysql.c(388): error:  #65: expected a ";"
+mysql\mysql.c(410): warning:  #12-D: parsing restarts here after previous syntax error
+mysql\mysql.c(412): error:  #169: expected a declaration
+mysql\mysql.c(416): warning:  #12-D: parsing restarts here after previous syntax error
+mysql\mysql.c(417): warning:  #77-D: this declaration has no storage class or type specifier
+mysql\mysql.c(417): error:  #92: identifier-list parameters may only be used in a function definition
+mysql\mysql.c(417): error:  #147: declaration is incompatible with "void free(void *)" (declared at line 307 of "C:\Keil\ARM\RV31\INC\stdlib.h")
+mysql\mysql.c(418): error:  #169: expected a declaration
+mysql\mysql.c(445): warning:  #12-D: parsing restarts here after previous syntax error
+mysql\mysql.c(447): error:  #169: expected a declaration
+mysql\mysql.c(451): warning:  #12-D: parsing restarts here after previous syntax error
+mysql\mysql.c(452): warning:  #77-D: this declaration has no storage class or type specifier
+mysql\mysql.c(452): error:  #92: identifier-list parameters may only be used in a function definition
+mysql\mysql.c(453): error:  #77-D: this declaration has no storage class or type specifier
+mysql\mysql.c(453): error:  #147: declaration is incompatible with "uint8_t *data_rec" (declared at line 52)
+mysql\mysql.c(454): error:  #169: expected a declaration
+mysql\mysql.c(659): warning:  #12-D: parsing restarts here after previous syntax error
+mysql\mysql.c(660): error:  #77-D: this declaration has no storage class or type specifier
+mysql\mysql.c(660): error:  #20: identifier "get_lcb_len" is undefined
+mysql\mysql.c(660): error:  #59: function call is not allowed in a constant expression
+mysql\mysql.c(660): error:  #20: identifier "offset" is undefined
+mysql\mysql.c(661): error:  #77-D: this declaration has no storage class or type specifier
+mysql\mysql.c(661): error:  #65: expected a ";"
+mysql\mysql.c(663): error:  #169: expected a declaration
+mysql\mysql.c(669): warning:  #12-D: parsing restarts here after previous syntax error
+mysql\mysql.c(670): error:  #169: expected a declaration
+mysql\mysql.c(672): error:  #79: expected a type specifier
+mysql\mysql.c(672): warning:  #77-D: this declaration has no storage class or type specifier
+mysql\mysql.c(673): error:  #169: expected a declaration
+mysql\mysql.c(674): error:  #169: expected a declaration
+mysql\mysql.c(702): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(84): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(88): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(76): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(123): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(250): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(272): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(274): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(207): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(564): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(672): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(685): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(76): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(72): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(73): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(108): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(112): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(100): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(147): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(274): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(296): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(298): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(231): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(588): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(696): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(709): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+template.axf: Error: L6218E: Undefined symbol free_columns_buffer (referred from mysql.o).
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(82): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(106): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(102): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(103): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(138): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(142): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(130): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(177): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(304): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(326): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(328): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(261): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(618): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(726): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(739): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+template.axf: Error: L6218E: Undefined symbol mem_free (referred from mysql.o).
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(106): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(102): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(103): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(138): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(142): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(130): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(177): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(304): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(326): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(328): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(261): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(618): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(726): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(739): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 15 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(80): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(81): warning:  #223-D: function "parse_error_packet" declared implicitly
+mysql\mysql.c(133): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(129): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(130): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(165): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(169): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(157): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(204): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(331): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(353): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(355): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(288): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(645): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(753): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(766): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+template.axf: Error: L6218E: Undefined symbol parse_error_packet (referred from mysql.o).
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(80): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(133): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(129): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(130): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(165): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(169): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(157): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(204): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(331): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(353): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(355): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(288): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(645): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(753): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(766): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 16 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(91): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(92): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(94): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(104): warning:  #223-D: function "run_query" declared implicitly
+mysql\mysql.c(88): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(88): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(112): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(118): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(122): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(137): warning:  #223-D: function "run_query_no_read" declared implicitly
+mysql\mysql.c(158): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(211): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(207): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(208): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(243): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(247): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(235): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(282): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(409): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(431): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(433): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(366): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(723): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(831): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(844): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(104): warning:  #223-D: function "run_query" declared implicitly
+mysql\mysql.c(88): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(88): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(112): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(118): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(122): warning:  #223-D: function "mem_malloc" declared implicitly
+mysql\mysql.c(137): warning:  #223-D: function "run_query_no_read" declared implicitly
+mysql\mysql.c(158): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(211): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(207): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(208): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(243): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(247): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(235): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(282): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(409): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(431): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(433): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(366): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(723): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(831): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(844): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(104): warning:  #223-D: function "run_query" declared implicitly
+mysql\mysql.c(88): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(88): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(118): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(127): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(137): warning:  #223-D: function "run_query_no_read" declared implicitly
+mysql\mysql.c(158): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(211): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(207): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(208): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(243): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(247): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(235): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(282): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(409): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(431): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(433): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(366): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(723): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(831): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(844): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(104): warning:  #223-D: function "run_query" declared implicitly
+mysql\mysql.c(88): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(88): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(127): error:  #20: identifier "buffer" is undefined
+mysql\mysql.c(137): warning:  #223-D: function "run_query_no_read" declared implicitly
+mysql\mysql.c(158): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(211): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(207): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(208): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(243): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(247): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(235): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(282): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(409): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(431): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(433): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(366): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(723): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(831): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(844): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(104): warning:  #223-D: function "run_query" declared implicitly
+mysql\mysql.c(88): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(88): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(137): warning:  #223-D: function "run_query_no_read" declared implicitly
+mysql\mysql.c(158): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(211): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(207): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(208): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(243): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(247): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(235): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(282): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(409): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(431): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(433): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(366): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(723): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(831): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(844): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 20 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(75): warning:  #177-D: variable "connected" was declared but never referenced
+mysql\mysql.c(76): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(77): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(165): warning:  #223-D: function "run_query" declared implicitly
+mysql\mysql.c(149): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(149): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(198): warning:  #223-D: function "run_query_no_read" declared implicitly
+mysql\mysql.c(219): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(272): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(268): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(269): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(304): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(308): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(296): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(343): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(470): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(492): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(494): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(427): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(784): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(892): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(905): warning:  #177-D: variable "res" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 23 Warning(s).
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(83): warning:  #223-D: function "tcp_echoclient_connect" declared implicitly
+mysql\mysql.c(85): warning:  #223-D: function "HAL_Delay" declared implicitly
+mysql\mysql.c(90): warning:  #223-D: function "parse_handshake_packet" declared implicitly
+mysql\mysql.c(91): warning:  #223-D: function "send_authentication_packet" declared implicitly
+mysql\mysql.c(92): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(77): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(143): warning:  #223-D: function "run_query" declared implicitly
+mysql\mysql.c(127): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(127): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(176): warning:  #223-D: function "run_query_no_read" declared implicitly
+mysql\mysql.c(197): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(250): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(246): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(247): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(282): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(286): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(274): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(321): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(448): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(470): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(472): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(405): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(677): error:  #159: declaration is incompatible with previous "parse_handshake_packet" (declared at line 90)
+mysql\mysql.c(762): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(870): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(883): warning:  #177-D: variable "res" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(92): warning:  #223-D: function "run_query" declared implicitly
+mysql\mysql.c(76): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(76): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(125): warning:  #223-D: function "run_query_no_read" declared implicitly
+mysql\mysql.c(146): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(199): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(195): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(196): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(231): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(235): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(223): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(270): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(397): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(419): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(421): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(354): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(711): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(819): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(832): warning:  #177-D: variable "res" was declared but never referenced
+mysql\mysql.c(872): warning:  #223-D: function "tcp_echoclient_connect" declared implicitly
+mysql\mysql.c(874): warning:  #223-D: function "HAL_Delay" declared implicitly
+mysql\mysql.c(881): warning:  #223-D: function "mem_free" declared implicitly
+mysql\mysql.c(866): warning:  #177-D: variable "count" was declared but never referenced
+linking...
+template.axf: Error: L6218E: Undefined symbol HAL_Delay (referred from mysql.o).
+template.axf: Error: L6218E: Undefined symbol mem_free (referred from mysql.o).
+template.axf: Error: L6218E: Undefined symbol tcp_echoclient_connect (referred from mysql.o).
+Target not created
+Build target 'Target 1'
+compiling mysql.c...
+mysql\mysql.c(58): warning:  #223-D: function "sendchar" declared implicitly
+mysql\mysql.c(92): warning:  #223-D: function "run_query" declared implicitly
+mysql\mysql.c(76): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(76): warning:  #177-D: variable "g" was declared but never referenced
+mysql\mysql.c(125): warning:  #223-D: function "run_query_no_read" declared implicitly
+mysql\mysql.c(146): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(199): warning:  #223-D: function "get_fields" declared implicitly
+mysql\mysql.c(195): warning:  #177-D: variable "name" was declared but never referenced
+mysql\mysql.c(196): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(231): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(235): warning:  #223-D: function "check_ok_packet" declared implicitly
+mysql\mysql.c(223): warning:  #177-D: variable "count" was declared but never referenced
+mysql\mysql.c(270): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(397): warning:  #223-D: function "scramble_password" declared implicitly
+mysql\mysql.c(419): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+mysql\mysql.c(421): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+mysql\mysql.c(354): warning:  #550-D: variable "len" was set but never used
+mysql\mysql.c(711): warning:  #767-D: conversion from pointer to smaller integer
+mysql\mysql.c(819): warning:  #223-D: function "get_row_values" declared implicitly
+mysql\mysql.c(832): warning:  #177-D: variable "res" was declared but never referenced
+mysql\mysql.c(864): warning:  #177-D: variable "connected" was declared but never referenced
+mysql\mysql.c(865): warning:  #177-D: variable "i" was declared but never referenced
+mysql\mysql.c(866): warning:  #177-D: variable "count" was declared but never referenced
+linking...
+Program Size: Code=24566 RO-data=1834 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 23 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(248): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23310 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(36): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(40): warning:  #223-D: function "getkey3" declared implicitly
+main.c(71): warning:  #223-D: function "read_adc" declared implicitly
+main.c(67): warning:  #550-D: variable "temp" was set but never used
+main.c(248): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(17): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(18): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(28): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23314 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 15 Warning(s).

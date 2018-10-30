@@ -11,7 +11,9 @@
 #include "SSD1306//font7X10.h"
 #include "SSD1306//font5X7.h"
 #include "eeprom//memory.h"
+
 #include "ds3231//ds3231.h"
+
 static const float lm335_offset = 559; // change this!
 static const float lm335_gain = 2.048;
 char UsartBuff[20];
@@ -168,11 +170,14 @@ lockCount=0;
 //=========================================================================================================================
 int main(){
 //float t,h;
+
+  
 stm32_Init();
 //jtag_Disable();
 //RGBInit();
 send_string("hello\n");
-
+ 
+  
 //SSD1306_InitGPIO();
  //adc_init(1);
 //DS3231Init();

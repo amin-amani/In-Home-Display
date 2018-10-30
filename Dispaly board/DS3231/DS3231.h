@@ -3,6 +3,7 @@
  #include <stm32f10x_lib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
 #define I2C_Speed              100000
 #define I2C1_SLAVE_ADDRESS7    0x00
 #define I2C_PageSize           16
@@ -16,12 +17,12 @@
 #define DS3231_control  0x0E // DS3231 control register address
 #define DS3231_tmp_MSB  0x11 // DS3231 temperature MSB
 
- typedef char               int8_t;
-typedef unsigned char      uint8_t;
-typedef short              int16_t;
-typedef unsigned short     uint16_t;
-typedef int                int32_t;
-typedef unsigned int       uint32_t;
+// typedef char               int8_t;
+//typedef unsigned char      uint8_t;
+//typedef short              int16_t;
+//typedef unsigned short     uint16_t;
+//typedef int                int32_t;
+//typedef unsigned int       uint32_t;
 // All DS3231 registers
 
 typedef struct {

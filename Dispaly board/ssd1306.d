@@ -28,3 +28,4 @@ ssd1306.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_systick.h
 ssd1306.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_tim.h
 ssd1306.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_usart.h
 ssd1306.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_wwdg.h
+ssd1306.o: C:\Keil\ARM\RV31\INC\stdint.h

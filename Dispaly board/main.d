@@ -34,6 +34,7 @@ main.o: serial//serial.h
 main.o: delay//delay.h
 main.o: SystemInit/SystemInit.h
 main.o: SSD1306//SSD1306.h
+main.o: C:\Keil\ARM\RV31\INC\stdint.h
 main.o: SSD1306//font7X10.h
 main.o: SSD1306//font5X7.h
 main.o: SSD1306//SSD1306.h
