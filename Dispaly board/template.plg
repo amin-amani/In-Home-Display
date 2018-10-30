@@ -7,3 +7,841 @@ G:\aa proj\In-Home-Display\Dispaly board\template.uvproj
 Project File Date:  10/20/2018
 
 <h2>Output:</h2>
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(176): warning:  #223-D: function "adc_init" declared implicitly
+main.c(242): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(249): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(268): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23674 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 18 Warning(s).
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(177): warning:  #111-D: statement is unreachable
+main.c(178): warning:  #223-D: function "adc_init" declared implicitly
+main.c(244): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(251): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(255): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(270): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23442 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 19 Warning(s).
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(176): error:  #137: expression must be a modifiable lvalue
+main.c(179): warning:  #111-D: statement is unreachable
+main.c(180): warning:  #223-D: function "adc_init" declared implicitly
+main.c(246): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(257): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(179): warning:  #111-D: statement is unreachable
+main.c(180): warning:  #223-D: function "adc_init" declared implicitly
+main.c(246): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(257): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23466 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 19 Warning(s).
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(179): warning:  #111-D: statement is unreachable
+main.c(180): warning:  #223-D: function "adc_init" declared implicitly
+main.c(246): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(257): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23462 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 19 Warning(s).
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(250): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(254): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(269): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(337): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(494): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23630 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 17 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(339): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(496): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23650 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(335): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(492): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23610 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(250): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(266): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23522 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(266): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23506 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(270): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23546 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(335): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(492): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23546 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(251): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(271): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(340): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(497): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23586 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 13 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=23586 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(340): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(497): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23586 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(275): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23618 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(275): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23602 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(341): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(498): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23610 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(253): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(275): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23626 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(341): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(498): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23626 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling STM32_Init.c...
+assembling STM32F10x.s...
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(256): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling SystemInit.c...
+systemInit\SystemInit.c(241): warning:  #223-D: function "delay_ms" declared implicitly
+compiling serial.c...
+compiling delay.c...
+compiling lib_crc.c...
+compiling adc.c...
+compiling eeprom.c...
+eeprom\eeprom.c(57): warning:  #68-D: integer conversion resulted in a change of sign
+compiling memory.c...
+eeprom\memory.c(66): warning:  #223-D: function "send_string" declared implicitly
+compiling SSD1306.c...
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(341): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(498): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23594 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 17 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=23594 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(256): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23590 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(341): warning:  #223-D: function "sendchar" declared implicitly
+DS3231\DS3231.c(498): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23590 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(395): error:  #20: identifier "pBuffer" is undefined
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(214): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(336): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(461): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(543): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23518 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(461): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(543): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23518 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(273): warning:  #224-D: the format string requires additional arguments
+main.c(273): error:  #18: expected a ")"
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(461): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(543): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(544): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23514 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(415): error:  #20: identifier "ReadAddr" is undefined
+DS3231\DS3231.c(448): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(464): error:  #268: declaration may not appear after executable statement in block
+DS3231\DS3231.c(464): warning:  #940-D: missing return statement at end of non-void function "I2C_EE_ByteRead"
+DS3231\DS3231.c(464): error:  #67: expected a "}"
+DS3231\DS3231.c(530): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(531): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(415): error:  #20: identifier "ReadAddr" is undefined
+DS3231\DS3231.c(448): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(530): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(531): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(448): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(530): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(531): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23510 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23514 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23506 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23322 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(254): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23330 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(254): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(418): error:  #20: identifier "address" is undefined
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(418): error:  #20: identifier "address" is undefined
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(254): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(254): warning:  #223-D: function "I2C_EE_ByteWrite" declared implicitly
+main.c(272): warning:  #223-D: function "I2C_EE_BufferRead" declared implicitly
+main.c(273): warning:  #223-D: function "I2C_EE_ByteRead" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(485): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(254): warning:  #69-D: integer conversion resulted in truncation
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(254): warning:  #69-D: integer conversion resulted in truncation
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23342 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(34): warning:  #940-D: missing return statement at end of non-void function "RadTemp"
+main.c(38): warning:  #223-D: function "getkey3" declared implicitly
+main.c(69): warning:  #223-D: function "read_adc" declared implicitly
+main.c(65): warning:  #550-D: variable "temp" was set but never used
+main.c(243): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(15): warning:  #177-D: variable "lm335_offset" was declared but never referenced
+main.c(16): warning:  #177-D: variable "lm335_gain" was declared but never referenced
+main.c(26): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23334 RO-data=1778 RW-data=40 ZI-data=2216  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 8 Warning(s).

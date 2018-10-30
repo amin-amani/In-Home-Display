@@ -7,7 +7,8 @@
 #define I2C1_SLAVE_ADDRESS7    0x00
 #define I2C_PageSize           16
 
-#define EEPROM_HW_ADDRESS      0x50   /* E0 = E1 = E2 = 0 */
+#define EEPROM_HW_ADDRESS      0xAE  /* E0 = E1 = E2 = 0 */
+	
 #define I2C_EE             I2C1//interface number
 
 #define DS3231_addr     0xD0 // I2C 7-bit slave address shifted for 1 bit to the left
@@ -79,6 +80,10 @@ void DS3231_ReadDate(HRF_date_TypeDef* hrf_date);
 void DS3231_DateToTimeStr(DS3231_date_TypeDef* raw_date, char *str) ;
 void DS3231_DateToDateStr(DS3231_date_TypeDef* raw_date, char *str) ;
 uint8_t DS3231_ReadTemp(void);
+void I2C_EE_ByteWrite(u8 data, uint16_t address);
+uint8_t I2C_EE_ByteRead( uint16_t address);
+void I2C_EE_BufferRead(u8* pBuffer, uint16_t address, u16 NumByteToRead);
+
 
  //=========================================================================
 void i2c_init(void);

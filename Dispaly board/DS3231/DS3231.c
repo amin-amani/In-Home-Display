@@ -1,5 +1,14 @@
 #include "ds3231.h"
-//=========================================================================================================================
+/*******************************************************************************
+* Function Name  : DS3231_ReadDateRAW
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
 char DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 	unsigned int i;
 	unsigned long int counter,countervalue=20000;
@@ -42,6 +51,16 @@ char DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 	memcpy(date,&buffer[0],7);
 	return 0;
 }
+/*******************************************************************************
+* Function Name  : DS3231_WriteDateRAW
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
 char DS3231_WriteDateRAW(DS3231_date_TypeDef* date) {
 	unsigned int i;
 	char buffer[7];
@@ -71,7 +90,16 @@ char DS3231_WriteDateRAW(DS3231_date_TypeDef* date) {
 	I2C_GenerateSTOP(I2C1,ENABLE);
 	return 0;
 }
-
+/*******************************************************************************
+* Function Name  : DS3231_ReadDate
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
 void DS3231_ReadDate(HRF_date_TypeDef* hrf_date) {
 	DS3231_date_TypeDef raw_date;
 
@@ -85,7 +113,16 @@ void DS3231_ReadDate(HRF_date_TypeDef* hrf_date) {
 	hrf_date->Year    = (raw_date.year    >> 4) * 10 + (raw_date.year    & 0x0f) + 2000;
 	hrf_date->DOW     = raw_date.day_of_week;
 }
-
+/*******************************************************************************
+* Function Name  : DS3231_DateToTimeStr
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
 void DS3231_DateToTimeStr(DS3231_date_TypeDef* raw_date, char *str) {
 	*str++ = (raw_date->hours >> 4)     + '0';
     *str++ = (raw_date->hours & 0x0f)   + '0';
@@ -97,7 +134,16 @@ void DS3231_DateToTimeStr(DS3231_date_TypeDef* raw_date, char *str) {
     *str++ = (raw_date->seconds & 0x0f) + '0';
     *str++ = 0;
 }
-
+ /*******************************************************************************
+* Function Name  : DS3231_DateToDateStr
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
 void DS3231_DateToDateStr(DS3231_date_TypeDef* raw_date, char *str) {
 	*str++ = (raw_date->date >> 4)   + '0';
     *str++ = (raw_date->date & 0x0f) + '0';
@@ -110,7 +156,16 @@ void DS3231_DateToDateStr(DS3231_date_TypeDef* raw_date, char *str) {
     *str++ = (raw_date->year & 0x0f) + '0';
     *str++ = 0;
 }
-
+ /*******************************************************************************
+* Function Name  : DS3231_ReadTemp
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
 uint8_t DS3231_ReadTemp(void) {
 	uint8_t temperature ;
 	unsigned long int counter,countervalue=20000; 
@@ -148,8 +203,16 @@ uint8_t DS3231_ReadTemp(void) {
 
 	return temperature;
 }
-
- //=========================================================================
+/*******************************************************************************
+* Function Name  : i2c_init
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
 void i2c_init(){
    I2C_InitTypeDef  I2C_InitStructure; 
   GPIO_InitTypeDef  GPIO_InitStructure; 
@@ -174,7 +237,17 @@ RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, ENABLE);
   /* Apply I2C configuration after enabling it */
   I2C_Init(I2C1, &I2C_InitStructure);
 
-}
+} 
+/*******************************************************************************
+* Function Name  : DS3231Init
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
 void DS3231Init(){
 
   
@@ -227,6 +300,16 @@ void DS3231Init(){
 	I2C_GenerateSTOP(I2C1,ENABLE);
 
 }
+/*******************************************************************************
+* Function Name  : I2C_EE_BufferRead
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
 	void I2C_Configuration(void){
 
    	   I2C_InitTypeDef  I2C_InitStructure;
@@ -244,141 +327,159 @@ void DS3231Init(){
 
 	   I2C_DeInit(I2C_EE);
 	   I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
-	   I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_16_9;
-	   I2C_InitStructure.I2C_OwnAddress1 = 1;
+	   I2C_InitStructure.I2C_DutyCycle =I2C_DutyCycle_2;// I2C_DutyCycle_16_9;
+	  // I2C_InitStructure.I2C_OwnAddress1 = 1;
 	   I2C_InitStructure.I2C_Ack = I2C_Ack_Enable;
 	   I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
-	   I2C_InitStructure.I2C_ClockSpeed = 100000;  /* 100kHz */
+	   I2C_InitStructure.I2C_ClockSpeed =400000;// 100000;  /* 100kHz */
 
 	   I2C_Cmd(I2C_EE, ENABLE);
 	   I2C_Init(I2C_EE, &I2C_InitStructure);
 	   I2C_AcknowledgeConfig(I2C_EE, ENABLE);
 
 }
+ /*******************************************************************************
+* Function Name  : I2C_EE_ByteWrite
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
 
-void I2C_EE_ByteWrite(uint8_t val, uint16_t WriteAddr){
+void I2C_EE_ByteWrite(u8 data, uint16_t address)
+{
+  /* Send STRAT condition */
+  I2C_GenerateSTART(I2C1, ENABLE);
 
+  /* Test on EV5 and clear it */
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT));  
 
-    /* Send START condition */
-    I2C_GenerateSTART(I2C_EE, ENABLE);
+  /* Send EEPROM address for write */
+  I2C_Send7bitAddress(I2C1, EEPROM_HW_ADDRESS&0xfe, I2C_Direction_Transmitter);
+  
+  /* Test on EV6 and clear it */
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
+      
+	    /* Send the EEPROM's internal address to write to */
+  I2C_SendData(I2C1,(uint8_t)((address & 0xFF00) >> 8));
+  
+  /* Test on EV8 and clear it */
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+  /* Send the EEPROM's internal address to write to */
+  I2C_SendData(I2C1,(uint8_t)(address & 0x00FF));
+  
+  /* Test on EV8 and clear it */
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
 
-    /* Test on EV5 and clear it */
-    while(!I2C_CheckEvent(I2C_EE, I2C_EVENT_MASTER_MODE_SELECT));
-
-    /* Send EEPROM address for write */
-    I2C_Send7bitAddress(I2C_EE, EEPROM_HW_ADDRESS, I2C_Direction_Transmitter);
-
-    /* Test on EV6 and clear it */
-    while(!I2C_CheckEvent(I2C_EE, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
-
-
-    /* Send the EEPROM's internal address to write to : MSB of the address first */
-    I2C_SendData(I2C_EE, (uint8_t)((WriteAddr & 0xFF00) >> 8));
-
-    /* Test on EV8 and clear it */
-    while(!I2C_CheckEvent(I2C_EE, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
-
-
-
-    /* Send the EEPROM's internal address to write to : LSB of the address */
-    I2C_SendData(I2C_EE, (uint8_t)(WriteAddr & 0x00FF));
-
-    /* Test on EV8 and clear it */
-    while(! I2C_CheckEvent(I2C_EE, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
-
-
-     I2C_SendData(I2C_EE, val);
-
-        /* Test on EV8 and clear it */
-    while (!I2C_CheckEvent(I2C_EE, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
-
-    /* Send STOP condition */
-    I2C_GenerateSTOP(I2C_EE, ENABLE);
-
-    //delay between write and read...not less 4ms
-    delay_ms(5);
+  /* Send the byte to be written */
+  I2C_SendData(I2C1, data); 
+   
+  /* Test on EV8 and clear it */
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+  
+  /* Send STOP condition */
+  I2C_GenerateSTOP(I2C1, ENABLE);
+   delay_ms(5);
 }
 
-uint8_t I2C_EE_ByteRead( uint16_t ReadAddr){
-    uint8_t tmp;
-
-	/* While the bus is busy */
-    while(I2C_GetFlagStatus(I2C_EE, I2C_FLAG_BUSY));
-
-    /* Send START condition */
-    I2C_GenerateSTART(I2C_EE, ENABLE);
-
-    /* Test on EV5 and clear it */
-    while(!I2C_CheckEvent(I2C_EE, I2C_EVENT_MASTER_MODE_SELECT));
-
-    /* Send EEPROM address for write */
-    I2C_Send7bitAddress(I2C_EE, EEPROM_HW_ADDRESS, I2C_Direction_Transmitter);
-
-    /* Test on EV6 and clear it */
-    while(!I2C_CheckEvent(I2C_EE, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
 
 
-    /* Send the EEPROM's internal address to read from: MSB of the address first */
-    I2C_SendData(I2C_EE, (uint8_t)((ReadAddr & 0xFF00) >> 8));
 
-    /* Test on EV8 and clear it */
-    while(!I2C_CheckEvent(I2C_EE, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+/*******************************************************************************
+* Function Name  : I2C_EE_BufferRead
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void I2C_EE_BufferRead(u8* pBuffer, uint16_t address, u16 NumByteToRead)
+{  
+  /* Send START condition */
+  I2C_GenerateSTART(I2C1, ENABLE);
+  
+  /* Test on EV5 and clear it */
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT));
+   
+  /* Send EEPROM address for write */
+  I2C_Send7bitAddress(I2C1, EEPROM_HW_ADDRESS, I2C_Direction_Transmitter);
 
-    /* Send the EEPROM's internal address to read from: LSB of the address */
-    I2C_SendData(I2C_EE, (uint8_t)(ReadAddr & 0x00FF));
+  /* Test on EV6 and clear it */
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
+  
+  /* Clear EV6 by setting again the PE bit */
+  I2C_Cmd(I2C1, ENABLE);
+  
+  I2C_SendData(I2C1, (uint8_t)((address & 0xFF00) >> 8));  
 
-    /* Test on EV8 and clear it */
-    while(!I2C_CheckEvent(I2C_EE, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+  /* Send the EEPROM's internal address to write to */
+  I2C_SendData(I2C1,(uint8_t)(address & 0x00FF));  
 
-
-    /* Send STRAT condition a second time */
-    I2C_GenerateSTART(I2C_EE, ENABLE);
-
-    /* Test on EV5 and clear it */
-    while(!I2C_CheckEvent(I2C_EE, I2C_EVENT_MASTER_MODE_SELECT));
-
-    /* Send EEPROM address for read */
-    I2C_Send7bitAddress(I2C_EE, EEPROM_HW_ADDRESS, I2C_Direction_Receiver);
-
-    /* Test on EV6 and clear it */
-    while(!I2C_CheckEvent(I2C_EE,I2C_EVENT_MASTER_BYTE_RECEIVED));//I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
-
-    tmp=I2C_ReceiveData(I2C_EE);
-
-
-    I2C_AcknowledgeConfig(I2C_EE, DISABLE);
-
-    /* Send STOP Condition */
-    I2C_GenerateSTOP(I2C_EE, ENABLE);
-
-    return tmp;
+  /* Test on EV8 and clear it */
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+  
+  /* Send STRAT condition a second time */  
+  I2C_GenerateSTART(I2C1, ENABLE);
+  
+  /* Test on EV5 and clear it */
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT));
+  
+  /* Send EEPROM address for read */
+  I2C_Send7bitAddress(I2C1, EEPROM_HW_ADDRESS, I2C_Direction_Receiver);
+  
+  /* Test on EV6 and clear it */
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
+  
+  /* While there is data to be read */
+  while(NumByteToRead)  
+  {
+    if(NumByteToRead == 1)
+    {
+      /* Disable Acknowledgement */
+      I2C_AcknowledgeConfig(I2C1, DISABLE);
+      
+      /* Send STOP Condition */
+      I2C_GenerateSTOP(I2C1, ENABLE);
     }
 
+    /* Test on EV7 and clear it */
+    if(I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_RECEIVED))  
+    {      
+      /* Read a byte from the EEPROM */
+      *pBuffer = I2C_ReceiveData(I2C1);
 
-uint16_t I2C_EE_16bit_read(uint16_t readaddr){
+      /* Point to the next location where the byte read will be saved */
+      pBuffer++; 
+      
+      /* Decrement the read bytes counter */
+      NumByteToRead--;        
+    }   
+  }
 
-    uint8_t part1,part2;
-    uint16_t i;
-
-    part1=I2C_EE_ByteRead(readaddr);
-     part2=I2C_EE_ByteRead(readaddr+1);
-
-
-     i=part1<<8;
-     i=i+part2;
-
-     return i;
+  /* Enable Acknowledgement to be ready for another reception */
+  I2C_AcknowledgeConfig(I2C1, ENABLE);
+  delay_ms(5);
 }
+/*******************************************************************************
+* Function Name  : I2C_EE_ByteRead
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+uint8_t I2C_EE_ByteRead( uint16_t address){
 
-void I2C_EE_16bit_write(uint16_t val,uint16_t writeaddr){
+uint8_t temp=0xff;					
+I2C_EE_BufferRead(&temp,address,1);
+return temp;
 
-    uint8_t part1,part2;
-
-    part1=val >>8;
-    part2=val & 0xFF;
-
-
-    I2C_EE_ByteWrite(part1,writeaddr);
-     I2C_EE_ByteWrite(part2,writeaddr+1);
-
-}
+    }

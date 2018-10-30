@@ -20,7 +20,7 @@ int UsartBuffIndex=0;
 float InputCurrent=0,InputVoltage=0;
 int i;
 HRF_date_TypeDef CurrentDate;
-
+u8 Rx1_Buffer[10];
 
 // Tile bitmap
 static const uint8_t bmp_tile[] = {
@@ -80,6 +80,7 @@ static unsigned long int roundRobinLcd=0;
 	
 	SSD1306_Flush();
 	roundRobinLcd=0;
+	send_string("test\n");
 
   
 }
@@ -168,29 +169,30 @@ lockCount=0;
 int main(){
 //float t,h;
 stm32_Init();
-jtag_Disable();
-RGBInit();
+//jtag_Disable();
+//RGBInit();
 send_string("hello\n");
-SSD1306_InitGPIO();
- adc_init(1);
-DS3231Init();
+
+//SSD1306_InitGPIO();
+ //adc_init(1);
+//DS3231Init();
 
 
 	// Initialize display
-	SSD1306_InitGPIO();
-	SSD1306_Init();
+	//SSD1306_InitGPIO();
+	//SSD1306_Init();
 
 	// Screen orientation normal (FPC cable at the bottom)
-	SSD1306_Orientation(LCD_ORIENT_NORMAL);
+	//SSD1306_Orientation(LCD_ORIENT_NORMAL);
 
 	// Mid level contrast
-		SSD1306_Contrast(127);
+	//	SSD1306_Contrast(127);
 
 
 	// Now do some drawing
 
 	// Clear video buffer
-	SSD1306_Fill(0x00);
+	//SSD1306_Fill(0x00);
 
 	// Drawing mode: set pixels
 //	LCD_PixelMode = LCD_PSET;
@@ -238,23 +240,39 @@ DS3231Init();
 //	    CurrentDate.month=10;
 //	    CurrentDate.year=18;
 //		DS3231_WriteDateRAW(&CurrentDate);
-//I2C_Configuration();
+I2C_Configuration();
 //send_string("itc init ok\n");
 //I2C_EE_ByteWrite(0x01,175);
 //I2C_EE_ByteWrite(0x02,178);
-//send_string("i2c write ok\n");
- 
+
+//for(i=0;i<10;i++){
+
+//void I2C_EE_ByteWrite(u8 pBuffer, u8 WriteAddr)
+
+//}
+send_string("i2c init ok\n");
+//I2C_EE_ByteWrite(177,4095);
+ for(i=0;i<10;i++){
+ //I2C_EE_ByteWrite(i+40,i);
+Rx1_Buffer[i]=0;
+}
+//I2C_EE_ByteWrite(Rx1_Buffer,i+1);
+//} 
 while(1){
 //	DS3231_ReadDate(&CurrentDate);
 //	sprintf(temp_main,"%d %d %d\n",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds) ;
 //	delay_ms(300);
 //	send_string(temp_main);
-	   			DisplayValues(200);
-				 CheckKeyPad();
+	   			//DisplayValues(200);
+				 //CheckKeyPad();
 	//	sprintf(temp_main,"D0=%d D1=%d\n",InputCurrent,InputVoltage) ;
 	//SetRGB(0,1,0);
-//	delay_ms(300);
-//	send_string(temp_main);
+	delay_ms(300);
+	 //void I2C_EE_BufferRead(u8* pBuffer, u8 ReadAddr, u16 NumByteToRead);
+	 I2C_EE_BufferRead(Rx1_Buffer, 0, 2); 
+sprintf(temp_main,"D0=%d %d %d\n",Rx1_Buffer[0],Rx1_Buffer[1],I2C_EE_ByteRead(4095)) ;
+//sprintf(temp_main,"D0=%d \n",I2C_EE_ByteRead(0)) ;
+	send_string(temp_main);
 
 		
 
