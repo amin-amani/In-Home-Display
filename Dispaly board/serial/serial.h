@@ -11,6 +11,7 @@ int sendchar (int ch);
 int getkey (void);
 int sendchar2 (int ch);
 int getkey2 (void);
+int getkey3 (void);
 void jtag_Disable(void);
 void send_static_string(const char *str);
 void send_static_string2(const char *str);

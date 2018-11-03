@@ -2187,7 +2187,7 @@
 #define __USART_SETUP             1                       //  0
 #define __USART_USED              0x05                    //  1
 #define __USART_DETAILS           0x00					  //  2
-#define __USART_INTERRUPTS        0x06					  //  3
+#define __USART_INTERRUPTS        0x07					  //  3
 #define __USART1_BAUDRATE         115200					  //  4
 #define __USART1_DATABITS         0x00000000
 #define __USART1_STOPBITS         0x00000000

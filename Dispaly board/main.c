@@ -11,14 +11,22 @@
 #include "SSD1306//font7X10.h"
 #include "SSD1306//font5X7.h"
 #include "eeprom//memory.h"
+#include "commandline//commandline.h"
 
 #include "ds3231//ds3231.h"
+#define USART1_BUFFER_SIZE 40
 
-static const float lm335_offset = 559; // change this!
-static const float lm335_gain = 2.048;
-char UsartBuff[20];
+char Usart1Buff[USART1_BUFFER_SIZE];
+int Usart1BuffIndex=0;
+
+
+char Usart3Buff[20];
+int Usart3BuffIndex=0;
+
+
+
 char temp_main[30];
-int UsartBuffIndex=0;
+
 float InputCurrent=0,InputVoltage=0;
 int i;
 HRF_date_TypeDef CurrentDate;
@@ -33,23 +41,41 @@ static const uint8_t bmp_tile[] = {
 };
 int RadTemp()
 { 
+return 0;
+}
+void USART1_IRQHandler()
+{
+   char ch=getkey();
+	   
+Usart1Buff[Usart1BuffIndex]=ch;
+Usart1BuffIndex++;
+Usart1Buff[Usart1BuffIndex]=0;
+
+if(ch==10)
+{
+//  send_string(Usart1Buff);
+  CommandlineHandle(Usart1Buff);
+  Usart1BuffIndex=0;
+  Usart1Buff[0]=0;
+}
+if(Usart1BuffIndex>USART1_BUFFER_SIZE)Usart1BuffIndex=0;				
+
 }
 
 void USART3_IRQHandler()
 {
 char ch=getkey3();
 
-UsartBuff[UsartBuffIndex]=ch;
-UsartBuffIndex++;
-UsartBuff[UsartBuffIndex]=0;
+Usart3Buff[Usart3BuffIndex]=ch;
+Usart3BuffIndex++;
+Usart3Buff[Usart3BuffIndex]=0;
 if(ch==10)
 {
-send_string(UsartBuff) ;
-
- sscanf(UsartBuff,"%f %f",&InputCurrent,&InputVoltage) ;
- if(InputCurrent<0.1)InputCurrent=0;
- UsartBuff[0]=0;
-     UsartBuffIndex=0;
+send_string(Usart3Buff) ;
+sscanf(Usart3Buff,"%f %f",&InputCurrent,&InputVoltage) ;
+if(InputCurrent<0.1)InputCurrent=0;
+ Usart3Buff[0]=0;
+     Usart3BuffIndex=0;
 }
 //sendchar(ch);
 //if(ch=='I')iFlag=1;
@@ -68,7 +94,7 @@ float temp;
 static unsigned long int roundRobinLcd=0;
  if(roundRobinLcd++>refereshTime)
  {
-	temp=read_adc();
+
 	SSD1306_Fill(0x00);
 	DS3231_ReadDate(&CurrentDate);
 	sprintf(temp_main,"Time %2d:%2d:%2d",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
@@ -164,8 +190,85 @@ lockCount=0;
 
 }
 
+ ////////////////////////////////////////////////////////////////////////Commandline Functions
+ //=================================================================================
+ void Ping(char*par)
+ {
+ send_string("ping\n");
+ 
+ }
+ //=================================================================================
 
+ //=================================================================================
+ void GetInfo(char*par)
+ {
+ send_string("GetInfo\n");
 
+ }
+ //=================================================================================
+ void GetOnlineParameters(char*par)
+ {
+send_string("GetOnlineParameters\n"); 
+
+ }
+ //=================================================================================
+ void GetDate(char*par)
+ {
+send_string("GetDate\n"); 
+ }
+ //=================================================================================
+ void SetDate(char*par)
+ {
+send_string("SetDate\n"); 
+ }
+ //=================================================================================
+ void GetTime(char*par)
+ {
+ send_string("GetTime\n");
+ }
+ //=================================================================================
+ void SetTime(char*par)
+ {
+send_string("SetTime\n"); 
+ }
+ //=================================================================================
+ void GetPeackTime(char*par)
+ {
+ send_string("GetPeackTime\n");
+ }
+ //=================================================================================
+ void SetPeakTime(char*par)
+ {
+ send_string("SetPeakTime\n");
+ }
+ //=================================================================================
+ void GetConsumePattern(char*par)
+ {
+ send_string("GetConsumePattern\n");
+ }
+ //=================================================================================
+ void SetConsumePattern(char*par)
+ {
+ send_string("SetConsumePattern\n");
+ }
+ //=================================================================================
+ void GetLedBarLevels(char*par)
+ {
+ send_string("GetLedBarLevels\n");
+ }
+ //=================================================================================
+ void SetLedBarLevels(char*par)
+ {
+ send_string("set bar\n");
+ }
+ //=================================================================================
+ void ReadMemory(char*par)
+ {
+
+ send_string("read mem\n");
+ }
+ //=================================================================================
+ ////////////////////////////////////////////////////////////////////////Commandline Functions
 //uint8_t LCD_PixelMode = LCD_PSET;
 //=========================================================================================================================
 int main(){
@@ -176,7 +279,7 @@ stm32_Init();
 //jtag_Disable();
 //RGBInit();
 send_string("hello\n");
- 
+ while(1){}
   
 //SSD1306_InitGPIO();
  //adc_init(1);

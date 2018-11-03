@@ -558,6 +558,21 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>CommandLine</GroupName>
+          <Files>
+            <File>
+              <FileName>commandline.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\commandline\commandline.c</FilePath>
+            </File>
+            <File>
+              <FileName>commandline.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\commandline\commandline.h</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>

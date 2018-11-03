@@ -41,4 +41,5 @@ main.o: SSD1306//SSD1306.h
 main.o: eeprom//memory.h
 main.o: C:\Keil\ARM\RV31\INC\stdbool.h
 main.o: eeprom//eeprom.h
+main.o: commandline//commandline.h
 main.o: ds3231//ds3231.h
