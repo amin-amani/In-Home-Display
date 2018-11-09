@@ -16,15 +16,16 @@
 ### List of Objects: adding '"ssd1306.o"'
 ### List of Objects: adding '"ds3231.o"'
 ### List of Objects: adding '"commandline.o"'
+### List of Objects: adding '"log.o"'
 ### ADS-LD Command completed:
---cpu Cortex-M3 ".\FS_CM3.lib" "stm32_init.o" "stm32f10x.o" ".\STM32F10xR.LIB" "main.o" "systeminit.o" "serial.o" "delay.o" "lib_crc.o" "adc.o" "eeprom.o" "memory.o" "ssd1306.o" "ds3231.o" "commandline.o" --strict --scatter "template.sct" 
+--cpu Cortex-M3 ".\FS_CM3.lib" "stm32_init.o" "stm32f10x.o" ".\STM32F10xR.LIB" "main.o" "systeminit.o" "serial.o" "delay.o" "lib_crc.o" "adc.o" "eeprom.o" "memory.o" "ssd1306.o" "ds3231.o" "commandline.o" "log.o" --strict --scatter "template.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\template.map" -o "template.axf"### Preparing Environment (PrepEnvAds)
 ### ADS-LD Output File: 'template.axf'
 ### ADS-LD Command File: 'template.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'template.lnp', Handle=0x000001DC
+### Creating CmdFile 'template.lnp', Handle=0x000005BC
 ### Writing '.lnp' file
 ### ADS-LD Command file 'template.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

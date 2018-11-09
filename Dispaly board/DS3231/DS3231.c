@@ -13,13 +13,13 @@
 bool DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 	unsigned int i;
 		int timeout=0;
-	unsigned long int counter,countervalue=20000;
+	
 	unsigned char buffer[7];
 	
 	I2C_AcknowledgeConfig(I2C1,ENABLE); // Enable I2C acknowledge
 
 	I2C_GenerateSTART(I2C1,ENABLE); // Send START condition
-	counter=countervalue;
+
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){
 
   delay_ms(1);
@@ -28,7 +28,7 @@ bool DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 	} // Wait for EV5
 
 	I2C_Send7bitAddress(I2C1,DS3231_addr,I2C_Direction_Transmitter); // Send DS3231 slave address
-	counter=countervalue;
+	
 		 timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)){
 	  delay_ms(1);
@@ -38,7 +38,7 @@ bool DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 	} // Wait for EV6
 
 	I2C_SendData(I2C1,DS3231_seconds); // Send DS3231 seconds register address
-	counter=countervalue;
+	
 	 timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)){
 	  delay_ms(1);
@@ -47,7 +47,7 @@ bool DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 	} // Wait for EV8
 
 	I2C_GenerateSTART(I2C1,ENABLE); // Send repeated START condition (aka Re-START)
-	counter=countervalue;
+	
 		 timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){
 	  delay_ms(1);
@@ -56,7 +56,7 @@ bool DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 	} // Wait for EV5
 
 	I2C_Send7bitAddress(I2C1,DS3231_addr,I2C_Direction_Receiver); // Send DS3231 slave address for READ
-	counter=countervalue;
+	
 		 timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)){
 	  delay_ms(1);
@@ -65,7 +65,7 @@ bool DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 	} // Wait for EV6
 
 	for (i = 0; i < 6; i++) {
-	    counter=countervalue;
+	    
 			 timeout=0;
 		while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){
 		  delay_us(1);
@@ -77,7 +77,7 @@ bool DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 
 	I2C_AcknowledgeConfig(I2C1,DISABLE); // Disable I2C acknowledgement
 	I2C_GenerateSTOP(I2C1,ENABLE); // Send STOP condition
-    counter=countervalue; 
+     
 		 timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){
 			  delay_us(1);
@@ -275,7 +275,7 @@ uint8_t DS3231_ReadTemp(void) {
 	I2C_GenerateSTART(I2C1,ENABLE); // Send START condition
 	timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){
-	delay_ms(1);
+	delay_us(1);
   timeout++;
   if(timeout>500)return 0;
 
@@ -284,7 +284,7 @@ uint8_t DS3231_ReadTemp(void) {
 	I2C_Send7bitAddress(I2C1,DS3231_addr,I2C_Direction_Transmitter); // Send DS3231 slave address
 	timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)){
-	delay_ms(1);
+	delay_us(1);
   timeout++;
   if(timeout>500)return 0;
 
@@ -294,7 +294,7 @@ uint8_t DS3231_ReadTemp(void) {
 	I2C_SendData(I2C1,DS3231_tmp_MSB); // Send DS3231 temperature MSB register address
 	timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)){
-	delay_ms(1);
+	delay_us(1);
   timeout++;
   if(timeout>500)return 0;
 
@@ -303,7 +303,7 @@ uint8_t DS3231_ReadTemp(void) {
 	I2C_GenerateSTART(I2C1,ENABLE); // Send repeated START condition (aka Re-START)
 	timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){
-	delay_ms(1);
+	delay_us(1);
   timeout++;
   if(timeout>500)return 0;
 
@@ -312,7 +312,7 @@ uint8_t DS3231_ReadTemp(void) {
 	I2C_Send7bitAddress(I2C1,DS3231_addr,I2C_Direction_Receiver); // Send DS3231 slave address for READ
 	timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)){
-	delay_ms(1);
+	delay_us(1);
   timeout++;
   if(timeout>500)return 0;
 
@@ -320,7 +320,7 @@ uint8_t DS3231_ReadTemp(void) {
 
 	timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){
-	delay_ms(1);
+	delay_us(1);
   timeout++;
   if(timeout>500)return 0;
 
@@ -332,7 +332,7 @@ uint8_t DS3231_ReadTemp(void) {
 	I2C_GenerateSTOP(I2C1,ENABLE); // Send STOP condition
 	timeout=0;
 	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){
-	delay_ms(1);
+	delay_us(1);
   timeout++;
   if(timeout>500)return 0;
 

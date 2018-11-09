@@ -231,8 +231,11 @@ send_string("SetDate\n");
 	//uint8_t  DOW;
  send_string("GetTime\n");
  	if(DS3231_ReadDate(&CurrentDate)){
-	sprintf(temp_main,"%d-%d-%d -%d- %2d:%2d:%2d",CurrentDate.Year,CurrentDate.Month,CurrentDate.Day,CurrentDate.DOW,CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
-	send_string(temp_main);			  }
+	sprintf(temp_main,"%d-%d-%d -%d- %2d:%2d:%2d T=%d C",CurrentDate.Year,CurrentDate.Month,CurrentDate.Day,CurrentDate.DOW,CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds,DS3231_ReadTemp());
+	send_string(temp_main);			  
+	
+	
+	}
 	else{
 	send_string("error!");			
 	  

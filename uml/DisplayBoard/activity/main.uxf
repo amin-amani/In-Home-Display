@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
   <help_text/>
-  <zoom_level>7</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>364</x>
-      <y>798</y>
-      <w>21</w>
-      <h>63</h>
+      <x>416</x>
+      <y>912</y>
+      <w>24</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -16,10 +16,10 @@
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>364</x>
-      <y>791</y>
-      <w>14</w>
-      <h>14</h>
+      <x>416</x>
+      <y>904</y>
+      <w>16</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -27,10 +27,10 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>308</x>
-      <y>847</y>
-      <w>126</w>
-      <h>42</h>
+      <x>352</x>
+      <y>968</y>
+      <w>144</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>display
 voltage current
@@ -42,9 +42,9 @@ bg=blue</panel_attributes>
     <id>UMLState</id>
     <coordinates>
       <x>0</x>
-      <y>406</y>
-      <w>91</w>
-      <h>28</h>
+      <y>464</y>
+      <w>104</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>wifi serial
 data received
@@ -55,10 +55,10 @@ type=sender</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>553</x>
-      <y>938</y>
-      <w>154</w>
-      <h>28</h>
+      <x>632</x>
+      <y>1072</y>
+      <w>176</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>update current (V-I)
 metering parameters
@@ -68,10 +68,10 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>553</x>
-      <y>805</y>
-      <w>91</w>
-      <h>77</h>
+      <x>632</x>
+      <y>920</y>
+      <w>104</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>110.0;90.0;110.0;10.0;10.0;10.0</additional_attributes>
@@ -79,10 +79,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>616</x>
-      <y>868</y>
-      <w>28</w>
-      <h>28</h>
+      <x>704</x>
+      <y>992</y>
+      <w>32</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>bg=green
 type=decision</panel_attributes>
@@ -91,10 +91,10 @@ type=decision</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>623</x>
-      <y>889</y>
-      <w>49</w>
-      <h>63</h>
+      <x>712</x>
+      <y>1016</y>
+      <w>56</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m2=is valid</panel_attributes>
@@ -103,10 +103,10 @@ m2=is valid</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>798</y>
-      <w>84</w>
-      <h>105</h>
+      <x>160</x>
+      <y>912</y>
+      <w>96</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>100.0;130.0;100.0;10.0;10.0;10.0</additional_attributes>
@@ -114,10 +114,10 @@ m2=is valid</panel_attributes>
   <element>
     <id>UMLTimer</id>
     <coordinates>
-      <x>112</x>
-      <y>791</y>
-      <w>70</w>
-      <h>56</h>
+      <x>128</x>
+      <y>904</y>
+      <w>80</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Timer(dt = 1s)
 bg=black</panel_attributes>
@@ -126,10 +126,10 @@ bg=black</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>168</x>
-      <y>889</y>
-      <w>84</w>
-      <h>28</h>
+      <x>192</x>
+      <y>1016</y>
+      <w>96</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>E+=V*I*dt
 bg=red</panel_attributes>
@@ -138,10 +138,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>196</x>
-      <y>1015</y>
-      <w>28</w>
-      <h>28</h>
+      <x>224</x>
+      <y>1160</y>
+      <w>32</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>bg=green
 type=decision</panel_attributes>
@@ -150,10 +150,10 @@ type=decision</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>203</x>
-      <y>973</y>
-      <w>21</w>
-      <h>56</h>
+      <x>232</x>
+      <y>1112</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -162,10 +162,10 @@ type=decision</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>168</x>
-      <y>952</y>
-      <w>84</w>
-      <h>28</h>
+      <x>192</x>
+      <y>1088</y>
+      <w>96</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>get current time
 bg=blue</panel_attributes>
@@ -174,10 +174,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>203</x>
-      <y>910</y>
-      <w>21</w>
-      <h>56</h>
+      <x>232</x>
+      <y>1040</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -186,10 +186,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>203</x>
-      <y>1036</y>
-      <w>119</w>
-      <h>63</h>
+      <x>232</x>
+      <y>1184</y>
+      <w>136</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m2=is log time(every hour)</panel_attributes>
@@ -198,10 +198,10 @@ m2=is log time(every hour)</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>168</x>
-      <y>1169</y>
-      <w>84</w>
-      <h>28</h>
+      <x>192</x>
+      <y>1336</y>
+      <w>96</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>save to eeprom
 bg=green</panel_attributes>
@@ -210,10 +210,10 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>203</x>
-      <y>1190</y>
-      <w>21</w>
-      <h>63</h>
+      <x>232</x>
+      <y>1360</y>
+      <w>24</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -222,10 +222,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>175</x>
-      <y>1239</y>
-      <w>84</w>
-      <h>42</h>
+      <x>200</x>
+      <y>1416</y>
+      <w>96</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>update last 
 save address
@@ -236,10 +236,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>469</x>
-      <y>798</y>
-      <w>91</w>
-      <h>28</h>
+      <x>536</x>
+      <y>912</y>
+      <w>104</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>meter serial
 data received
@@ -250,10 +250,10 @@ type=sender</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>147</x>
-      <y>476</y>
-      <w>28</w>
-      <h>28</h>
+      <x>168</x>
+      <y>544</y>
+      <w>32</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>bg=green
 type=decision</panel_attributes>
@@ -262,10 +262,10 @@ type=decision</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>84</x>
-      <y>413</y>
-      <w>91</w>
-      <h>77</h>
+      <x>96</x>
+      <y>472</y>
+      <w>104</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>110.0;90.0;110.0;10.0;10.0;10.0</additional_attributes>
@@ -273,10 +273,10 @@ type=decision</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>154</x>
-      <y>497</y>
-      <w>49</w>
-      <h>63</h>
+      <x>176</x>
+      <y>568</y>
+      <w>56</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m2=is valid</panel_attributes>
@@ -285,10 +285,10 @@ m2=is valid</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>126</x>
-      <y>546</y>
-      <w>70</w>
-      <h>28</h>
+      <x>144</x>
+      <y>624</y>
+      <w>80</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>Command
 handler
@@ -298,10 +298,10 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>623</x>
-      <y>959</y>
-      <w>21</w>
-      <h>63</h>
+      <x>712</x>
+      <y>1096</y>
+      <w>24</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -310,10 +310,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>553</x>
-      <y>1008</y>
-      <w>154</w>
-      <h>28</h>
+      <x>632</x>
+      <y>1152</y>
+      <w>176</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>send via wifi?
 bg=red</panel_attributes>
@@ -322,10 +322,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>98</x>
-      <y>616</y>
-      <w>140</w>
-      <h>98</h>
+      <x>112</x>
+      <y>704</y>
+      <w>160</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Commands
 set/get date and clock
@@ -339,10 +339,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>364</x>
-      <y>882</y>
-      <w>21</w>
-      <h>63</h>
+      <x>416</x>
+      <y>1008</y>
+      <w>24</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -350,10 +350,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>329</x>
-      <y>931</y>
-      <w>84</w>
-      <h>28</h>
+      <x>376</x>
+      <y>1064</y>
+      <w>96</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>update led bar
 bg=orange</panel_attributes>
@@ -362,10 +362,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>168</x>
-      <y>1085</y>
-      <w>84</w>
-      <h>56</h>
+      <x>192</x>
+      <y>1240</y>
+      <w>96</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>get best eeprom 
 address to save
@@ -377,10 +377,10 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>203</x>
-      <y>1134</y>
-      <w>21</w>
-      <h>49</h>
+      <x>232</x>
+      <y>1296</y>
+      <w>24</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -389,10 +389,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>329</x>
-      <y>1001</y>
-      <w>84</w>
-      <h>28</h>
+      <x>376</x>
+      <y>1144</y>
+      <w>96</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>Check Keys
 bg=pink</panel_attributes>
@@ -401,10 +401,10 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>364</x>
-      <y>952</y>
-      <w>21</w>
-      <h>63</h>
+      <x>416</x>
+      <y>1088</y>
+      <w>24</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -412,10 +412,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>539</x>
-      <y>693</y>
-      <w>266</w>
-      <h>84</h>
+      <x>616</x>
+      <y>792</y>
+      <w>304</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Save parameters
 Year  Mon   day  hour   min  Energy Temp crc
@@ -428,10 +428,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>504</x>
-      <y>49</y>
-      <w>91</w>
-      <h>28</h>
+      <x>576</x>
+      <y>56</y>
+      <w>104</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>ReadMemory
 bg=yellow
@@ -441,10 +441,10 @@ type=sender</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>588</x>
-      <y>56</y>
-      <w>91</w>
-      <h>56</h>
+      <x>672</x>
+      <y>64</y>
+      <w>104</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>110.0;60.0;110.0;10.0;10.0;10.0</additional_attributes>
@@ -452,10 +452,10 @@ type=sender</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>630</x>
-      <y>154</y>
-      <w>84</w>
-      <h>28</h>
+      <x>720</x>
+      <y>176</y>
+      <w>96</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>EEPROM Read
 bg=red</panel_attributes>
@@ -464,10 +464,10 @@ bg=red</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>651</x>
-      <y>217</y>
-      <w>28</w>
-      <h>28</h>
+      <x>744</x>
+      <y>248</y>
+      <w>32</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>bg=green
 type=decision</panel_attributes>
@@ -476,10 +476,10 @@ type=decision</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>658</x>
-      <y>175</y>
-      <w>21</w>
-      <h>56</h>
+      <x>752</x>
+      <y>200</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -488,10 +488,10 @@ type=decision</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>224</y>
-      <w>98</w>
-      <h>84</h>
+      <x>768</x>
+      <y>256</y>
+      <w>112</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m2=error</panel_attributes>
@@ -500,10 +500,10 @@ m2=error</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>581</x>
-      <y>224</y>
-      <w>84</w>
-      <h>77</h>
+      <x>664</x>
+      <y>256</y>
+      <w>96</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m2=ok</panel_attributes>
@@ -512,10 +512,10 @@ m2=ok</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>546</x>
-      <y>287</y>
-      <w>84</w>
-      <h>28</h>
+      <x>624</x>
+      <y>328</y>
+      <w>96</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>send serial
 bg=cyan</panel_attributes>
@@ -524,10 +524,10 @@ bg=cyan</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>651</x>
-      <y>98</y>
-      <w>28</w>
-      <h>28</h>
+      <x>744</x>
+      <y>112</y>
+      <w>32</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>bg=green
 type=decision</panel_attributes>
@@ -536,10 +536,10 @@ type=decision</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>105</y>
-      <w>161</w>
-      <h>280</h>
+      <x>576</x>
+      <y>120</y>
+      <w>184</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m2=data exits</panel_attributes>
@@ -548,10 +548,10 @@ m2=data exits</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>574</x>
-      <y>350</y>
-      <w>28</w>
-      <h>28</h>
+      <x>656</x>
+      <y>400</y>
+      <w>32</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>bg=green
 type=decision</panel_attributes>
@@ -560,10 +560,10 @@ type=decision</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>658</x>
-      <y>119</y>
-      <w>21</w>
-      <h>49</h>
+      <x>752</x>
+      <y>136</y>
+      <w>24</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -572,10 +572,10 @@ type=decision</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>581</x>
-      <y>308</y>
-      <w>21</w>
-      <h>56</h>
+      <x>664</x>
+      <y>352</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -584,10 +584,10 @@ type=decision</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>595</x>
-      <y>357</y>
-      <w>98</w>
-      <h>84</h>
+      <x>680</x>
+      <y>408</y>
+      <w>112</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m2=end</panel_attributes>
@@ -596,10 +596,10 @@ m2=end</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>714</x>
-      <y>294</y>
-      <w>84</w>
-      <h>28</h>
+      <x>816</x>
+      <y>336</y>
+      <w>96</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>send "error"
 bg=orange</panel_attributes>
@@ -608,10 +608,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>637</x>
-      <y>427</y>
-      <w>84</w>
-      <h>28</h>
+      <x>728</x>
+      <y>488</y>
+      <w>96</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>send crc32
 bg=orange</panel_attributes>
@@ -620,10 +620,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>455</x>
+      <x>520</x>
       <y>0</y>
-      <w>378</w>
-      <h>532</h>
+      <w>432</w>
+      <h>608</h>
     </coordinates>
     <panel_attributes>Read memory
 valign=top</panel_attributes>
@@ -632,10 +632,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>672</x>
-      <y>483</y>
-      <w>14</w>
-      <h>14</h>
+      <x>768</x>
+      <y>552</y>
+      <w>16</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>type=final</panel_attributes>
     <additional_attributes/>
@@ -643,10 +643,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>756</x>
-      <y>315</y>
-      <w>21</w>
-      <h>56</h>
+      <x>864</x>
+      <y>360</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -655,10 +655,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>448</y>
-      <w>21</w>
-      <h>49</h>
+      <x>768</x>
+      <y>512</y>
+      <w>24</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -667,10 +667,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>756</x>
-      <y>357</y>
-      <w>14</w>
-      <h>14</h>
+      <x>864</x>
+      <y>408</y>
+      <w>16</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>type=final</panel_attributes>
     <additional_attributes/>
