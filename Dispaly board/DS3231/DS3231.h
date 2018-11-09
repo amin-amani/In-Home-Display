@@ -1,6 +1,7 @@
 #ifndef _DS3231_H
 #define _DS3231_H
  #include <stm32f10x_lib.h>
+ #include "..//delay//delay.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
@@ -82,8 +83,9 @@ void DS3231_DateToTimeStr(DS3231_date_TypeDef* raw_date, char *str) ;
 void DS3231_DateToDateStr(DS3231_date_TypeDef* raw_date, char *str) ;
 uint8_t DS3231_ReadTemp(void);
 void I2C_EE_ByteWrite(u8 data, uint16_t address);
-uint8_t I2C_EE_ByteRead( uint16_t address);
-void I2C_EE_BufferRead(u8* pBuffer, uint16_t address, u16 NumByteToRead);
+//uint8_t I2C_EE_ByteRead( uint16_t address);
+bool I2C_EE_ByteRead( uint16_t address,uint8_t* data);
+bool I2C_EE_BufferRead(u8* pBuffer, uint16_t address, u16 NumByteToRead);
 
 
  //=========================================================================

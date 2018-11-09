@@ -12,6 +12,7 @@
 #include "SSD1306//font5X7.h"
 #include "eeprom//memory.h"
 #include "commandline//commandline.h"
+#include "CRC//lib_crc.h"
 
 #include "ds3231//ds3231.h"
 #define USART1_BUFFER_SIZE 40
@@ -264,8 +265,31 @@ send_string("SetTime\n");
  //=================================================================================
  void ReadMemory(char*par)
  {
+ uint8_t data=0;
+ int i=0;
+ unsigned long crc=0xffffffff;
+send_string("read mem\n");
 
- send_string("read mem\n");
+ for(i=0;i<4096;i++)
+ {
+  if(I2C_EE_ByteRead(i,&data)==0)
+{
+send_string("ReadError\n");
+return;
+}
+crc=update_crc_32(data,crc);
+sendchar(data);
+
+
+ }
+ if(i==4096){
+   sprintf(temp_main,"OK %X",crc);
+   send_string(temp_main);
+ }
+ else{
+   send_string("error");
+ }
+ 
  }
  //=================================================================================
  ////////////////////////////////////////////////////////////////////////Commandline Functions
@@ -277,7 +301,9 @@ int main(){
   
 stm32_Init();
 //jtag_Disable();
-//RGBInit();
+//RGBInit(); 
+DS3231Init();
+//I2C_Configuration();
 send_string("hello\n");
  while(1){}
   
@@ -358,7 +384,7 @@ I2C_Configuration();
 //void I2C_EE_ByteWrite(u8 pBuffer, u8 WriteAddr)
 
 //}
-send_string("i2c init ok\n");
+send_string("i2c init ok\n");	  //384ye68
 //I2C_EE_ByteWrite(177,4095);
  for(i=0;i<10;i++){
  //I2C_EE_ByteWrite(i+40,i);
@@ -378,9 +404,9 @@ while(1){
 	delay_ms(300);
 	 //void I2C_EE_BufferRead(u8* pBuffer, u8 ReadAddr, u16 NumByteToRead);
 	 I2C_EE_BufferRead(Rx1_Buffer, 0, 2); 
-sprintf(temp_main,"D0=%d %d %d\n",Rx1_Buffer[0],Rx1_Buffer[1],I2C_EE_ByteRead(4095)) ;
+//sprintf(temp_main,"D0=%d %d %d\n",Rx1_Buffer[0],Rx1_Buffer[1],I2C_EE_ByteRead(4095)) ;
 //sprintf(temp_main,"D0=%d \n",I2C_EE_ByteRead(0)) ;
-	send_string(temp_main);
+//	send_string(temp_main);
 
 		
 

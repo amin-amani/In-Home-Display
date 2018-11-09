@@ -10,337 +10,402 @@ Project File Date:  11/01/2018
 Build target 'Target 1'
 compiling main.c...
 main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(274): warning:  #111-D: statement is unreachable
-main.c(274): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(351): warning:  #111-D: statement is unreachable
+main.c(351): warning:  #223-D: function "I2C_Configuration" declared implicitly
 main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=22446 RO-data=1778 RW-data=44 ZI-data=2260  
+Program Size: Code=23434 RO-data=2282 RW-data=48 ZI-data=2256  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 4 Warning(s).
 Build target 'Target 1'
 compiling main.c...
 main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(274): warning:  #111-D: statement is unreachable
-main.c(274): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(356): warning:  #111-D: statement is unreachable
+main.c(356): warning:  #223-D: function "I2C_Configuration" declared implicitly
 main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23074 RO-data=1886 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(468): warning:  #940-D: missing return statement at end of non-void function "I2C_EE_BufferRead"
+DS3231\DS3231.c(496): error:  #247: function "I2C_EE_ByteRead" has already been defined
+DS3231\DS3231.c(502): warning:  #1-D: last line of file ends without a newline
+Target not created
 Build target 'Target 1'
-compiling commandline.c...
-commandline\commandline.c(60): warning:  #128-D: loop is not reachable from preceding code
-linking...
-Program Size: Code=22998 RO-data=1778 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-commandline\commandline.c(61): warning:  #128-D: loop is not reachable from preceding code
-linking...
-Program Size: Code=23010 RO-data=1778 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-commandline\commandline.c(58): warning:  #111-D: statement is unreachable
-linking...
-Program Size: Code=22882 RO-data=1778 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-commandline\commandline.c(59): warning:  #111-D: statement is unreachable
-linking...
-Program Size: Code=22646 RO-data=1778 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=22646 RO-data=1778 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-commandline\commandline.c(61): warning:  #111-D: statement is unreachable
-linking...
-Program Size: Code=22882 RO-data=1778 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 1 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=22882 RO-data=1778 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23074 RO-data=1886 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23074 RO-data=1886 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23090 RO-data=1886 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23074 RO-data=1886 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23074 RO-data=1886 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23090 RO-data=1886 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23074 RO-data=1886 RW-data=44 ZI-data=2260  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23086 RO-data=1886 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(468): warning:  #940-D: missing return statement at end of non-void function "I2C_EE_BufferRead"
+DS3231\DS3231.c(496): error:  #247: function "I2C_EE_ByteRead" has already been defined
+DS3231\DS3231.c(502): warning:  #1-D: last line of file ends without a newline
+Target not created
 Build target 'Target 1'
 compiling main.c...
-commandline//commandline.h(18): warning:  #1-D: last line of file ends without a newline
+ds3231//ds3231.h(86): error:  #147-D: declaration is incompatible with "uint8_t I2C_EE_ByteRead(uint16_t)" (declared at line 85)
 main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(274): warning:  #111-D: statement is unreachable
-main.c(274): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(270): error:  #165: too few arguments in function call
+main.c(356): warning:  #111-D: statement is unreachable
+main.c(356): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(386): error:  #165: too few arguments in function call
 main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling commandline.c...
-commandline\commandline.h(18): warning:  #1-D: last line of file ends without a newline
+compiling DS3231.c...
+DS3231\ds3231.h(86): error:  #147-D: declaration is incompatible with "uint8_t I2C_EE_ByteRead(uint16_t)" (declared at line 85)
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(468): warning:  #940-D: missing return statement at end of non-void function "I2C_EE_BufferRead"
+DS3231\DS3231.c(479): error:  #147-D: declaration is incompatible with "bool I2C_EE_ByteRead(uint16_t, uint8_t *)" (declared at line 85 of "DS3231\ds3231.h")
+DS3231\DS3231.c(496): error:  #247: function "I2C_EE_ByteRead" has already been defined
+DS3231\DS3231.c(502): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(270): error:  #165: too few arguments in function call
+main.c(356): warning:  #111-D: statement is unreachable
+main.c(356): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(386): error:  #165: too few arguments in function call
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(468): warning:  #940-D: missing return statement at end of non-void function "I2C_EE_BufferRead"
+DS3231\DS3231.c(479): error:  #147-D: declaration is incompatible with "bool I2C_EE_ByteRead(uint16_t, uint8_t *)" (declared at line 86 of "DS3231\ds3231.h")
+DS3231\DS3231.c(496): error:  #247: function "I2C_EE_ByteRead" has already been defined
+DS3231\DS3231.c(502): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(270): error:  #165: too few arguments in function call
+main.c(356): warning:  #111-D: statement is unreachable
+main.c(356): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(386): error:  #165: too few arguments in function call
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(468): warning:  #940-D: missing return statement at end of non-void function "I2C_EE_BufferRead"
+DS3231\DS3231.c(502): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(270): error:  #165: too few arguments in function call
+main.c(356): warning:  #111-D: statement is unreachable
+main.c(356): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(271): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+main.c(274): warning:  #111-D: statement is unreachable
+main.c(366): warning:  #111-D: statement is unreachable
+main.c(366): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=23086 RO-data=1886 RW-data=48 ZI-data=2256  
+Program Size: Code=23462 RO-data=2282 RW-data=48 ZI-data=2256  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(468): error:  #20: identifier "true" is undefined
+DS3231\DS3231.c(503): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(287): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(385): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(467): warning:  #223-D: function "delay_ms" declared implicitly
+DS3231\DS3231.c(468): warning:  #188-D: enumerated type mixed with another type
+DS3231\DS3231.c(503): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23462 RO-data=2282 RW-data=48 ZI-data=2256  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(271): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+main.c(274): warning:  #111-D: statement is unreachable
+main.c(366): warning:  #111-D: statement is unreachable
+main.c(366): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling DS3231.c...
+DS3231\DS3231.c(468): warning:  #188-D: enumerated type mixed with another type
+DS3231\DS3231.c(503): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=23462 RO-data=2282 RW-data=48 ZI-data=2256  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(468): warning:  #188-D: enumerated type mixed with another type
+linking...
+Program Size: Code=23462 RO-data=2282 RW-data=48 ZI-data=2256  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(272): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+main.c(275): warning:  #111-D: statement is unreachable
+main.c(367): warning:  #111-D: statement is unreachable
+main.c(367): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23482 RO-data=2282 RW-data=48 ZI-data=2256  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 6 Warning(s).
 Build target 'Target 1'
 compiling main.c...
 main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(272): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
 main.c(274): warning:  #111-D: statement is unreachable
-main.c(274): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(274): warning:  #223-D: function "update_crc_32" declared implicitly
+main.c(367): warning:  #111-D: statement is unreachable
+main.c(367): warning:  #223-D: function "I2C_Configuration" declared implicitly
 main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling commandline.c...
 linking...
-Program Size: Code=23086 RO-data=1886 RW-data=48 ZI-data=2256  
+Program Size: Code=23482 RO-data=2282 RW-data=48 ZI-data=2256  
 FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23086 RO-data=2102 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23086 RO-data=2210 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=23086 RO-data=2210 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23086 RO-data=2246 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23086 RO-data=2282 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23086 RO-data=2282 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
+"template.axf" - 0 Error(s), 7 Warning(s).
 Build target 'Target 1'
 compiling main.c...
 main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(274): warning:  #111-D: statement is unreachable
-main.c(274): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling commandline.c...
-linking...
-Program Size: Code=23086 RO-data=2282 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(278): warning:  #111-D: statement is unreachable
-main.c(278): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(269): warning:  #223-D: function "init_crc32_tab" declared implicitly
+main.c(273): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+main.c(275): warning:  #111-D: statement is unreachable
+main.c(275): warning:  #223-D: function "update_crc_32" declared implicitly
+main.c(368): warning:  #111-D: statement is unreachable
+main.c(368): warning:  #223-D: function "I2C_Configuration" declared implicitly
 main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=23106 RO-data=2282 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(278): warning:  #111-D: statement is unreachable
-main.c(278): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23106 RO-data=2282 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-compiling commandline.c...
-linking...
-Program Size: Code=23106 RO-data=2282 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(57): warning:  #223-D: function "CommandlineHandle" declared implicitly
-main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(278): warning:  #111-D: statement is unreachable
-main.c(278): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling commandline.c...
-linking...
-template.axf: Error: L6218E: Undefined symbol GetConsumePattern (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetDate (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetInfo (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetLedBarLevels (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetOnlineParameters (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetPeackTime (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetTime (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol ReadMemory (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetConsumePattern (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetDate (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetLedBarLevels (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetPeakTime (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetTime (referred from commandline.o).
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(57): warning:  #223-D: function "CommandlineHandle" declared implicitly
-main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(278): warning:  #111-D: statement is unreachable
-main.c(278): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling commandline.c...
-linking...
-template.axf: Error: L6218E: Undefined symbol GetConsumePattern (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetDate (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetInfo (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetLedBarLevels (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetOnlineParameters (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetPeackTime (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetTime (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol ReadMemory (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetConsumePattern (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetDate (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetLedBarLevels (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetPeakTime (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetTime (referred from commandline.o).
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(57): warning:  #223-D: function "CommandlineHandle" declared implicitly
-main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(284): warning:  #111-D: statement is unreachable
-main.c(284): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-template.axf: Error: L6218E: Undefined symbol GetDate (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetInfo (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetLedBarLevels (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetOnlineParameters (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetPeackTime (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol GetTime (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol ReadMemory (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetConsumePattern (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetDate (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetLedBarLevels (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetPeakTime (referred from commandline.o).
-template.axf: Error: L6218E: Undefined symbol SetTime (referred from commandline.o).
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(57): warning:  #223-D: function "CommandlineHandle" declared implicitly
-main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(246): error:  #247: function "GetConsumePattern" has already been defined
-main.c(351): warning:  #111-D: statement is unreachable
-main.c(351): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+template.axf: Error: L6218E: Undefined symbol init_crc32_tab (referred from main.o).
 Target not created
 Build target 'Target 1'
 compiling main.c...
 main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(246): error:  #247: function "GetConsumePattern" has already been defined
-main.c(351): warning:  #111-D: statement is unreachable
-main.c(351): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(269): warning:  #223-D: function "init_crc32_tab" declared implicitly
+main.c(275): warning:  #111-D: statement is unreachable
+main.c(275): warning:  #223-D: function "update_crc_32" declared implicitly
+main.c(368): warning:  #111-D: statement is unreachable
+main.c(368): warning:  #223-D: function "I2C_Configuration" declared implicitly
 main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-compiling commandline.c...
+linking...
+template.axf: Error: L6218E: Undefined symbol init_crc32_tab (referred from main.o).
 Target not created
 Build target 'Target 1'
 compiling main.c...
-main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(247): error:  #247: function "GetConsumePattern" has already been defined
-main.c(352): warning:  #111-D: statement is unreachable
-main.c(352): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(270): warning:  #223-D: function "init_crc32_tab" declared implicitly
+main.c(276): warning:  #111-D: statement is unreachable
+main.c(276): error:  #165: too few arguments in function call
+main.c(369): warning:  #111-D: statement is unreachable
+main.c(369): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 Target not created
 Build target 'Target 1'
 compiling main.c...
-main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(348): warning:  #111-D: statement is unreachable
-main.c(348): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
-linking...
-Program Size: Code=23374 RO-data=2282 RW-data=48 ZI-data=2256  
-FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(270): warning:  #223-D: function "init_crc32_tab" declared implicitly
+main.c(271): error:  #268: declaration may not appear after executable statement in block
+main.c(268): warning:  #177-D: variable "data" was declared but never referenced
+main.c(269): warning:  #177-D: variable "i" was declared but never referenced
+main.c(271): error:  #67: expected a "}"
+main.c(272): error:  #169: expected a declaration
+main.c(286): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(287): error:  #169: expected a declaration
+main.c(369): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(379): error:  #79: expected a type specifier
+main.c(379): warning:  #77-D: this declaration has no storage class or type specifier
+main.c(379): error:  #147: declaration is incompatible with "void send_string(const char *)" (declared at line 18 of "serial//serial.h")
+main.c(381): error:  #169: expected a declaration
+main.c(408): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
 Build target 'Target 1'
 compiling main.c...
-main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(348): warning:  #111-D: statement is unreachable
-main.c(348): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(271): warning:  #223-D: function "init_crc32_tab" declared implicitly
+main.c(277): warning:  #111-D: statement is unreachable
+main.c(370): warning:  #111-D: statement is unreachable
+main.c(370): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=23434 RO-data=2282 RW-data=48 ZI-data=2256  
+template.axf: Error: L6218E: Undefined symbol init_crc32_tab (referred from main.o).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(277): warning:  #111-D: statement is unreachable
+main.c(370): warning:  #111-D: statement is unreachable
+main.c(370): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23482 RO-data=2282 RW-data=48 ZI-data=2256  
 FromELF: creating hex file...
-"template.axf" - 0 Error(s), 4 Warning(s).
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(277): warning:  #111-D: statement is unreachable
+main.c(370): warning:  #111-D: statement is unreachable
+main.c(370): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23486 RO-data=2282 RW-data=48 ZI-data=2256  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(277): warning:  #111-D: statement is unreachable
+main.c(283): error:  #65: expected a ";"
+main.c(370): warning:  #111-D: statement is unreachable
+main.c(370): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(277): warning:  #111-D: statement is unreachable
+main.c(371): warning:  #111-D: statement is unreachable
+main.c(371): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23610 RO-data=2322 RW-data=48 ZI-data=2256  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(277): warning:  #111-D: statement is unreachable
+main.c(371): warning:  #111-D: statement is unreachable
+main.c(371): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23610 RO-data=2322 RW-data=48 ZI-data=2256  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(280): warning:  #111-D: statement is unreachable
+main.c(375): warning:  #111-D: statement is unreachable
+main.c(375): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23630 RO-data=2322 RW-data=48 ZI-data=2256  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(280): warning:  #111-D: statement is unreachable
+main.c(376): warning:  #111-D: statement is unreachable
+main.c(376): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23630 RO-data=2322 RW-data=48 ZI-data=2256  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(280): warning:  #111-D: statement is unreachable
+main.c(306): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(377): warning:  #111-D: statement is unreachable
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=23630 RO-data=2322 RW-data=48 ZI-data=2256  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
 Build target 'Target 1'
 linking...
-Program Size: Code=23434 RO-data=2282 RW-data=48 ZI-data=2256  
+Program Size: Code=23630 RO-data=2322 RW-data=48 ZI-data=2256  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 0 Warning(s).
 Build target 'Target 1'
 compiling main.c...
-main.c(93): warning:  #177-D: variable "temp" was declared but never referenced
-main.c(350): warning:  #111-D: statement is unreachable
-main.c(350): warning:  #223-D: function "I2C_Configuration" declared implicitly
-main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(280): warning:  #111-D: statement is unreachable
+main.c(306): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(377): warning:  #111-D: statement is unreachable
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
 linking...
-Program Size: Code=23434 RO-data=2282 RW-data=48 ZI-data=2256  
+Program Size: Code=23630 RO-data=2322 RW-data=48 ZI-data=2256  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(306): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(377): warning:  #111-D: statement is unreachable
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=24354 RO-data=2322 RW-data=72 ZI-data=5328  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(306): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(377): warning:  #111-D: statement is unreachable
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=24354 RO-data=2322 RW-data=72 ZI-data=5328  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(377): warning:  #111-D: statement is unreachable
+main.c(377): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=24350 RO-data=2322 RW-data=72 ZI-data=5328  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(377): warning:  #111-D: statement is unreachable
+main.c(377): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling DS3231.c...
+DS3231\DS3231.c(473): warning:  #188-D: enumerated type mixed with another type
+linking...
+Program Size: Code=24366 RO-data=2322 RW-data=72 ZI-data=5328  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling DS3231.c...
+DS3231\DS3231.c(412): warning:  #188-D: enumerated type mixed with another type
+DS3231\DS3231.c(424): warning:  #188-D: enumerated type mixed with another type
+DS3231\DS3231.c(435): warning:  #188-D: enumerated type mixed with another type
+DS3231\DS3231.c(445): warning:  #188-D: enumerated type mixed with another type
+DS3231\DS3231.c(456): warning:  #188-D: enumerated type mixed with another type
+DS3231\DS3231.c(467): warning:  #188-D: enumerated type mixed with another type
+DS3231\DS3231.c(499): warning:  #188-D: enumerated type mixed with another type
+linking...
+Program Size: Code=24498 RO-data=2322 RW-data=72 ZI-data=5328  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(94): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(377): warning:  #111-D: statement is unreachable
+main.c(377): warning:  #223-D: function "I2C_Configuration" declared implicitly
+main.c(37): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=24502 RO-data=2322 RW-data=72 ZI-data=5328  
 FromELF: creating hex file...
 "template.axf" - 0 Error(s), 4 Warning(s).

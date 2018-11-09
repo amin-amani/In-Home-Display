@@ -398,43 +398,74 @@ void I2C_EE_ByteWrite(u8 data, uint16_t address)
 * Output         : None
 * Return         : None
 *******************************************************************************/
-void I2C_EE_BufferRead(u8* pBuffer, uint16_t address, u16 NumByteToRead)
+bool I2C_EE_BufferRead(u8* pBuffer, uint16_t address, u16 NumByteToRead)
 {  
+int timeout=0;
   /* Send START condition */
   I2C_GenerateSTART(I2C1, ENABLE);
   
   /* Test on EV5 and clear it */
-  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT));
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+  {
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+  }
    
   /* Send EEPROM address for write */
   I2C_Send7bitAddress(I2C1, EEPROM_HW_ADDRESS, I2C_Direction_Transmitter);
 
+timeout=0;
   /* Test on EV6 and clear it */
-  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
-  
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+  {
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+  } 
   /* Clear EV6 by setting again the PE bit */
   I2C_Cmd(I2C1, ENABLE);
   
   I2C_SendData(I2C1, (uint8_t)((address & 0xFF00) >> 8));  
-
-while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+timeout=0;
+while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+ {
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+  }
   /* Send the EEPROM's internal address to write to */
   I2C_SendData(I2C1,(uint8_t)(address & 0x00FF));  
-
+timeout=0;
   /* Test on EV8 and clear it */
-  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+   {
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+  }
   
   /* Send STRAT condition a second time */  
   I2C_GenerateSTART(I2C1, ENABLE);
-  
+  timeout=0;
   /* Test on EV5 and clear it */
-  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT));
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+   {
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+  }
   
   /* Send EEPROM address for read */
   I2C_Send7bitAddress(I2C1, EEPROM_HW_ADDRESS, I2C_Direction_Receiver);
-  
+timeout=0;  
   /* Test on EV6 and clear it */
-  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
+   {
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+  }
   
   /* While there is data to be read */
   while(NumByteToRead)  
@@ -465,6 +496,7 @@ while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
   /* Enable Acknowledgement to be ready for another reception */
   I2C_AcknowledgeConfig(I2C1, ENABLE);
   delay_ms(5);
+  return 1;
 }
 /*******************************************************************************
 * Function Name  : I2C_EE_ByteRead
@@ -476,10 +508,27 @@ while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
 * Output         : None
 * Return         : None
 *******************************************************************************/
-uint8_t I2C_EE_ByteRead( uint16_t address){
+//uint8_t I2C_EE_ByteRead( uint16_t address){
+//
+//uint8_t temp=0xff;					
+//I2C_EE_BufferRead(&temp,address,1);
+//return temp;
+//
+//    }
+/*******************************************************************************
+* Function Name  : I2C_EE_ByteRead
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+bool I2C_EE_ByteRead( uint16_t address,uint8_t* data){
 
-uint8_t temp=0xff;					
-I2C_EE_BufferRead(&temp,address,1);
-return temp;
+*data=0xff;					
+return I2C_EE_BufferRead(data,address,1);
 
-    }
+
+}
