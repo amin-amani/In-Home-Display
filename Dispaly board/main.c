@@ -26,7 +26,7 @@ int Usart3BuffIndex=0;
 
 
 
-char temp_main[30];
+char temp_main[40];
 
 float InputCurrent=0,InputVoltage=0;
 int i;
@@ -216,6 +216,7 @@ send_string("GetOnlineParameters\n");
  void GetDate(char*par)
  {
 send_string("GetDate\n"); 
+
  }
  //=================================================================================
  void SetDate(char*par)
@@ -225,12 +226,40 @@ send_string("SetDate\n");
  //=================================================================================
  void GetTime(char*par)
  {
+ //	uint8_t  Month;
+//	uint16_t Year;
+	//uint8_t  DOW;
  send_string("GetTime\n");
+ 	if(DS3231_ReadDate(&CurrentDate)){
+	sprintf(temp_main,"%d-%d-%d -%d- %2d:%2d:%2d",CurrentDate.Year,CurrentDate.Month,CurrentDate.Day,CurrentDate.DOW,CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
+	send_string(temp_main);			  }
+	else{
+	send_string("error!");			
+	  
+	}
  }
  //=================================================================================
  void SetTime(char*par)
  {
-send_string("SetTime\n"); 
+HRF_date_TypeDef date;
+int h=0,m=0,s=0,d=0,mm=0,y=0,dow=0;
+
+
+ sscanf(par,"%d %d %d %d %d %d %d",&y,&mm, &d, &dow,&h, &m, &s) ;
+ date.Year=y;
+ date.Month=mm;
+ date.Day=d;
+ date.DOW=dow;
+ date.Hours=h;
+ date.Minutes=m;
+ date.Seconds=s;
+ //sprintf(temp_main,"date= %d %d %d %d %d %d %d\n",date.Year,date.Month,date.Day, date.DOW,date.Hours, date.Minutes, date.Seconds) ;
+ //send_string(temp_main);
+if(DS3231_WriteDate(&date)){
+send_string("OK");
+}
+else send_string("Error");
+
  }
  //=================================================================================
  void GetPeackTime(char*par)

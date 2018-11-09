@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
+#include <stdbool.h>
 #define I2C_Speed              100000
 #define I2C1_SLAVE_ADDRESS7    0x00
 #define I2C_PageSize           16
@@ -75,22 +76,26 @@ typedef struct {
 
 
 //=========================================================================================================================
-char DS3231_ReadDateRAW(DS3231_date_TypeDef* date) ;
-char DS3231_WriteDateRAW(DS3231_date_TypeDef* date);
-
-void DS3231_ReadDate(HRF_date_TypeDef* hrf_date);
+bool DS3231_ReadDateRAW(DS3231_date_TypeDef* date) ;
+bool DS3231_WriteDateRAW(DS3231_date_TypeDef* date);
 void DS3231_DateToTimeStr(DS3231_date_TypeDef* raw_date, char *str) ;
 void DS3231_DateToDateStr(DS3231_date_TypeDef* raw_date, char *str) ;
+
+
+bool DS3231Init(void);
+bool DS3231_WriteDate(HRF_date_TypeDef* hrf_date);
+bool DS3231_ReadDate(HRF_date_TypeDef* hrf_date);
 uint8_t DS3231_ReadTemp(void);
-void I2C_EE_ByteWrite(u8 data, uint16_t address);
+
+bool I2C_EE_ByteWrite(u8 data, uint16_t address);
 //uint8_t I2C_EE_ByteRead( uint16_t address);
 bool I2C_EE_ByteRead( uint16_t address,uint8_t* data);
 bool I2C_EE_BufferRead(u8* pBuffer, uint16_t address, u16 NumByteToRead);
 
 
  //=========================================================================
-void i2c_init(void);
-void DS3231Init(void);
+//bool i2c_init(void);
+
 
 
 

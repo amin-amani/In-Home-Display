@@ -9,8 +9,10 @@
 * Output         : None
 * Return         : None
 *******************************************************************************/
-char DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
+
+bool DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 	unsigned int i;
+		int timeout=0;
 	unsigned long int counter,countervalue=20000;
 	unsigned char buffer[7];
 	
@@ -18,38 +20,74 @@ char DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 
 	I2C_GenerateSTART(I2C1,ENABLE); // Send START condition
 	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){if((counter--)==0)return 1;} // Wait for EV5
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){
+
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+	} // Wait for EV5
 
 	I2C_Send7bitAddress(I2C1,DS3231_addr,I2C_Direction_Transmitter); // Send DS3231 slave address
 	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)){if((counter--)==0)return 2;} // Wait for EV6
+		 timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)){
+	  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+	
+	} // Wait for EV6
 
 	I2C_SendData(I2C1,DS3231_seconds); // Send DS3231 seconds register address
 	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)){if((counter--)==0)return 3;} // Wait for EV8
+	 timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)){
+	  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+	} // Wait for EV8
 
 	I2C_GenerateSTART(I2C1,ENABLE); // Send repeated START condition (aka Re-START)
 	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){if((counter--)==0)return 4;} // Wait for EV5
+		 timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){
+	  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+	} // Wait for EV5
 
 	I2C_Send7bitAddress(I2C1,DS3231_addr,I2C_Direction_Receiver); // Send DS3231 slave address for READ
 	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)){if((counter--)==0)return 5;} // Wait for EV6
+		 timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)){
+	  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+	} // Wait for EV6
 
 	for (i = 0; i < 6; i++) {
 	    counter=countervalue;
-		while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){if((counter--)==0)return 6;} // Wait for EV7 (Byte received from slave)
+			 timeout=0;
+		while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){
+		  delay_us(1);
+  timeout++;
+  if(timeout>500)return 0;
+		} // Wait for EV7 (Byte received from slave)
 		buffer[i] = I2C_ReceiveData(I2C1); // Receive byte
 	}
 
 	I2C_AcknowledgeConfig(I2C1,DISABLE); // Disable I2C acknowledgement
 	I2C_GenerateSTOP(I2C1,ENABLE); // Send STOP condition
     counter=countervalue; 
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){if((counter--)==0)return 7;} // Wait for EV7 (Byte received from slave)
+		 timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){
+			  delay_us(1);
+  timeout++;
+  if(timeout>500)return 0;
+	} // Wait for EV7 (Byte received from slave)
 	buffer[i] = I2C_ReceiveData(I2C1); // Receive last byte
 
 	memcpy(date,&buffer[0],7);
-	return 0;
+	return 1;
 }
 /*******************************************************************************
 * Function Name  : DS3231_WriteDateRAW
@@ -61,34 +99,57 @@ char DS3231_ReadDateRAW(DS3231_date_TypeDef* date) {
 * Output         : None
 * Return         : None
 *******************************************************************************/
-char DS3231_WriteDateRAW(DS3231_date_TypeDef* date) {
+bool DS3231_WriteDateRAW(DS3231_date_TypeDef* date) {
 	unsigned int i;
 	char buffer[7];
-	unsigned long int counter,countervalue=20000; 
+	int timeout=0;
 	memcpy(&buffer[0],date,7);
 
 	I2C_AcknowledgeConfig(I2C1,ENABLE); // Enable I2C acknowledge
 
 	I2C_GenerateSTART(I2C1,ENABLE); // Send START condition
-	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){if((counter--)==0)return 1;} // Wait for EV5
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT))
+	{
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	} // Wait for EV5
 
 	I2C_Send7bitAddress(I2C1,DS3231_addr,I2C_Direction_Transmitter); // Send DS3231 slave address
-	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)){if((counter--)==0)return 2;} // Wait for EV6
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)){
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	}
+	 // Wait for EV6
 
 	I2C_SendData(I2C1,DS3231_seconds); // Send DS3231 seconds register address
-	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)){if((counter--)==0)return 3;} // Wait for EV8
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)){
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	
+	} // Wait for EV8
 
 	for (i = 0; i < 7; i++) {
 		I2C_SendData(I2C1,buffer[i]); // Send DS3231 seconds register address
-		counter=countervalue;
-		while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)){if((counter--)==0)return 4;} // Wait for EV8
+	timeout=0;
+		while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)){
+		delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+		} // Wait for EV8
 	}
 
 	I2C_GenerateSTOP(I2C1,ENABLE);
-	return 0;
+	return 1;
 }
 /*******************************************************************************
 * Function Name  : DS3231_ReadDate
@@ -100,10 +161,9 @@ char DS3231_WriteDateRAW(DS3231_date_TypeDef* date) {
 * Output         : None
 * Return         : None
 *******************************************************************************/
-void DS3231_ReadDate(HRF_date_TypeDef* hrf_date) {
+bool DS3231_ReadDate(HRF_date_TypeDef* hrf_date) {
 	DS3231_date_TypeDef raw_date;
-
-	DS3231_ReadDateRAW(&raw_date);
+	bool result=DS3231_ReadDateRAW(&raw_date);
 
 	hrf_date->Seconds = (raw_date.seconds >> 4) * 10 + (raw_date.seconds & 0x0f);
 	hrf_date->Minutes = (raw_date.minutes >> 4) * 10 + (raw_date.minutes & 0x0f);
@@ -112,6 +172,46 @@ void DS3231_ReadDate(HRF_date_TypeDef* hrf_date) {
 	hrf_date->Month   = (raw_date.month   >> 4) * 10 + (raw_date.month   & 0x0f);
 	hrf_date->Year    = (raw_date.year    >> 4) * 10 + (raw_date.year    & 0x0f) + 2000;
 	hrf_date->DOW     = raw_date.day_of_week;
+	return result;
+}
+/*******************************************************************************
+* Function Name  : DS3231_ReadDate
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+
+uint8_t DecToBcd(uint8_t val) {
+// Convert normal decimal numbers to binary coded decimal
+	return ( (val/10*16) + (val%10) );
+}
+/*******************************************************************************
+* Function Name  : DS3231_ReadDate
+* Description    : Reads a block of data from the EEPROM.
+* Input          : - pBuffer : pointer to the buffer that receives the data read 
+*                    from the EEPROM.
+*                  - ReadAddr : EEPROM's internal address to read from.
+*                  - NumByteToRead : number of bytes to read from the EEPROM.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+
+bool DS3231_WriteDate(HRF_date_TypeDef* hrf_date) {
+
+DS3231_date_TypeDef raw_date;
+raw_date.seconds=DecToBcd(hrf_date->Seconds);
+raw_date.minutes=DecToBcd(hrf_date->Minutes);
+raw_date.hours =DecToBcd(hrf_date->Hours);
+raw_date.date  =DecToBcd(hrf_date->Day);
+raw_date.month =DecToBcd(hrf_date->Month);
+raw_date.year=DecToBcd(hrf_date->Year);
+raw_date.day_of_week=DecToBcd(hrf_date->DOW);
+return DS3231_WriteDateRAW(&raw_date);
+
 }
 /*******************************************************************************
 * Function Name  : DS3231_DateToTimeStr
@@ -168,38 +268,75 @@ void DS3231_DateToDateStr(DS3231_date_TypeDef* raw_date, char *str) {
 *******************************************************************************/
 uint8_t DS3231_ReadTemp(void) {
 	uint8_t temperature ;
-	unsigned long int counter,countervalue=20000; 
+	int timeout=0;
+	
 	I2C_AcknowledgeConfig(I2C1,ENABLE); // Enable I2C acknowledge
 
 	I2C_GenerateSTART(I2C1,ENABLE); // Send START condition
-	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){if((counter--)==0)return 1;} // Wait for EV5
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	} // Wait for EV5
 
 	I2C_Send7bitAddress(I2C1,DS3231_addr,I2C_Direction_Transmitter); // Send DS3231 slave address
-	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)){if((counter--)==0)return 2;} // Wait for EV6
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)){
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	}
+	 // Wait for EV6
 
 	I2C_SendData(I2C1,DS3231_tmp_MSB); // Send DS3231 temperature MSB register address
-	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)){if((counter--)==0)return 3;} // Wait for EV8
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)){
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	} // Wait for EV8
 
 	I2C_GenerateSTART(I2C1,ENABLE); // Send repeated START condition (aka Re-START)
-	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){if((counter--)==0)return 4;} // Wait for EV5
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)){
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	} // Wait for EV5
 
 	I2C_Send7bitAddress(I2C1,DS3231_addr,I2C_Direction_Receiver); // Send DS3231 slave address for READ
-	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)){if((counter--)==0)return 5;} // Wait for EV6
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)){
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
 
-	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){if((counter--)==0)return 6;} // Wait for EV7 (Byte received from slave)
+	} // Wait for EV6
+
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	} // Wait for EV7 (Byte received from slave)
 	 temperature = I2C_ReceiveData(I2C1); // Receive temperature MSB
 
 	I2C_AcknowledgeConfig(I2C1,DISABLE); // Disable I2C acknowledgement
 
 	I2C_GenerateSTOP(I2C1,ENABLE); // Send STOP condition
-	counter=countervalue;
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){if((counter--)==0)return 7;} // Wait for EV7 (Byte received from slave)
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)){
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	} // Wait for EV7 (Byte received from slave)
 
 	return temperature;
 }
@@ -213,7 +350,7 @@ uint8_t DS3231_ReadTemp(void) {
 * Output         : None
 * Return         : None
 *******************************************************************************/
-void i2c_init(){
+bool i2c_init(){
    I2C_InitTypeDef  I2C_InitStructure; 
   GPIO_InitTypeDef  GPIO_InitStructure; 
 
@@ -236,6 +373,7 @@ RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, ENABLE);
   I2C_Cmd(I2C1, ENABLE);
   /* Apply I2C configuration after enabling it */
   I2C_Init(I2C1, &I2C_InitStructure);
+  return 1;
 
 } 
 /*******************************************************************************
@@ -248,8 +386,8 @@ RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, ENABLE);
 * Output         : None
 * Return         : None
 *******************************************************************************/
-void DS3231Init(){
-
+bool DS3231Init(){
+		 int timeout=0;
   
 
    GPIO_InitTypeDef  GPIO_InitStructure; 
@@ -274,13 +412,33 @@ void DS3231Init(){
 	I2C_Cmd(I2C1,ENABLE); // Enable I2C
 	I2C_Init(I2C1,&I2CInit); // Configure I2C
 	   //send_string("Wait until I2C free...");
-	while (I2C_GetFlagStatus(I2C1,I2C_FLAG_BUSY)); // Wait until I2C free
+	   timeout=0;
+	while (I2C_GetFlagStatus(I2C1,I2C_FLAG_BUSY))
+	{
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	}
+	 // Wait until I2C free
 //   send_string(" ok\n");
 	// Check connection to DS3231
 	I2C_GenerateSTART(I2C1,ENABLE); // Send START condition
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)); // Wait for EV5
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)) // Wait for EV5
+	{delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+}
 	I2C_Send7bitAddress(I2C1,DS3231_addr,I2C_Direction_Transmitter); // Send DS3231 slave address
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)); // Wait for EV6
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)) // Wait for EV6
+	{
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	}
 	I2C_GenerateSTOP(I2C1,ENABLE);
 
 	// Wait for 250ms for DS3231 startup
@@ -288,16 +446,50 @@ void DS3231Init(){
 
 	// DS3231 init
 	I2C_GenerateSTART(I2C1,ENABLE);
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)); // Wait for EV5
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)) // Wait for EV5
+	{
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	}
 	I2C_Send7bitAddress(I2C1,DS3231_addr,I2C_Direction_Transmitter); // Send DS3231 slave address
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)); // Wait for EV6
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)) // Wait for EV6
+	{
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	}
 	I2C_SendData(I2C1,DS3231_control); // Send DS3231 control register address
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)); // Wait for EV8
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)) // Wait for EV8
+	{
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	}
 	I2C_SendData(I2C1,0x00); // DS3231 EOSC enabled, INTCN enabled, SQW set to 1Hz
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)); // Wait for EV8
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)) // Wait for EV8
+	{delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+}
 	I2C_SendData(I2C1,0x00); // DS3231 clear alarm flags
-	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)); // Wait for EV8
+	timeout=0;
+	while (!I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)) // Wait for EV8
+	{
+	delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+	}
 	I2C_GenerateSTOP(I2C1,ENABLE);
+	return 1;
 
 }
 /*******************************************************************************
@@ -349,40 +541,76 @@ void DS3231Init(){
 * Return         : None
 *******************************************************************************/
 
-void I2C_EE_ByteWrite(u8 data, uint16_t address)
-{
+bool I2C_EE_ByteWrite(u8 data, uint16_t address)
+{	int timeout=0;
   /* Send STRAT condition */
   I2C_GenerateSTART(I2C1, ENABLE);
 
   /* Test on EV5 and clear it */
-  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT));  
+  timeout=0;
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
+  {
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+  }
 
   /* Send EEPROM address for write */
   I2C_Send7bitAddress(I2C1, EEPROM_HW_ADDRESS&0xfe, I2C_Direction_Transmitter);
   
   /* Test on EV6 and clear it */
-  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
+  timeout=0;
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+  {
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+  }
       
 	    /* Send the EEPROM's internal address to write to */
   I2C_SendData(I2C1,(uint8_t)((address & 0xFF00) >> 8));
   
   /* Test on EV8 and clear it */
-  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+  timeout=0;
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+  {
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+  }
   /* Send the EEPROM's internal address to write to */
   I2C_SendData(I2C1,(uint8_t)(address & 0x00FF));
   
   /* Test on EV8 and clear it */
-  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+  timeout=0;
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+  {
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+  }
 
   /* Send the byte to be written */
   I2C_SendData(I2C1, data); 
    
   /* Test on EV8 and clear it */
-  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+  timeout=0;
+  while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED)){
+  delay_ms(1);
+  timeout++;
+  if(timeout>500)return 0;
+
+  }
   
   /* Send STOP condition */
   I2C_GenerateSTOP(I2C1, ENABLE);
    delay_ms(5);
+   return 1;
+
 }
 
 
@@ -409,7 +637,7 @@ int timeout=0;
   {
   delay_ms(1);
   timeout++;
-  if(timeout>500)return 0;
+  if(timeout>500)return false;
   }
    
   /* Send EEPROM address for write */

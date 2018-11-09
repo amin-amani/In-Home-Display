@@ -32,3 +32,4 @@ ds3231.o: DS3231\..//delay//delay.h
 ds3231.o: C:\Keil\ARM\RV31\INC\stdio.h
 ds3231.o: C:\Keil\ARM\RV31\INC\string.h
 ds3231.o: C:\Keil\ARM\RV31\INC\stdint.h
+ds3231.o: C:\Keil\ARM\RV31\INC\stdbool.h
