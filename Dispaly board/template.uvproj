@@ -573,6 +573,21 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>Log</GroupName>
+          <Files>
+            <File>
+              <FileName>Log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\log\Log.c</FilePath>
+            </File>
+            <File>
+              <FileName>Log.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\log\Log.h</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>

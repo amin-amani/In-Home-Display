@@ -1,4 +1,6 @@
-    /*******************************************************************\
+#ifndef LIBCRC_H
+#define LIBCRC_H    
+	/*******************************************************************\
     *                                                                   *
     *   Library         : lib_crc                                       *
     *   File            : lib_crc.h                                     *
@@ -48,13 +50,12 @@
     \*******************************************************************/
 
 
-
+#include <stdbool.h>
 #define CRC_VERSION     "1.16"
 
 
 
-#define FALSE           0
-#define TRUE            1
+
 
 
 
@@ -64,3 +65,5 @@ unsigned short          update_crc_ccitt(  unsigned short crc, char c           
 unsigned short          update_crc_dnp(    unsigned short crc, char c                 );
 unsigned short          update_crc_kermit( unsigned short crc, char c                 );
 unsigned short          update_crc_sick(   unsigned short crc, char c, char prev_byte );
+
+#endif

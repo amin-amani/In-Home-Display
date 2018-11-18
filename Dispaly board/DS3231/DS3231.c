@@ -637,7 +637,7 @@ int timeout=0;
   {
   delay_ms(1);
   timeout++;
-  if(timeout>500)return false;
+  if(timeout>500)return 0;
   }
    
   /* Send EEPROM address for write */

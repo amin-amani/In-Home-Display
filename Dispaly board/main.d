@@ -42,6 +42,8 @@ main.o: eeprom//memory.h
 main.o: C:\Keil\ARM\RV31\INC\stdbool.h
 main.o: eeprom//eeprom.h
 main.o: commandline//commandline.h
-main.o: CRC//lib_crc.h
-main.o: ds3231//ds3231.h
-main.o: ds3231//..//delay//delay.h
+main.o: Log//Log.h
+main.o: Log//..//ds3231//ds3231.h
+main.o: Log//..//ds3231//..//delay//delay.h
+main.o: Log//..//crc//lib_crc.h
+main.o: Log//..//serial//serial.h

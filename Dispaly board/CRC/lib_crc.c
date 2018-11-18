@@ -87,11 +87,11 @@
     *                                                                   *
     \*******************************************************************/
 
-static int              crc_tab16_init          = FALSE;
-static int              crc_tab32_init          = FALSE;
-static int              crc_tabccitt_init       = FALSE;
-static int              crc_tabdnp_init         = FALSE;
-static int              crc_tabkermit_init      = FALSE;
+static int              crc_tab16_init          = 0;
+static int              crc_tab32_init          = 0;
+static int              crc_tabccitt_init       = 0;
+static int              crc_tabdnp_init         = 0;
+static int              crc_tabkermit_init      = 0;
 
 static unsigned short   crc_tab16[256];
 static unsigned long    crc_tab32[256];
@@ -313,7 +313,7 @@ static void init_crc16_tab( void ) {
         crc_tab16[i] = crc;
     }
 
-    crc_tab16_init = TRUE;
+    crc_tab16_init = true;
 
 }  /* init_crc16_tab */
 
@@ -349,7 +349,7 @@ static void init_crckermit_tab( void ) {
         crc_tabkermit[i] = crc;
     }
 
-    crc_tabkermit_init = TRUE;
+    crc_tabkermit_init = true;
 
 }  /* init_crckermit_tab */
 
@@ -385,7 +385,7 @@ static void init_crcdnp_tab( void ) {
         crc_tabdnp[i] = crc;
     }
 
-    crc_tabdnp_init = TRUE;
+    crc_tabdnp_init = true;
 
 }  /* init_crcdnp_tab */
 
@@ -418,7 +418,7 @@ static void init_crc32_tab( void ) {
         crc_tab32[i] = crc;
     }
 
-    crc_tab32_init = TRUE;
+    crc_tab32_init = true;
 
 }  /* init_crc32_tab */
 
@@ -454,6 +454,6 @@ static void init_crcccitt_tab( void ) {
         crc_tabccitt[i] = crc;
     }
 
-    crc_tabccitt_init = TRUE;
+    crc_tabccitt_init = true;
 
 }  /* init_crcccitt_tab */

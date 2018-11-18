@@ -12,6 +12,7 @@
 #include "SSD1306//font5X7.h"
 #include "eeprom//memory.h"
 #include "commandline//commandline.h"
+#include "Log//Log.h"
 #include "CRC//lib_crc.h"
 
 #include "ds3231//ds3231.h"
@@ -26,7 +27,7 @@ int Usart3BuffIndex=0;
 
 
 
-char temp_main[40];
+char temp_main[70];
 
 float InputCurrent=0,InputVoltage=0;
 int i;
@@ -44,6 +45,7 @@ int RadTemp()
 { 
 return 0;
 }
+//=========================================================================================================================
 void USART1_IRQHandler()
 {
    char ch=getkey();
@@ -62,7 +64,7 @@ if(ch==10)
 if(Usart1BuffIndex>USART1_BUFFER_SIZE)Usart1BuffIndex=0;				
 
 }
-
+//=========================================================================================================================
 void USART3_IRQHandler()
 {
 char ch=getkey3();
@@ -87,6 +89,31 @@ if(InputCurrent<0.1)InputCurrent=0;
 
 
 }
+ //=================================================================================
+ void DoLog()
+ {
+ 
+ EnergyRecord record;
+ send_string("Start Log...\n");
+ if(!DS3231_ReadDate(&CurrentDate)){send_string("Log RTC Error...\n");return;	}
+ record.Year=CurrentDate.Year;
+ record.Mon=CurrentDate.Month;
+ record.Day=CurrentDate.Day;
+ record.Hour=CurrentDate.Hours;
+ record.Min=0;//min is alwasy zero becase of sampling period
+ record.Temp=25;
+ record.Energy=1288;
+ 
+ if(!AppendEnergyRecord(record))
+ {
+ send_string("Log error!\n");
+ }
+ 
+
+
+
+ 
+ }
 //=========================================================================================================================
 
 void DisplayValues(unsigned long int refereshTime)
@@ -195,10 +222,8 @@ lockCount=0;
  //=================================================================================
  void Ping(char*par)
  {
- send_string("ping\n");
- 
+DoLog();
  }
- //=================================================================================
 
  //=================================================================================
  void GetInfo(char*par)
@@ -213,15 +238,55 @@ send_string("GetOnlineParameters\n");
 
  }
  //=================================================================================
- void GetDate(char*par)
+ void GetDate(char*par)		  
  {
-send_string("GetDate\n"); 
+  EnergyRecord rec;
+int addr=0;
+
+
+ sscanf(par,"%d",&addr) ;
+if(ReadEnergyRecord(addr,&rec))
+{
+sprintf(temp_main,"%d %d %d %d %d %d %d\n",rec.Year,rec.Mon,rec.Day,rec.Hour,rec.Min,rec.Energy,rec.Temp);
+send_string(temp_main); 
+return ;
+}
+  sprintf(temp_main,"read bad crc @%d\n ",addr);
+ send_string(temp_main); 
 
  }
  //=================================================================================
  void SetDate(char*par)
  {
-send_string("SetDate\n"); 
+/*
+
+uint8_t		Year;
+uint8_t		Mon;
+uint8_t		Day;
+uint8_t		Hour;
+uint8_t		Min;
+uint32_t	Energy;
+uint8_t 	Temp;
+*/
+EnergyRecord rec;
+int addr=0;
+
+
+ sscanf(par,"%d",&addr) ;
+rec.Year=18;
+rec.Mon=11;
+rec.Day=16;
+rec.Hour=1;
+rec.Min=59;
+rec.Energy=2345;
+rec.Temp=25;
+ if( WriteEnergyRecord(addr ,rec))
+ {
+send_string("write crc ok\n"); 
+return;
+	}
+  sprintf(temp_main,"write error @%d\n ",addr);
+ send_string(temp_main); 
  }
  //=================================================================================
  void GetTime(char*par)
@@ -336,7 +401,11 @@ stm32_Init();
 //RGBInit(); 
 DS3231Init();
 //I2C_Configuration();
+
 send_string("hello\n");
+
+
+LogInit();
  while(1){}
   
 //SSD1306_InitGPIO();
@@ -406,7 +475,7 @@ send_string("hello\n");
 //	    CurrentDate.month=10;
 //	    CurrentDate.year=18;
 //		DS3231_WriteDateRAW(&CurrentDate);
-I2C_Configuration();
+//I2C_Configuration();
 //send_string("itc init ok\n");
 //I2C_EE_ByteWrite(0x01,175);
 //I2C_EE_ByteWrite(0x02,178);
