@@ -25,7 +25,9 @@ static const SCMD tskcmd[] =
 	"SetConsumePattern",SetConsumePattern,
 	"GetLedBarLevels",GetLedBarLevels,
 	"SetLedBarLevels",SetLedBarLevels,	
-	"ReadMemory",ReadMemory
+	"ReadRecord",ReadRecord,
+	"ReadMemory",ReadMemory,
+	"Erase",EraseMemory
  };
  //===============================================================================================================
 int  start_with(char*str,const char*main_str)

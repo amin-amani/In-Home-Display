@@ -19,7 +19,7 @@ uint8_t		Hour;
 uint8_t		Min;
 uint32_t	Energy;
 uint8_t 	Temp;
-uint16_t		Crc;
+uint16_t	Crc;
 } EnergyRecord;
 
 

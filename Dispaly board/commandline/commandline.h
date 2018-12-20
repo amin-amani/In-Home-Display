@@ -15,6 +15,7 @@ clear_array(arg,50)
 void CommandlineHandle( char*buffer);
 
 extern void Ping(char*par);
+extern void EraseMemory(char*par);
 extern void GetInfo(char*par);
 extern void GetOnlineParameters(char*par);
 extern void GetDate(char*par);
@@ -27,6 +28,7 @@ extern void GetConsumePattern(char*par);
 extern void SetConsumePattern(char*par);
 extern void GetLedBarLevels(char*par);
 extern void SetLedBarLevels(char*par);
+extern void ReadRecord(char*par);
 extern void ReadMemory(char*par);
 
 typedef struct scmd {

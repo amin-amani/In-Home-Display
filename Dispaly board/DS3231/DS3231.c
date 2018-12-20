@@ -635,7 +635,7 @@ int timeout=0;
   /* Test on EV5 and clear it */
   while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
   {
-  delay_ms(1);
+  delay_us(1);
   timeout++;
   if(timeout>500)return 0;
   }
@@ -647,7 +647,7 @@ timeout=0;
   /* Test on EV6 and clear it */
   while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
   {
-  delay_ms(1);
+  delay_us(1);
   timeout++;
   if(timeout>500)return 0;
   } 
@@ -658,7 +658,7 @@ timeout=0;
 timeout=0;
 while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
  {
-  delay_ms(1);
+  delay_us(1);
   timeout++;
   if(timeout>500)return 0;
   }
@@ -668,7 +668,7 @@ timeout=0;
   /* Test on EV8 and clear it */
   while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
    {
-  delay_ms(1);
+  delay_us(1);
   timeout++;
   if(timeout>500)return 0;
   }
@@ -679,7 +679,7 @@ timeout=0;
   /* Test on EV5 and clear it */
   while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_MODE_SELECT))
    {
-  delay_ms(1);
+  delay_us(1);
   timeout++;
   if(timeout>500)return 0;
   }
@@ -690,7 +690,7 @@ timeout=0;
   /* Test on EV6 and clear it */
   while(!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
    {
-  delay_ms(1);
+  delay_us(1);
   timeout++;
   if(timeout>500)return 0;
   }
@@ -723,7 +723,7 @@ timeout=0;
 
   /* Enable Acknowledgement to be ready for another reception */
   I2C_AcknowledgeConfig(I2C1, ENABLE);
-  delay_ms(5);
+  delay_ms(2);
   return 1;
 }
 /*******************************************************************************

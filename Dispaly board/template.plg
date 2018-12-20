@@ -7,3 +7,230 @@ G:\aa proj\In-Home-Display\Dispaly board\template.uvproj
 Project File Date:  11/10/2018
 
 <h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(563): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27690 RO-data=2358 RW-data=96 ZI-data=5368  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(564): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27718 RO-data=2358 RW-data=96 ZI-data=5368  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(564): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27714 RO-data=2358 RW-data=96 ZI-data=5368  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(240): error:  #20: identifier "InputVolatge" is undefined
+main.c(241): error:  #20: identifier "temp_min" is undefined
+main.c(566): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(241): error:  #20: identifier "temp_min" is undefined
+main.c(566): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(566): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27766 RO-data=2358 RW-data=96 ZI-data=5368  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(566): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27766 RO-data=2358 RW-data=96 ZI-data=5368  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(569): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+compiling commandline.c...
+commandline\commandline.c(30): error:  #20: identifier "EaseMemory" is undefined
+Target not created
+Build target 'Target 1'
+compiling commandline.c...
+linking...
+Program Size: Code=27770 RO-data=2394 RW-data=96 ZI-data=5368  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(570): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27770 RO-data=2394 RW-data=96 ZI-data=5368  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(570): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27794 RO-data=2394 RW-data=96 ZI-data=5368  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(570): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27794 RO-data=2394 RW-data=96 ZI-data=5368  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(110): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(124): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(570): warning:  #111-D: statement is unreachable
+main.c(35): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27794 RO-data=2394 RW-data=96 ZI-data=5368  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(111): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(125): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(571): warning:  #111-D: statement is unreachable
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27810 RO-data=2394 RW-data=100 ZI-data=5372  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(111): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(125): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(571): warning:  #111-D: statement is unreachable
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27810 RO-data=2394 RW-data=100 ZI-data=5372  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(111): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(125): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(571): warning:  #111-D: statement is unreachable
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27810 RO-data=2394 RW-data=100 ZI-data=5372  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(111): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(125): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(571): warning:  #111-D: statement is unreachable
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27818 RO-data=2394 RW-data=100 ZI-data=5372  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(111): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(125): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(571): warning:  #111-D: statement is unreachable
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27866 RO-data=2414 RW-data=100 ZI-data=5372  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=27866 RO-data=2414 RW-data=100 ZI-data=5372  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(111): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(125): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(573): warning:  #111-D: statement is unreachable
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27902 RO-data=2414 RW-data=100 ZI-data=5372  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(111): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(125): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(580): warning:  #111-D: statement is unreachable
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27990 RO-data=2414 RW-data=100 ZI-data=5372  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(111): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(125): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(581): warning:  #111-D: statement is unreachable
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27990 RO-data=2414 RW-data=100 ZI-data=5372  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(111): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(125): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(581): warning:  #111-D: statement is unreachable
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27990 RO-data=2414 RW-data=100 ZI-data=5372  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(111): warning:  #223-D: function "AppendEnergyRecord" declared implicitly
+main.c(125): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(581): warning:  #111-D: statement is unreachable
+main.c(36): warning:  #177-D: variable "bmp_tile" was declared but never referenced
+linking...
+Program Size: Code=27990 RO-data=2414 RW-data=100 ZI-data=5372  
+FromELF: creating hex file...
+"template.axf" - 0 Error(s), 4 Warning(s).

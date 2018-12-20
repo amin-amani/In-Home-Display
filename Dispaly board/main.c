@@ -14,22 +14,20 @@
 #include "commandline//commandline.h"
 #include "Log//Log.h"
 #include "CRC//lib_crc.h"
-
 #include "ds3231//ds3231.h"
 #define USART1_BUFFER_SIZE 40
-
+#define USART3_BUFFER_SIZE 20
+//--------------------------------------------------------------------------------------------------------------------
 char Usart1Buff[USART1_BUFFER_SIZE];
 int Usart1BuffIndex=0;
-
-
-char Usart3Buff[20];
+char Usart3Buff[USART3_BUFFER_SIZE];
 int Usart3BuffIndex=0;
-
-
-
 char temp_main[70];
-
 float InputCurrent=0,InputVoltage=0;
+bool DeviceInitialized=false;
+float TotalEnergy=0;
+float Voltage=0,Current=0;
+int CurrentTemperature=23;
 int i;
 HRF_date_TypeDef CurrentDate;
 u8 Rx1_Buffer[10];
@@ -41,6 +39,8 @@ static const uint8_t bmp_tile[] = {
 		0x11,0x29,0x82,0x44,0x00,0x00,0x00,0x01,0x01,0x01,0x00,0x00,0x00,0x00,
 		0x00,0x01,0x01,0x01,0x00,0x00
 };
+//=========================================================================================================================
+
 int RadTemp()
 { 
 return 0;
@@ -71,10 +71,14 @@ char ch=getkey3();
 
 Usart3Buff[Usart3BuffIndex]=ch;
 Usart3BuffIndex++;
+if(Usart3BuffIndex>=USART3_BUFFER_SIZE)	 Usart3BuffIndex=0;
 Usart3Buff[Usart3BuffIndex]=0;
+
+
+
 if(ch==10)
 {
-send_string(Usart3Buff) ;
+//send_string(Usart3Buff) ;
 sscanf(Usart3Buff,"%f %f",&InputCurrent,&InputVoltage) ;
 if(InputCurrent<0.1)InputCurrent=0;
  Usart3Buff[0]=0;
@@ -95,7 +99,7 @@ if(InputCurrent<0.1)InputCurrent=0;
  
  EnergyRecord record;
  send_string("Start Log...\n");
- if(!DS3231_ReadDate(&CurrentDate)){send_string("Log RTC Error...\n");return;	}
+ //if(!DS3231_ReadDate(&CurrentDate)){send_string("Log RTC Error...\n");return;	}
  record.Year=CurrentDate.Year;
  record.Mon=CurrentDate.Month;
  record.Day=CurrentDate.Day;
@@ -124,7 +128,7 @@ static unsigned long int roundRobinLcd=0;
  {
 
 	SSD1306_Fill(0x00);
-	DS3231_ReadDate(&CurrentDate);
+	//DS3231_ReadDate(&CurrentDate);
 	sprintf(temp_main,"Time %2d:%2d:%2d",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
 	LCD_PutStr(1,5,temp_main,fnt7x10,( uint8_t *)fdata);
 	sprintf(temp_main,"I=%2.2f",InputCurrent);
@@ -224,7 +228,11 @@ lockCount=0;
  {
 DoLog();
  }
-
+ //=================================================================================
+ void EraseMemory(char*par)
+ {
+    send_string("Erase Mem\n");
+ }
  //=================================================================================
  void GetInfo(char*par)
  {
@@ -234,25 +242,27 @@ DoLog();
  //=================================================================================
  void GetOnlineParameters(char*par)
  {
-send_string("GetOnlineParameters\n"); 
+sprintf(temp_main,"%3.1f,%3.1f,%6.1f,%d\n",InputVoltage,InputCurrent,TotalEnergy,CurrentTemperature);
+send_string(temp_main); 
+
 
  }
  //=================================================================================
  void GetDate(char*par)		  
  {
-  EnergyRecord rec;
+EnergyRecord rec;
 int addr=0;
 
 
- sscanf(par,"%d",&addr) ;
+sscanf(par,"%d",&addr) ;
 if(ReadEnergyRecord(addr,&rec))
 {
 sprintf(temp_main,"%d %d %d %d %d %d %d\n",rec.Year,rec.Mon,rec.Day,rec.Hour,rec.Min,rec.Energy,rec.Temp);
 send_string(temp_main); 
 return ;
 }
-  sprintf(temp_main,"read bad crc @%d\n ",addr);
- send_string(temp_main); 
+sprintf(temp_main,"read bad crc @%d\n ",addr);
+send_string(temp_main); 
 
  }
  //=================================================================================
@@ -294,18 +304,20 @@ return;
  //	uint8_t  Month;
 //	uint16_t Year;
 	//uint8_t  DOW;
- send_string("GetTime\n");
- 	if(DS3231_ReadDate(&CurrentDate)){
-	sprintf(temp_main,"%d-%d-%d -%d- %2d:%2d:%2d T=%d C",CurrentDate.Year,CurrentDate.Month,CurrentDate.Day,CurrentDate.DOW,CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds,DS3231_ReadTemp());
+ //send_string("GetTime\n");
+ 	//if(DS3231_ReadDate(&CurrentDate)){
+	//sprintf(temp_main,"%d-%d-%d -%d- %2d:%2d:%2d T=%d C\n",CurrentDate.Year,CurrentDate.Month,CurrentDate.Day,CurrentDate.DOW,CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds,27);
+	sprintf(temp_main,"%d-%02d-%02d %02d:%02d:%02d\n",CurrentDate.Year,CurrentDate.Month,CurrentDate.Day,CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
 	send_string(temp_main);			  
 	
 	
-	}
-	else{
-	send_string("error!");			
+//	}
+//	else{
+//	send_string("error!");			
 	  
-	}
+//	}
  }
+
  //=================================================================================
  void SetTime(char*par)
  {
@@ -314,6 +326,15 @@ int h=0,m=0,s=0,d=0,mm=0,y=0,dow=0;
 
 
  sscanf(par,"%d %d %d %d %d %d %d",&y,&mm, &d, &dow,&h, &m, &s) ;
+if(y>99 || y<0)y=0;
+if(mm>12 || mm<1)mm=1;
+if(d>30 || d<1)d=1;
+if(dow>7 || dow<1)dow=1;
+if(h>23 || h<0)h=0;
+if(m>59 || m<0)m=0;
+if(s>59 || s<0)s=0;
+
+
  date.Year=y;
  date.Month=mm;
  date.Day=d;
@@ -357,8 +378,37 @@ else send_string("Error");
  //=================================================================================
  void SetLedBarLevels(char*par)
  {
+ 
  send_string("set bar\n");
  }
+ //=================================================================================
+void ReadRecord(char*par)
+{
+/*
+uint8_t		Year;
+uint8_t		Mon;
+uint8_t		Day;
+uint8_t		Hour;
+uint8_t		Min;
+uint32_t	Energy;
+uint8_t 	Temp;
+*/
+int address=0;
+EnergyRecord record;
+
+sscanf(par,"%d",&address);
+//ReadEnergyRecord(address,&record);
+if(!ReadEnergyRecord(address,&record))
+{
+sprintf(temp_main,"error=%d\n",address);
+send_string( temp_main );
+return ;
+
+}
+sprintf(temp_main,"%d %d %d %d %d %d %d\n",2000+record.Year,record.Mon,record.Day,record.Hour,record.Min,record.Energy,record.Temp);
+send_string( temp_main );
+
+}
  //=================================================================================
  void ReadMemory(char*par)
  {
@@ -390,7 +440,35 @@ sendchar(data);
  }
  //=================================================================================
  ////////////////////////////////////////////////////////////////////////Commandline Functions
-//uint8_t LCD_PixelMode = LCD_PSET;
+
+void TIM1_UP_IRQHandler()
+{
+static int lastUpdateHour=-1;
+TIM1->SR&=~(1<<0);
+if(!DeviceInitialized)return;
+
+if(lastUpdateHour<0){
+lastUpdateHour=CurrentDate.Hours+1;
+if(lastUpdateHour==24){lastUpdateHour=0;}
+send_string("define last update for first\n");
+}
+ TotalEnergy+=InputCurrent*InputVoltage*1;
+//energy test add
+ //TotalEnergy+=1;
+//sprintf(temp_main,"%d %d %d\n",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds) ;
+//send_string(temp_main);
+ //-------------------------------------
+ if(CurrentDate.Hours==lastUpdateHour && CurrentDate.Minutes==0)
+ {
+  send_string("log to file\n");
+//log to file
+lastUpdateHour=CurrentDate.Hours+1;
+if(lastUpdateHour==24){lastUpdateHour=0;}
+  TotalEnergy=0;
+ }
+ //-------------------------------------
+
+}
 //=========================================================================================================================
 int main(){
 //float t,h;
@@ -405,8 +483,23 @@ DS3231Init();
 send_string("hello\n");
 
 
-LogInit();
- while(1){}
+//LogInit();
+//DeviceInitialized=true;
+ while(1){
+ 
+ if(!DS3231_ReadDate(&CurrentDate))
+{
+
+send_string("rtc error\n");
+
+
+}
+//sprintf(temp_main,"%d %d %d\n",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds) ;
+//send_string(temp_main);
+
+delay_ms(1000);
+
+ }
   
 //SSD1306_InitGPIO();
  //adc_init(1);

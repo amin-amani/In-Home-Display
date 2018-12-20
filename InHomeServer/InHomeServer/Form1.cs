@@ -10,6 +10,8 @@ using System.Net.Sockets;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Globalization;
+using System.IO;
 
 namespace InHomeServer
 {
@@ -21,6 +23,8 @@ namespace InHomeServer
         public static event EventHandler OperationCompleted;
         int MaxDevices = 1;
         string Host;
+        Thread thrUpdate;
+        bool busy=false;
 
 
         public Form1()
@@ -31,14 +35,148 @@ namespace InHomeServer
 
         void Form1_OperationCompleted(object sender, EventArgs e)
         {
+            try
+            {
+                PgrProgress.Invoke(new MethodInvoker(delegate
+                {
+                    PgrProgress.Value++;
+                    PgrProgress.Refresh();
+                }));
+            }
+            catch (Exception)
+            { }
             
-            PgrProgress.Invoke(new MethodInvoker(delegate
-                    {
-                        PgrProgress.Value++;
-                        PgrProgress.Refresh();
-                    }));
-      
+            
         }
+        public DateTime GetDeviceClock()
+        {
+            DateTime result = new DateTime();
+            try
+            {
+
+                TCPHandler client = new TCPHandler();
+
+
+                if (!client.Connect(CmbDeviceName.Text, 1217, 10))
+                {
+                    Console.WriteLine("end......." + CmbDeviceName.Text + " fail");
+                    return result;
+                }
+                string resp = client.SendCommandMs("GetTime\n", 20, 10, 1);
+                //DateTime.TryParseExact(resp.Trim(),
+                //              "yyyy-dd-MM hh:mm:ss",
+                //              CultureInfo.InvariantCulture,
+                //              DateTimeStyles.None,
+                //              out result);
+                result = DateTime.ParseExact(resp.Trim(), "yyyy-MM-dd HH:mm:ss",
+                                           System.Globalization.CultureInfo.InvariantCulture);
+                //  result = new DateTime();
+                //MessageBox.Show(resp);
+                client.Disconnect();
+                return result;                
+            }
+            catch(Exception){
+                return result;
+            }
+
+        }
+
+        private bool GetOnlineParameters(ref float voltage, ref  float current, ref  float energy,ref int temp)
+        {
+            
+
+            TCPHandler client = new TCPHandler();
+
+
+            if (!client.Connect(CmbDeviceName.Text, 1217, 10))
+            {
+                Console.WriteLine("end......." + CmbDeviceName.Text + " fail");
+                return false;
+            }
+            string resp = client.SendCommandMs("Online\n", 40, 10, 1);
+            string []sp=resp.Split(',');
+            if (sp.Length < 4) return false;
+        
+            float.TryParse(sp[0], out voltage);
+            float.TryParse(sp[1], out current);
+            float.TryParse(sp[2], out energy);
+            int.TryParse(sp[3], out temp);
+ //Console.WriteLine("resp ------------------->>> "+sp[0]+" "+ sp[1]+" "+sp[2]);
+            //  result = new DateTime();
+            //MessageBox.Show(resp);
+            client.Disconnect();
+            return true;
+        }
+
+
+
+          private void ReadMem()
+        { 
+              TCPHandler client = new TCPHandler();
+              
+                  BtnDownload.Invoke(new MethodInvoker(delegate
+           {
+            if (!client.Connect(CmbDeviceName.Text, 1217, 10))
+            {
+                Console.WriteLine("end......." + CmbDeviceName.Text + " fail");
+            
+                    BtnDownload.Enabled = true;
+                    TimUpdateValues.Enabled = true;
+              
+                return;
+         
+            }  
+                
+                }));
+            //string resp = 
+              StreamWriter sw = new StreamWriter("export.txt");
+            for (int i = 0; i < 336; i++) { 
+            string resp = client.SendCommandReadLine("ReadRecord "+i.ToString()+"\n", 40, 10, 1);
+            PgrProgress.Invoke(new MethodInvoker(delegate
+            {
+
+                PgrProgress.Value++; ;
+            }));
+           // Thread.Sleep(1);
+            if (!resp.Contains("error")) {  sw.WriteLine(resp); }
+            Console.WriteLine(resp);
+            }
+            sw.Close();
+            BtnDownload.Invoke(new MethodInvoker(delegate
+    {
+        BtnDownload.Enabled = true;
+        TimUpdateValues.Enabled = true;
+    }));
+
+            //List<byte> resp = client.SendCommandMs(Encoding.ASCII.GetBytes("ReadRecord\n").ToList(), 13, 200, 1);
+              //MessageBox.Show("Test");
+           // MessageBox.Show(resp);
+        }
+        public DateTime SetDeviceClock()
+        {
+            DateTime result =DateTime.Now;
+
+            TCPHandler client = new TCPHandler();
+            string msg = "SetTime " + (result.Year-2000).ToString() + " " + result.Month.ToString() + " "
+    + result.Day.ToString() + " 1 " + result.Hour.ToString() + " " + result.Minute.ToString() + " " +
+    result.Second.ToString() + "\n";
+            MessageBox.Show(msg);
+
+            if (!client.Connect(CmbDeviceName.Text, 1217, 5))
+            {
+                Console.WriteLine("end......." + CmbDeviceName.Text + " fail");
+                return result;
+            }
+
+            string resp = client.SendCommandMs(msg, 40, 10, 1);
+
+   
+            //  result = new DateTime();
+            MessageBox.Show(resp);
+            client.Disconnect();
+            return result;
+        }
+        
         public static string GetLocalIPAddress()
         {
             var host = Dns.GetHostEntry(Dns.GetHostName());
@@ -64,12 +202,15 @@ namespace InHomeServer
 
                 if (!success)
                 {
+
                     Console.WriteLine("end......." + ip + " fail");
+                  
                     return false;
                 }
 
                 // we have connected
                 client.EndConnect(result);
+                client.Close();
                 Console.WriteLine("end......."+ip+" succsess");
                 return true;
             }
@@ -142,7 +283,7 @@ namespace InHomeServer
 
             Console.WriteLine("fin.....................");
           //  CmbDeviceName.Items.AddRange(AvaliableDevices.ToArray());
-            MessageBox.Show("finished");
+           // MessageBox.Show("finished");
             return;
         
         }
@@ -151,8 +292,88 @@ namespace InHomeServer
             PgrProgress.Value = 0;
             PgrProgress.Maximum = 255;
     Thread thrSearch = new Thread(new ThreadStart(StartSearch));
+    thrSearch.IsBackground = true;
     thrSearch.Start();
         
+        }
+
+      
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+            TimUpdateValues.Enabled = false;
+            if (thrUpdate!=null)
+            while (thrUpdate.IsAlive) ;   
+            MessageBox.Show(   GetDeviceClock().ToString());
+            TimUpdateValues.Enabled = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TimUpdateValues.Enabled = false;
+            if (thrUpdate != null)
+                while (thrUpdate.IsAlive) ;
+            SetDeviceClock(); 
+            //MessageBox.Show(GetDeviceClock().ToString());
+            TimUpdateValues.Enabled = true;
+            //ReadMem();
+            //SetDeviceClock(); 
+
+        }
+
+        private void TimUpdateValues_Tick(object sender, EventArgs e)
+        {
+
+            Thread thrUpdate = new Thread(new ThreadStart(StartUpdate));
+            thrUpdate.IsBackground = true;
+            thrUpdate.Start();
+        }
+        void StartUpdate()
+        {
+
+            float v=0, i=0, e=0;
+            int temp=0;
+            LabDeviceDate.Invoke(new MethodInvoker(delegate
+           {
+               LabDeviceDate.Text = GetDeviceClock().ToString();
+               if (GetOnlineParameters(ref v, ref i, ref e,ref temp))
+               {
+                   LabVoltage.Text ="Voltage="+ v.ToString()+" V";
+                   LabCurrent.Text = "Current=" + i.ToString()+" A";
+                   LabEnergy.Text = "Energy=" + e.ToString()+" Kwh";
+                   LabTemp.Text = "Temp=" + temp.ToString() + " C";
+               }
+               
+
+           }));
+
+          
+     
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+    
+        }
+
+        private void BtnDownload_Click(object sender, EventArgs e)
+        {
+            TimUpdateValues.Enabled = false;
+            if (thrUpdate != null)
+                while (thrUpdate.IsAlive) ;
+            //ReadMem();
+            ////MessageBox.Show(GetDeviceClock().ToString());
+            //TimUpdateValues.Enabled = true;
+
+
+
+
+            PgrProgress.Value = 0;
+            PgrProgress.Maximum = 336;
+            Thread thrReadmem = new Thread(new ThreadStart(ReadMem));
+            thrReadmem.IsBackground = true;
+            thrReadmem.Start();
+            BtnDownload.Enabled = false;
+            
         }
     }
 }

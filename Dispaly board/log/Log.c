@@ -74,7 +74,9 @@ bool ReadEnergyRecord(int recordNum ,EnergyRecord *record)
 
  char temp[30];
 uint8_t *data=0;
-unsigned long crc=0xffffffff;
+//uint8_t data[15];
+
+uint16_t  crc=0xffff;
 int i=0;
 
 recordNum*=sizeof(EnergyRecord);
@@ -82,37 +84,52 @@ data=(uint8_t*)record;
 
 ///////////////
 
-if(!I2C_EE_BufferRead(data,recordNum,sizeof(EnergyRecord)))
-return false;
-for(i=0;i<sizeof(EnergyRecord)-2;i++)
-{
-	 crc=update_crc_16(data[i],crc);
+//if(!I2C_EE_BufferRead(data,recordNum,12))
+//{send_string("eeprom read \n");return false; }
+//for(i=0;i<12;i++){
+//if(!I2C_EE_ByteRead(recordNum+i,&data[i]))
+//{
+// send_string("eeprom read \n");return false;
+//}
+//}
+//
+//for(i=0;i<sizeof(EnergyRecord)-2;i++)
+//{
+//sprintf(temp,"%x ",data[i]);
+//send_string(temp);
+//
+//	 crc=update_crc_16(crc,data[i]);
+//
+//} 	 
+//
 
-} 	 
+ for(i=0;i<sizeof(EnergyRecord);i++)
+ {
+ 	 
+  if(I2C_EE_ByteRead(recordNum+i,data)==0)  
+  {
+  send_string("ReadError\n");
+  	return false;
 
-// for(i=0;i<sizeof(EnergyRecord);i++)
-// {
-// 	 
-//  if(I2C_EE_ByteRead(recordNum+i,data)==0)  
-//  {
-//  send_string("ReadError\n");
-//  	return false;
-//
-//  }
-//
-//	if((sizeof(EnergyRecord)-2)>i){
-//	crc=update_crc_16(*data,crc);
-//	
-//	}
-//	data++;
-//  
-//
-// }
-//
+  }
+//sprintf(temp,"%x ",data[i]);
+//send_string(temp);
+	if((sizeof(EnergyRecord)-2)>i){
+	crc=update_crc_16(crc,*data);
+	
+	}
+	data++;
+  
+
+ }
+
 
 ////////////////
 //sprintf(temp,"calc crc=%x crc=%x\n",crc,record->Crc);
 //send_string(temp);
+//sprintf(temp,"crc =%x rcrc=%x\n",crc,record->Crc);
+//send_string(temp);
+
 if(crc==record->Crc)
  return true;
 
@@ -123,10 +140,10 @@ return false;
 
 bool WriteEnergyRecord(int recordNum ,EnergyRecord record)
 {
-uint8_t *data=0;
-
+uint8_t *data;
+//char temp[20];
 int i;
-unsigned long crc=0xffffffff;
+uint16_t  crc=0xffff;
 
 recordNum*=sizeof(EnergyRecord);
 if(recordNum >ENERGY_RECORD_MAX_ADDRESS)return 0;
@@ -142,19 +159,21 @@ send_string("write Error\n");
 return false;
 
 }
-crc=update_crc_16(*data,crc);
+crc=update_crc_16(crc,*data);
 data++;
   
 
  }
+//sprintf(temp,"crc =%x\n",crc);
+//send_string(temp);
 //////////////// write crc
-if(!I2C_EE_ByteWrite((crc>>0)&0xff,sizeof(EnergyRecord)-2))
+if(!I2C_EE_ByteWrite((crc&0xff),sizeof(EnergyRecord)-2+recordNum))
 {
 send_string("write Error2\n");
 return false;
 }
-
-if( !I2C_EE_ByteWrite((crc>>8)&0xff,sizeof(EnergyRecord)-1))
+crc>>=8;//get high byte
+if( !I2C_EE_ByteWrite((crc&0xff),sizeof(EnergyRecord)-1+recordNum))
 {
 send_string("write Error3\n");
 return false;
