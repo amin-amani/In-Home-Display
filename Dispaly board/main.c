@@ -1,3 +1,17 @@
+/*
+hardware test....................
+led red			ok			 
+led green		ok
+ledbar			ok
+RTC				ok
+buzzer			ok
+Temp			OK
+wifi
+MeterData
+lcd
+key				ok
+			
+*/
 #include <stm32f10x_lib.h>
 #include <stdio.h>
 #include <string.h>
@@ -17,6 +31,14 @@
 #include "ds3231//ds3231.h"
 #define USART1_BUFFER_SIZE 40
 #define USART3_BUFFER_SIZE 20
+
+#define LEDR_ON GPIOB->ODR|=1<<0 
+#define LEDR_OFF GPIOB->ODR&=~(1<<0)
+#define LEDG_ON GPIOB->ODR|=(1<<1)
+#define LEDG_OFF GPIOB->ODR&=~(1<<1)
+#define BUZZER_ON GPIOB->ODR|=(1<<13)
+#define BUZZER_OFF GPIOB->ODR&=~(1<<13)
+#define KEY (GPIOA->IDR>>8)&0x01
 //--------------------------------------------------------------------------------------------------------------------
 char Usart1Buff[USART1_BUFFER_SIZE];
 int Usart1BuffIndex=0;
@@ -32,18 +54,73 @@ int i;
 HRF_date_TypeDef CurrentDate;
 u8 Rx1_Buffer[10];
 
+int LedLevel=0;
+
+
+
+
 // Tile bitmap
-static const uint8_t bmp_tile[] = {
-		0x38,0x44,0x82,0x29,0x11,0x29,0x82,0x44,0x38,0x44,0x82,0x11,0x29,0x11,
-		0x82,0x44,0x38,0x44,0x82,0x11,0x29,0x11,0x82,0x44,0x38,0x44,0x82,0x29,
-		0x11,0x29,0x82,0x44,0x00,0x00,0x00,0x01,0x01,0x01,0x00,0x00,0x00,0x00,
-		0x00,0x01,0x01,0x01,0x00,0x00
-};
+//static const uint8_t bmp_tile[] = {
+//		0x38,0x44,0x82,0x29,0x11,0x29,0x82,0x44,0x38,0x44,0x82,0x11,0x29,0x11,
+//		0x82,0x44,0x38,0x44,0x82,0x11,0x29,0x11,0x82,0x44,0x38,0x44,0x82,0x29,
+//		0x11,0x29,0x82,0x44,0x00,0x00,0x00,0x01,0x01,0x01,0x00,0x00,0x00,0x00,
+//		0x00,0x01,0x01,0x01,0x00,0x00
+//};
+
+//=========================================================================================================================
+void SetLedBar(int level)
+{
+GPIOA->ODR&=~(0x18fe);
+
+if(level>0){
+GPIOA->ODR|=1<<1;
+
+}
+if(level>1){
+GPIOA->ODR|=1<<2;
+
+}
+if(level>2){
+GPIOA->ODR|=1<<3;
+
+}
+if(level>3){
+
+GPIOA->ODR|=1<<4;
+}
+if(level>4){
+GPIOA->ODR|=1<<5;
+
+}
+if(level>5){
+GPIOA->ODR|=1<<6;
+
+}
+if(level>6){
+GPIOA->ODR|=1<<7;
+}
+if(level>7){
+GPIOA->ODR|=1<<11;
+}
+if(level>8){
+GPIOA->ODR|=1<<12;
+}
+
+}
 //=========================================================================================================================
 
-int RadTemp()
-{ 
-return 0;
+double ReadTemp()
+{ 	  
+double result=0;
+for(i=0;i<50;i++)
+result+=readadc(0);
+result/=50;
+
+ result =result*330/4095.0;
+ result-=273.0;
+
+
+return result;
 }
 //=========================================================================================================================
 void USART1_IRQHandler()
@@ -479,8 +556,25 @@ stm32_Init();
 //RGBInit(); 
 DS3231Init();
 //I2C_Configuration();
-
+  adc_init(1);
 send_string("hello\n");
+//----------------LCD INITIALIZE---------------
+SSD1306_InitGPIO();
+SSD1306_Init();
+ // Screen orientation normal (FPC cable at the bottom)
+SSD1306_Orientation(LCD_ORIENT_NORMAL);
+// Mid level contrast
+SSD1306_Contrast(127);
+	// Now do some drawing
+
+	// Clear video buffer
+SSD1306_Fill(0x00);
+	// Drawing mode: set pixels
+	LCD_PixelMode = LCD_PSET;
+LCD_PutStr(35,11,"SSD1306",fnt7x10,( uint8_t *)fdata);
+	SSD1306_Flush();
+//LCD_PutStr(19,43,"OLED 128x64",fnt7x10);
+//---------------------------------------------
 
 
 //LogInit();
@@ -494,9 +588,15 @@ send_string("rtc error\n");
 
 
 }
-//sprintf(temp_main,"%d %d %d\n",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds) ;
-//send_string(temp_main);
-
+//LedLevel++;
+//if(LedLevel>9)LedLevel=0;
+//if(LedLevel==1){BUZZER_ON;LEDG_OFF;LEDR_ON;}
+//if(LedLevel==2){BUZZER_OFF;LEDG_ON;LEDR_OFF;}
+//if(LedLevel==3){BUZZER_OFF;LEDG_OFF;LEDR_OFF;}
+if(KEY)LEDR_ON;
+sprintf(temp_main,"%2.3f\n",ReadTemp()) ;
+send_string(temp_main);
+  SetLedBar(LedLevel);
 delay_ms(1000);
 
  }

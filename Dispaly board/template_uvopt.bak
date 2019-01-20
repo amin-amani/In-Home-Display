@@ -261,10 +261,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>21</ColumnNumber>
+      <ColumnNumber>31</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>366</TopLine>
-      <CurrentLine>380</CurrentLine>
+      <TopLine>69</TopLine>
+      <CurrentLine>69</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -602,7 +602,7 @@
 
   <Group>
     <GroupName>CommandLine</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
@@ -611,10 +611,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>13</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>18</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\commandline\commandline.c</PathWithFileName>
       <FilenameWithoutPath>commandline.c</FilenameWithoutPath>
@@ -625,10 +625,10 @@
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>22</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>11</TopLine>
+      <CurrentLine>18</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\commandline\commandline.h</PathWithFileName>
       <FilenameWithoutPath>commandline.h</FilenameWithoutPath>
@@ -646,10 +646,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>5</ColumnNumber>
+      <ColumnNumber>30</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>54</TopLine>
-      <CurrentLine>72</CurrentLine>
+      <TopLine>65</TopLine>
+      <CurrentLine>71</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\log\Log.c</PathWithFileName>
       <FilenameWithoutPath>Log.c</FilenameWithoutPath>
@@ -660,10 +660,10 @@
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>21</ColumnNumber>
+      <ColumnNumber>27</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>15</TopLine>
+      <CurrentLine>19</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\log\Log.h</PathWithFileName>
       <FilenameWithoutPath>Log.h</FilenameWithoutPath>
@@ -679,9 +679,9 @@
       <Documents>
         <Doc>
           <Name>.\log\Log.c</Name>
-          <ColumnNumber>5</ColumnNumber>
-          <TopLine>54</TopLine>
-          <CurrentLine>72</CurrentLine>
+          <ColumnNumber>30</ColumnNumber>
+          <TopLine>65</TopLine>
+          <CurrentLine>71</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\DS3231\DS3231.c</Name>
@@ -691,15 +691,27 @@
         </Doc>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>21</ColumnNumber>
-          <TopLine>366</TopLine>
-          <CurrentLine>380</CurrentLine>
+          <ColumnNumber>31</ColumnNumber>
+          <TopLine>69</TopLine>
+          <CurrentLine>69</CurrentLine>
         </Doc>
         <Doc>
           <Name>Log//Log.h</Name>
-          <ColumnNumber>18</ColumnNumber>
+          <ColumnNumber>27</ColumnNumber>
           <TopLine>15</TopLine>
-          <CurrentLine>15</CurrentLine>
+          <CurrentLine>19</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\commandline\commandline.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>18</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>commandline//commandline.h</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>11</TopLine>
+          <CurrentLine>18</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

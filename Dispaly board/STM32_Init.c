@@ -4438,10 +4438,10 @@
 // </e> End of General purpose I/O Configuration
 #define __GPIO_SETUP              1
 #define __GPIO_USED               0x03
-#define __GPIOA_CRL               0x00000040
-#define __GPIOA_CRH               0x00444004
-#define __GPIOB_CRL               0x00000040
-#define __GPIOB_CRH               0x00000000
+#define __GPIOA_CRL               0x33333330
+#define __GPIOA_CRH               0x00433008
+#define __GPIOB_CRL               0x00000011
+#define __GPIOB_CRH               0x00200000
 #define __GPIOC_CRL               0x33003003
 #define __GPIOC_CRH               0x88000000
 #define __GPIOD_CRL               0x00000300
