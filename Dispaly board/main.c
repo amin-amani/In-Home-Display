@@ -7,8 +7,8 @@ RTC				ok
 buzzer			ok
 Temp			OK
 wifi
-MeterData
-lcd
+MeterData		ok
+lcd				ok
 key				ok
 			
 */
@@ -552,7 +552,7 @@ int main(){
 
   
 stm32_Init();
-//jtag_Disable();
+jtag_Disable();
 //RGBInit(); 
 DS3231Init();
 //I2C_Configuration();
@@ -565,14 +565,12 @@ SSD1306_Init();
 SSD1306_Orientation(LCD_ORIENT_NORMAL);
 // Mid level contrast
 SSD1306_Contrast(127);
-	// Now do some drawing
-
-	// Clear video buffer
+//Clear video buffer
 SSD1306_Fill(0x00);
-	// Drawing mode: set pixels
-	LCD_PixelMode = LCD_PSET;
+// Drawing mode: set pixels
+LCD_PixelMode = LCD_PSET;
 LCD_PutStr(35,11,"SSD1306",fnt7x10,( uint8_t *)fdata);
-	SSD1306_Flush();
+SSD1306_Flush();
 //LCD_PutStr(19,43,"OLED 128x64",fnt7x10);
 //---------------------------------------------
 
@@ -594,8 +592,8 @@ send_string("rtc error\n");
 //if(LedLevel==2){BUZZER_OFF;LEDG_ON;LEDR_OFF;}
 //if(LedLevel==3){BUZZER_OFF;LEDG_OFF;LEDR_OFF;}
 if(KEY)LEDR_ON;
-sprintf(temp_main,"%2.3f\n",ReadTemp()) ;
-send_string(temp_main);
+//sprintf(temp_main,"%2.3f\n",ReadTemp()) ;
+//send_string(temp_main);
   SetLedBar(LedLevel);
 delay_ms(1000);
 
