@@ -44,15 +44,16 @@ maxDate.Day=1;
 maxDate.Hours=0;
 maxDate.Minutes=0;
 
-
+send_string("start read\n");
 
 delay_ms(700); 
 for(i=0;i<ENERGY_RECORD_MAX_ADDRESS/sizeof(EnergyRecord);i++)	//in normal 4032/12=336
  {
- 
+   	delay_ms(5);
  result=ReadEnergyRecord(i,&record);	//read record
-  if(!result)continue; 								//skip nothing with invalid records
-  if( CompareRecordDate(record,maxDate)<0)continue; //record date smaller
+
+  if(!result){ continue; }								//skip nothing with invalid records
+  if( CompareRecordDate(record,maxDate)<0){	  continue;} //record date smaller	}
  
   	
 	RecordIndex=i;
@@ -63,7 +64,7 @@ for(i=0;i<ENERGY_RECORD_MAX_ADDRESS/sizeof(EnergyRecord);i++)	//in normal 4032/1
 	maxDate.Minutes=record.Min;
 
  }
-
+ 
   sprintf(temp,"\n%d %d %d %d %d index=%d\n",	maxDate.Year,maxDate.Month,maxDate.Day,maxDate.Hours,maxDate.Minutes,RecordIndex);
   send_string(temp);
 

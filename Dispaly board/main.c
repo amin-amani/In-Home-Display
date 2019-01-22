@@ -36,9 +36,8 @@ key				ok
 #define LEDR_OFF GPIOB->ODR&=~(1<<0)
 #define LEDG_ON GPIOB->ODR|=(1<<1)
 #define LEDG_OFF GPIOB->ODR&=~(1<<1)
-#define BUZZER_ON GPIOB->ODR|=(1<<13)
-#define BUZZER_OFF GPIOB->ODR&=~(1<<13)
-#define KEY (GPIOA->IDR>>8)&0x01
+
+
 //--------------------------------------------------------------------------------------------------------------------
 char Usart1Buff[USART1_BUFFER_SIZE];
 int Usart1BuffIndex=0;
@@ -53,9 +52,10 @@ int CurrentTemperature=23;
 int i;
 HRF_date_TypeDef CurrentDate;
 u8 Rx1_Buffer[10];
+int DisplayPage=0;
 
-int LedLevel=0;
-
+const float ConsumePattern[24]={14.17,13.73,12.96,12.97,13.43,12.99,13.33,14.23,15.46,16.47,16.37,16.49,16.28,
+16.29,16.07,16.42,17.32,20.43,21.00,20.56,19.69,18.69,17.04,15.60};
 
 
 
@@ -197,6 +197,62 @@ if(InputCurrent<0.1)InputCurrent=0;
  }
 //=========================================================================================================================
 
+void CalcConsumptionPatern(float Current,int hour)
+{
+ float calc=0;
+calc=100*(Current-ConsumePattern[hour])/(ConsumePattern[hour]);
+
+
+if(calc<-12.5)
+{
+SetLedBar(0);
+return;
+}
+if(Current<-7.5)
+{
+SetLedBar(1);
+return;
+}
+if(Current<-2.5)
+{
+SetLedBar(2);
+return;
+}
+if(Current<1.5)
+{
+SetLedBar(3);
+return;
+}
+if(Current<4.5)
+{
+SetLedBar(4);
+return;
+}
+if(Current<7.5)
+{
+SetLedBar(5);
+return;
+}
+if(Current<10.5)
+{
+SetLedBar(6);
+return;
+}
+ if(Current<13.5)
+{
+SetLedBar(7);
+return;
+}
+ if(Current<17.5)
+{
+SetLedBar(8);
+return;
+}
+SetLedBar(9);
+
+}
+//=========================================================================================================================
+
 void DisplayValues(unsigned long int refereshTime)
 { 
 float temp;
@@ -204,90 +260,77 @@ static unsigned long int roundRobinLcd=0;
  if(roundRobinLcd++>refereshTime)
  {
 
+if(!DS3231_ReadDate(&CurrentDate))
+{
+
+send_string("rtc error\n");
+
+
+}
+
+
+CalcConsumptionPatern(InputCurrent,CurrentDate.Hours);
+
 	SSD1306_Fill(0x00);
 	//DS3231_ReadDate(&CurrentDate);
-	sprintf(temp_main,"Time %2d:%2d:%2d",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
-	LCD_PutStr(1,5,temp_main,fnt7x10,( uint8_t *)fdata);
+	if(DisplayPage==0){
+	sprintf(temp_main,"    %02d:%02d:%02d",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
+	LCD_PutStr(1,15,temp_main,fnt7x10,( uint8_t *)fdata);
+	sprintf(temp_main,"TEMP: %d C",(int)ReadTemp());
+	LCD_PutStr(28,35,temp_main,fnt7x10,( uint8_t *)fdata);
+	
+						   }
+	if(DisplayPage==1){
+//	sprintf(temp_main,"Time %2d:%2d:%2d",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
+	LCD_PutStr(30,5,"Metering",fnt7x10,( uint8_t *)fdata);
 	sprintf(temp_main,"I=%2.2f",InputCurrent);
 	LCD_PutStr(1,20,temp_main,fnt7x10,( uint8_t *)fdata);
 	sprintf(temp_main,"V=%3.2f",InputVoltage);
 	LCD_PutStr(1,35,temp_main,fnt7x10,( uint8_t *)fdata);
 	sprintf(temp_main,"P=%3.2f",InputVoltage*InputCurrent*0.9);
 	LCD_PutStr(1,50,temp_main,fnt7x10,( uint8_t *)fdata);
-	
+						   }
 	SSD1306_Flush();
 	roundRobinLcd=0;
-	send_string("test\n");
 
+//sprintf(temp_main,"%x",GPIOA->IDR);
+//	send_string(temp_main);
+	 // SetLedBar(InputCurrent)
   
 }
 
 }
 //----------------------------------------------------------------------------------
 
-void OnStartButtonPresed()
+void OnSelectKeyPresed()
 {
-
-  	  	 //send_string("start\n");
-}
-//=================================================================================
-
-void OnStopButtonPresed()
-{
- 	 //send_string("stop\n");
-}
-//=================================================================================
-
-void OnUpButtonPresed()
-{
-  	// send_string("up\n");
-
-}
-//=================================================================================
-
-void OnDownButtonPresed()
-{
+  Beep(30);
+  DisplayPage++;
+  if(DisplayPage>1)DisplayPage=0;
      	// send_string("down\n");
 }
-//=================================================================================
 
-void OnPlusButtonPresed()
-{
-  	// send_string("plus\n");
-
-}
-//=================================================================================
-
-void OnMinusButtonPresed()
-{
-    	// send_string("min\n");
-}
 //=================================================================================
 void CheckKeyPad()
 {
   static bool lock=false;
   static int lockCount=0;
-  if(!AnyKeyPressed)
+  if(SelectKEY)
   {
   	 lock=0;
 	 lockCount=0;
-
+	   
  return;
   }
 if(!lock)
 {
 lock=true;
- Beep(10);
 
 
-if(DownButton)
-OnDownButtonPresed();
-if(PlusButton)
-OnPlusButtonPresed();
-if(MinusButton)
-OnMinusButtonPresed();
-if(UpButton)
-OnUpButtonPresed();
+
+if(!SelectKEY)
+OnSelectKeyPresed();
+
 
  return;
 }
@@ -553,9 +596,10 @@ int main(){
   
 stm32_Init();
 jtag_Disable();
+delay_ms(1000);
 //RGBInit(); 
 DS3231Init();
-//I2C_Configuration();
+I2C_Configuration();
   adc_init(1);
 send_string("hello\n");
 //----------------LCD INITIALIZE---------------
@@ -569,140 +613,26 @@ SSD1306_Contrast(127);
 SSD1306_Fill(0x00);
 // Drawing mode: set pixels
 LCD_PixelMode = LCD_PSET;
-LCD_PutStr(35,11,"SSD1306",fnt7x10,( uint8_t *)fdata);
+LCD_PutStr(28,11,"Rasana Mehr",fnt7x10,( uint8_t *)fdata);
 SSD1306_Flush();
 //LCD_PutStr(19,43,"OLED 128x64",fnt7x10);
 //---------------------------------------------
 
-
+ delay_ms(1000);
 //LogInit();
 //DeviceInitialized=true;
  while(1){
  
- if(!DS3231_ReadDate(&CurrentDate))
-{
-
-send_string("rtc error\n");
-
-
-}
-//LedLevel++;
-//if(LedLevel>9)LedLevel=0;
-//if(LedLevel==1){BUZZER_ON;LEDG_OFF;LEDR_ON;}
-//if(LedLevel==2){BUZZER_OFF;LEDG_ON;LEDR_OFF;}
-//if(LedLevel==3){BUZZER_OFF;LEDG_OFF;LEDR_OFF;}
-if(KEY)LEDR_ON;
-//sprintf(temp_main,"%2.3f\n",ReadTemp()) ;
-//send_string(temp_main);
-  SetLedBar(LedLevel);
-delay_ms(1000);
-
- }
-  
-//SSD1306_InitGPIO();
- //adc_init(1);
-//DS3231Init();
-
-
-	// Initialize display
-	//SSD1306_InitGPIO();
-	//SSD1306_Init();
-
-	// Screen orientation normal (FPC cable at the bottom)
-	//SSD1306_Orientation(LCD_ORIENT_NORMAL);
-
-	// Mid level contrast
-	//	SSD1306_Contrast(127);
-
-
-	// Now do some drawing
-
-	// Clear video buffer
-	//SSD1306_Fill(0x00);
-
-	// Drawing mode: set pixels
-//	LCD_PixelMode = LCD_PSET;
-
-	// Draw a couple of strings
-	//LCD_PutStr(35,11,"SSD1306",fnt7x10,( uint8_t *)fdata);
-	//LCD_PutStr(19,43,"OLED 128x64",fnt7x10);
-	//	LCD_HLine(0,60,60);
-		// Send video buffer to the screen
-
-
-		// Draw tiled bitmap
-//	for (i = 0; i < scr_width - 1; i += 16)	LCD_DrawBitmap(i,23,16,17,bmp_tile);
-
-//	SSD1306_Flush();
-// Configure display to scroll horizontally right
-//	SSD1306_ScrollHSetup(LCD_SCROLL_RIGHT,2,5,LCD_SCROLL_IF25);
-
-	// Start hardware display scrolling
-//	SSD1306_ScrollStart();
-
-	// Delay for 5 seconds
-//	delay_ms(5000);
-
-	// Stop scrolling
-//	SSD1306_ScrollStop();
-
-	// Configure display to scroll horizontally left with maximum speed
-//	SSD1306_ScrollHSetup(LCD_SCROLL_LEFT,2,5,LCD_SCROLL_IF2);
-
-	// Start hardware display scrolling
-//	SSD1306_ScrollStart();
-
-	// Delay for 5 seconds
-//	delay_ms(5000);
-
-	// Stop scrolling
-//	SSD1306_ScrollStop();
-//SetRGB(1,1,1);
-//delay_ms(1000);
-//		CurrentDate.seconds=0;
-//	  	CurrentDate.minutes=0;
-//	    CurrentDate.hours=0;
-//		CurrentDate.date=19;
-//	    CurrentDate.month=10;
-//	    CurrentDate.year=18;
-//		DS3231_WriteDateRAW(&CurrentDate);
-//I2C_Configuration();
-//send_string("itc init ok\n");
-//I2C_EE_ByteWrite(0x01,175);
-//I2C_EE_ByteWrite(0x02,178);
-
-//for(i=0;i<10;i++){
-
-//void I2C_EE_ByteWrite(u8 pBuffer, u8 WriteAddr)
-
+// if(!DS3231_ReadDate(&CurrentDate))
+//{
+//
+//send_string("rtc error\n");
+//
+//
 //}
-send_string("i2c init ok\n");	  //384ye68
-//I2C_EE_ByteWrite(177,4095);
- for(i=0;i<10;i++){
- //I2C_EE_ByteWrite(i+40,i);
-Rx1_Buffer[i]=0;
-}
-//I2C_EE_ByteWrite(Rx1_Buffer,i+1);
-//} 
-while(1){
-//	DS3231_ReadDate(&CurrentDate);
-//	sprintf(temp_main,"%d %d %d\n",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds) ;
-//	delay_ms(300);
-//	send_string(temp_main);
-	   			//DisplayValues(200);
-				 //CheckKeyPad();
-	//	sprintf(temp_main,"D0=%d D1=%d\n",InputCurrent,InputVoltage) ;
-	//SetRGB(0,1,0);
-	delay_ms(300);
-	 //void I2C_EE_BufferRead(u8* pBuffer, u8 ReadAddr, u16 NumByteToRead);
-	 I2C_EE_BufferRead(Rx1_Buffer, 0, 2); 
-//sprintf(temp_main,"D0=%d %d %d\n",Rx1_Buffer[0],Rx1_Buffer[1],I2C_EE_ByteRead(4095)) ;
-//sprintf(temp_main,"D0=%d \n",I2C_EE_ByteRead(0)) ;
-//	send_string(temp_main);
+CheckKeyPad();
+ DisplayValues(1000);
+delay_ms(1);
 
-		
-
-
-
-		}//end while
+ }//end while
 	}//end main

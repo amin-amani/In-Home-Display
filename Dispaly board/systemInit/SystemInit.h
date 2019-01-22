@@ -1,7 +1,8 @@
 #include <stm32f10x_lib.h>
 #include "..//stm32_init.h"
-#define KeyLockThreshold 1
+#define KeyLockThreshold 4000
 #define AnyKeyPressed ((GPIOA->IDR&0x1ff)!=0x1ff)
+#define SelectKEY ((GPIOA->IDR>>8)&0x01)
 //#define ModeButton GPIOA->IDR&(1<<3)>>3
 #define DownButton  !((GPIOA->IDR&(1<<11))>>11) //ok
 #define MinusButton !((GPIOA->IDR&(1<<12))>>12) //ok
