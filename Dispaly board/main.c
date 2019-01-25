@@ -47,7 +47,7 @@ char temp_main[70];
 float InputCurrent=0,InputVoltage=0;
 bool DeviceInitialized=false;
 float TotalEnergy=0;
-float Voltage=0,Current=0;
+//float Voltage=0,Current=0;
 int CurrentTemperature=23;
 int i;
 HRF_date_TypeDef CurrentDate;
@@ -197,53 +197,55 @@ if(InputCurrent<0.1)InputCurrent=0;
  }
 //=========================================================================================================================
 
-void CalcConsumptionPatern(float Current,int hour)
+void CalcConsumptionPatern(float Current,uint8_t hour)
 {
  float calc=0;
-calc=100*(Current-ConsumePattern[hour])/(ConsumePattern[hour]);
+calc=100*(Current-ConsumePattern[hour]);
+calc/=(ConsumePattern[hour]);
 
-
+ // sprintf(temp_main,"I=%f h=%d  pat=%f calc=%f\n",Current,hour,ConsumePattern[hour],calc);
+ // send_string(temp_main);
 if(calc<-12.5)
 {
 SetLedBar(0);
 return;
 }
-if(Current<-7.5)
+if(calc<-7.5)
 {
 SetLedBar(1);
 return;
 }
-if(Current<-2.5)
+if(calc<-2.5)
 {
 SetLedBar(2);
 return;
 }
-if(Current<1.5)
+if(calc<1.5)
 {
 SetLedBar(3);
 return;
 }
-if(Current<4.5)
+if(calc<4.5)
 {
 SetLedBar(4);
 return;
 }
-if(Current<7.5)
+if(calc<7.5)
 {
 SetLedBar(5);
 return;
 }
-if(Current<10.5)
+if(calc<10.5)
 {
 SetLedBar(6);
 return;
 }
- if(Current<13.5)
+ if(calc<13.5)
 {
 SetLedBar(7);
 return;
 }
- if(Current<17.5)
+ if(calc<17.5)
 {
 SetLedBar(8);
 return;
@@ -268,6 +270,7 @@ send_string("rtc error\n");
 
 }
 
+//=========================================================================================================================
 
 CalcConsumptionPatern(InputCurrent,CurrentDate.Hours);
 
@@ -275,9 +278,12 @@ CalcConsumptionPatern(InputCurrent,CurrentDate.Hours);
 	//DS3231_ReadDate(&CurrentDate);
 	if(DisplayPage==0){
 	sprintf(temp_main,"    %02d:%02d:%02d",CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
-	LCD_PutStr(1,15,temp_main,fnt7x10,( uint8_t *)fdata);
-	sprintf(temp_main,"TEMP: %d C",(int)ReadTemp());
-	LCD_PutStr(28,35,temp_main,fnt7x10,( uint8_t *)fdata);
+	LCD_PutStr(1,10,temp_main,fnt7x10,( uint8_t *)fdata);
+		sprintf(temp_main,"    %04d/%02d/%02d",CurrentDate.Year,CurrentDate.Month,CurrentDate.Day);
+	LCD_PutStr(1,30,temp_main,fnt7x10,( uint8_t *)fdata);
+	CurrentTemperature=ReadTemp();
+	sprintf(temp_main,"TEMP: %d C",(int)CurrentTemperature);
+	LCD_PutStr(28,50,temp_main,fnt7x10,( uint8_t *)fdata);
 	
 						   }
 	if(DisplayPage==1){
@@ -346,12 +352,7 @@ lockCount=0;
  //=================================================================================
  void Ping(char*par)
  {
-DoLog();
- }
- //=================================================================================
- void EraseMemory(char*par)
- {
-    send_string("Erase Mem\n");
+   send_string("Pong\n");
  }
  //=================================================================================
  void GetInfo(char*par)
@@ -360,6 +361,18 @@ DoLog();
 
  }
  //=================================================================================
+ void EraseMemory(char*par)
+ {
+    send_string("Erase Mem...\n");
+	if(EraseEnergyRecords())
+	{
+	      send_string("OK\n");
+		  return;
+	}
+	    send_string("Error\n");
+ }
+
+ //=================================================================================
  void GetOnlineParameters(char*par)
  {
 sprintf(temp_main,"%3.1f,%3.1f,%6.1f,%d\n",InputVoltage,InputCurrent,TotalEnergy,CurrentTemperature);
@@ -367,75 +380,13 @@ send_string(temp_main);
 
 
  }
- //=================================================================================
- void GetDate(char*par)		  
- {
-EnergyRecord rec;
-int addr=0;
 
-
-sscanf(par,"%d",&addr) ;
-if(ReadEnergyRecord(addr,&rec))
-{
-sprintf(temp_main,"%d %d %d %d %d %d %d\n",rec.Year,rec.Mon,rec.Day,rec.Hour,rec.Min,rec.Energy,rec.Temp);
-send_string(temp_main); 
-return ;
-}
-sprintf(temp_main,"read bad crc @%d\n ",addr);
-send_string(temp_main); 
-
- }
- //=================================================================================
- void SetDate(char*par)
- {
-/*
-
-uint8_t		Year;
-uint8_t		Mon;
-uint8_t		Day;
-uint8_t		Hour;
-uint8_t		Min;
-uint32_t	Energy;
-uint8_t 	Temp;
-*/
-EnergyRecord rec;
-int addr=0;
-
-
- sscanf(par,"%d",&addr) ;
-rec.Year=18;
-rec.Mon=11;
-rec.Day=16;
-rec.Hour=1;
-rec.Min=59;
-rec.Energy=2345;
-rec.Temp=25;
- if( WriteEnergyRecord(addr ,rec))
- {
-send_string("write crc ok\n"); 
-return;
-	}
-  sprintf(temp_main,"write error @%d\n ",addr);
- send_string(temp_main); 
- }
  //=================================================================================
  void GetTime(char*par)
  {
- //	uint8_t  Month;
-//	uint16_t Year;
-	//uint8_t  DOW;
- //send_string("GetTime\n");
- 	//if(DS3231_ReadDate(&CurrentDate)){
-	//sprintf(temp_main,"%d-%d-%d -%d- %2d:%2d:%2d T=%d C\n",CurrentDate.Year,CurrentDate.Month,CurrentDate.Day,CurrentDate.DOW,CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds,27);
 	sprintf(temp_main,"%d-%02d-%02d %02d:%02d:%02d\n",CurrentDate.Year,CurrentDate.Month,CurrentDate.Day,CurrentDate.Hours,CurrentDate.Minutes,CurrentDate.Seconds);
 	send_string(temp_main);			  
 	
-	
-//	}
-//	else{
-//	send_string("error!");			
-	  
-//	}
  }
 
  //=================================================================================
@@ -490,16 +441,24 @@ else send_string("Error");
  {
  send_string("SetConsumePattern\n");
  }
- //=================================================================================
- void GetLedBarLevels(char*par)
- {
- send_string("GetLedBarLevels\n");
- }
+
  //=================================================================================
  void SetLedBarLevels(char*par)
  {
- 
- send_string("set bar\n");
+int level=0;
+
+
+sscanf(par,"%d",&level);
+SetLedBar(level);
+ }
+  //=================================================================================
+ void SetVI(char*par)
+ {
+
+
+
+sscanf(par,"%f %f",&InputVoltage,&InputCurrent);
+
  }
  //=================================================================================
 void ReadRecord(char*par)
@@ -529,35 +488,7 @@ sprintf(temp_main,"%d %d %d %d %d %d %d\n",2000+record.Year,record.Mon,record.Da
 send_string( temp_main );
 
 }
- //=================================================================================
- void ReadMemory(char*par)
- {
- uint8_t data=0;
- int i=0;
- unsigned long crc=0xffffffff;
-send_string("read mem\n");
 
- for(i=0;i<4096;i++)
- {
-  if(I2C_EE_ByteRead(i,&data)==0)
-{
-send_string("ReadError\n");
-return;
-}
-crc=update_crc_32(data,crc);
-sendchar(data);
-
-
- }
- if(i==4096){
-   sprintf(temp_main,"OK %X",crc);
-   send_string(temp_main);
- }
- else{
-   send_string("error");
- }
- 
- }
  //=================================================================================
  ////////////////////////////////////////////////////////////////////////Commandline Functions
 
@@ -619,8 +550,8 @@ SSD1306_Flush();
 //---------------------------------------------
 
  delay_ms(1000);
-//LogInit();
-//DeviceInitialized=true;
+LogInit();
+DeviceInitialized=true;
  while(1){
  
 // if(!DS3231_ReadDate(&CurrentDate))

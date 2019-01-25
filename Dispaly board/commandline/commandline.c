@@ -15,18 +15,13 @@ static const SCMD tskcmd[] =
 	"Ping",Ping,
 	"GetInfo",GetInfo,
 	"Online",GetOnlineParameters,
-	"GetDate",GetDate,
-	"SetDate",SetDate,
 	"GetTime",GetTime,
 	"SetTime",SetTime,
 	"GetPeackTime",GetPeackTime,
 	"SetPeackTime",SetPeakTime,
-	"GetConsumePattern",GetConsumePattern,
-	"SetConsumePattern",SetConsumePattern,
-	"GetLedBarLevels",GetLedBarLevels,
 	"SetLedBarLevels",SetLedBarLevels,	
 	"ReadRecord",ReadRecord,
-	"ReadMemory",ReadMemory,
+	"SetVI",SetVI,
 	"Erase",EraseMemory
  };
  //===============================================================================================================

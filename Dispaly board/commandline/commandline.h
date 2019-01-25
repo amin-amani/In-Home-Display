@@ -24,13 +24,11 @@ extern void GetTime(char*par);
 extern void SetTime(char*par);
 extern void GetPeackTime(char*par);
 extern void SetPeakTime(char*par);
-extern void GetConsumePattern(char*par);
-extern void SetConsumePattern(char*par);
 extern void GetLedBarLevels(char*par);
 extern void SetLedBarLevels(char*par);
 extern void ReadRecord(char*par);
 extern void ReadMemory(char*par);
-
+extern void SetVI(char*par);
 typedef struct scmd {
  char val[30];
  void (*func)(char *par);

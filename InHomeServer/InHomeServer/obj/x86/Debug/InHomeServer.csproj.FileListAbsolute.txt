@@ -14,3 +14,11 @@ G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.
 G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.Form1.resources
 G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.Properties.Resources.resources
 G:\aa proj\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.csproj.GenerateResource.Cache
+C:\Users\amin\Desktop\current Projects\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.exe
+C:\Users\amin\Desktop\current Projects\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.pdb
+C:\Users\amin\Desktop\current Projects\In-Home-Display\InHomeServer\InHomeServer\bin\Debug\InHomeServer.exe
+C:\Users\amin\Desktop\current Projects\In-Home-Display\InHomeServer\InHomeServer\bin\Debug\InHomeServer.pdb
+C:\Users\amin\Desktop\current Projects\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.csprojResolveAssemblyReference.cache
+C:\Users\amin\Desktop\current Projects\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.Form1.resources
+C:\Users\amin\Desktop\current Projects\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.Properties.Resources.resources
+C:\Users\amin\Desktop\current Projects\In-Home-Display\InHomeServer\InHomeServer\obj\x86\Debug\InHomeServer.csproj.GenerateResource.Cache

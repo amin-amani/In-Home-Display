@@ -64,7 +64,7 @@
             this.CmbDeviceName.Name = "CmbDeviceName";
             this.CmbDeviceName.Size = new System.Drawing.Size(121, 21);
             this.CmbDeviceName.TabIndex = 1;
-            this.CmbDeviceName.Text = "192.168.1.8";
+            this.CmbDeviceName.Text = "192.168.1.100";
             // 
             // PgrProgress
             // 

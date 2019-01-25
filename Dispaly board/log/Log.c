@@ -49,13 +49,13 @@ send_string("start read\n");
 delay_ms(700); 
 for(i=0;i<ENERGY_RECORD_MAX_ADDRESS/sizeof(EnergyRecord);i++)	//in normal 4032/12=336
  {
-   	delay_ms(5);
+   	//delay_ms(5);
  result=ReadEnergyRecord(i,&record);	//read record
 
-  if(!result){ continue; }								//skip nothing with invalid records
+  if(!result){continue; }								//skip nothing with invalid records
   if( CompareRecordDate(record,maxDate)<0){	  continue;} //record date smaller	}
  
-  	
+  	 //send_string(".");
 	RecordIndex=i;
 	maxDate.Year=record.Year;
 	maxDate.Month=record.Mon;
@@ -68,6 +68,23 @@ for(i=0;i<ENERGY_RECORD_MAX_ADDRESS/sizeof(EnergyRecord);i++)	//in normal 4032/1
   sprintf(temp,"\n%d %d %d %d %d index=%d\n",	maxDate.Year,maxDate.Month,maxDate.Day,maxDate.Hours,maxDate.Minutes,RecordIndex);
   send_string(temp);
 
+}
+//=======================================================================================================
+bool EraseEnergyRecords()
+{
+int i;
+for(i=0;i<4032;i++)	//in normal 4032/12=336
+ {
+if(I2C_EE_ByteWrite(0,i)==0)  
+{
+send_string("erase Error\n");
+return false;
+
+}
+
+
+	}
+	return true;
 }
 //=======================================================================================================
 bool ReadEnergyRecord(int recordNum ,EnergyRecord *record)

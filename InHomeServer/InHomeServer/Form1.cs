@@ -62,7 +62,7 @@ namespace InHomeServer
                     Console.WriteLine("end......." + CmbDeviceName.Text + " fail");
                     return result;
                 }
-                string resp = client.SendCommandMs("GetTime\n", 20, 10, 1);
+                string resp = client.SendCommandMs("GetTime\n", 20, 100, 1);
                 //DateTime.TryParseExact(resp.Trim(),
                 //              "yyyy-dd-MM hh:mm:ss",
                 //              CultureInfo.InvariantCulture,
@@ -324,9 +324,9 @@ namespace InHomeServer
         private void TimUpdateValues_Tick(object sender, EventArgs e)
         {
 
-            Thread thrUpdate = new Thread(new ThreadStart(StartUpdate));
-            thrUpdate.IsBackground = true;
-            thrUpdate.Start();
+            //Thread thrUpdate = new Thread(new ThreadStart(StartUpdate));
+            //thrUpdate.IsBackground = true;
+            //thrUpdate.Start();
         }
         void StartUpdate()
         {

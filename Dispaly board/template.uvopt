@@ -200,7 +200,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>2743</TopLine>
+      <TopLine>2745</TopLine>
       <CurrentLine>2749</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\STM32_Init.c</PathWithFileName>
@@ -261,10 +261,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>52</ColumnNumber>
+      <ColumnNumber>27</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>293</TopLine>
-      <CurrentLine>293</CurrentLine>
+      <TopLine>200</TopLine>
+      <CurrentLine>216</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -441,7 +441,7 @@
 
   <Group>
     <GroupName>eeprom</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
@@ -450,10 +450,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>38</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>31</TopLine>
+      <CurrentLine>31</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\eeprom\eeprom.c</PathWithFileName>
       <FilenameWithoutPath>eeprom.c</FilenameWithoutPath>
@@ -567,7 +567,7 @@
 
   <Group>
     <GroupName>DS3231</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
@@ -578,8 +578,8 @@
       <Focus>0</Focus>
       <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>695</TopLine>
-      <CurrentLine>695</CurrentLine>
+      <TopLine>544</TopLine>
+      <CurrentLine>544</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\DS3231\DS3231.c</PathWithFileName>
       <FilenameWithoutPath>DS3231.c</FilenameWithoutPath>
@@ -602,7 +602,7 @@
 
   <Group>
     <GroupName>CommandLine</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
@@ -611,10 +611,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>29</ColumnNumber>
+      <ColumnNumber>14</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>11</TopLine>
-      <CurrentLine>17</CurrentLine>
+      <TopLine>10</TopLine>
+      <CurrentLine>24</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\commandline\commandline.c</PathWithFileName>
       <FilenameWithoutPath>commandline.c</FilenameWithoutPath>
@@ -646,10 +646,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>21</ColumnNumber>
+      <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>49</TopLine>
-      <CurrentLine>65</CurrentLine>
+      <TopLine>72</TopLine>
+      <CurrentLine>87</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\log\Log.c</PathWithFileName>
       <FilenameWithoutPath>Log.c</FilenameWithoutPath>
@@ -675,8 +675,20 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>4</ActiveTab>
+      <ActiveTab>0</ActiveTab>
       <Documents>
+        <Doc>
+          <Name>Log//..//ds3231//ds3231.h</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>63</TopLine>
+          <CurrentLine>69</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\STM32F10x.s</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>117</TopLine>
+          <CurrentLine>117</CurrentLine>
+        </Doc>
         <Doc>
           <Name>SystemInit/SystemInit.h</Name>
           <ColumnNumber>26</ColumnNumber>
@@ -691,39 +703,39 @@
         </Doc>
         <Doc>
           <Name>.\log\Log.c</Name>
-          <ColumnNumber>21</ColumnNumber>
-          <TopLine>49</TopLine>
-          <CurrentLine>65</CurrentLine>
+          <ColumnNumber>5</ColumnNumber>
+          <TopLine>72</TopLine>
+          <CurrentLine>87</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\DS3231\DS3231.c</Name>
           <ColumnNumber>5</ColumnNumber>
-          <TopLine>695</TopLine>
-          <CurrentLine>695</CurrentLine>
+          <TopLine>544</TopLine>
+          <CurrentLine>544</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>52</ColumnNumber>
-          <TopLine>293</TopLine>
-          <CurrentLine>293</CurrentLine>
+          <ColumnNumber>27</ColumnNumber>
+          <TopLine>200</TopLine>
+          <CurrentLine>216</CurrentLine>
         </Doc>
         <Doc>
           <Name>Log//Log.h</Name>
-          <ColumnNumber>8</ColumnNumber>
-          <TopLine>3</TopLine>
-          <CurrentLine>3</CurrentLine>
+          <ColumnNumber>105</ColumnNumber>
+          <TopLine>17</TopLine>
+          <CurrentLine>30</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\commandline\commandline.c</Name>
-          <ColumnNumber>29</ColumnNumber>
-          <TopLine>11</TopLine>
-          <CurrentLine>17</CurrentLine>
+          <ColumnNumber>14</ColumnNumber>
+          <TopLine>10</TopLine>
+          <CurrentLine>24</CurrentLine>
         </Doc>
         <Doc>
           <Name>commandline//commandline.h</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>11</TopLine>
-          <CurrentLine>18</CurrentLine>
+          <ColumnNumber>9</ColumnNumber>
+          <TopLine>17</TopLine>
+          <CurrentLine>24</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\systemInit\SystemInit.c</Name>
@@ -734,7 +746,7 @@
         <Doc>
           <Name>.\STM32_Init.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>2743</TopLine>
+          <TopLine>2745</TopLine>
           <CurrentLine>2749</CurrentLine>
         </Doc>
         <Doc>
@@ -748,12 +760,6 @@
           <ColumnNumber>17</ColumnNumber>
           <TopLine>56</TopLine>
           <CurrentLine>56</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\STM32F10x.s</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>117</TopLine>
-          <CurrentLine>117</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>
