@@ -51,6 +51,7 @@ namespace InHomeServer
         public DateTime GetDeviceClock()
         {
             DateTime result = new DateTime();
+            
             try
             {
 
@@ -62,20 +63,23 @@ namespace InHomeServer
                     Console.WriteLine("end......." + CmbDeviceName.Text + " fail");
                     return result;
                 }
-                string resp = client.SendCommandMs("GetTime\n", 20, 100, 1);
+                string resp = client.SendCommandMs("GetTime\n", 20, 5000, 0);
                 //DateTime.TryParseExact(resp.Trim(),
                 //              "yyyy-dd-MM hh:mm:ss",
                 //              CultureInfo.InvariantCulture,
                 //              DateTimeStyles.None,
                 //              out result);
+          
+                client.Disconnect();
                 result = DateTime.ParseExact(resp.Trim(), "yyyy-MM-dd HH:mm:ss",
                                            System.Globalization.CultureInfo.InvariantCulture);
                 //  result = new DateTime();
                 //MessageBox.Show(resp);
-                client.Disconnect();
+      
                 return result;                
             }
             catch(Exception){
+        
                 return result;
             }
 
@@ -131,8 +135,9 @@ namespace InHomeServer
             //string resp = 
               StreamWriter sw = new StreamWriter("export.txt");
             for (int i = 0; i < 336; i++) { 
-            string resp = client.SendCommandReadLine("ReadRecord "+i.ToString()+"\n", 40, 10, 1);
-            PgrProgress.Invoke(new MethodInvoker(delegate
+            //string resp = client.SendCommandReadLine("ReadRecord "+i.ToString()+"\n", 40, 10, 1);
+                string resp = client.SendCommandReadLine("ReadRecord " + i.ToString() + "\n", 40, 5000, 1);
+                PgrProgress.Invoke(new MethodInvoker(delegate
             {
 
                 PgrProgress.Value++; ;

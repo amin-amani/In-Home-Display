@@ -519,6 +519,7 @@ namespace InHomeServer
 
                 byte[] receiveBuffer = new Byte[client.ReceiveBufferSize];
                 stream.ReadTimeout = timeout;
+              // Task.Delay(800).Wait();
                 // Receive the TcpServer.response.
                 //  using (stream = client.GetStream())
                 //{
@@ -527,7 +528,7 @@ namespace InHomeServer
                     try
                     {
 
-
+                        
                         var bytesRead = stream.Read(receiveBuffer, 0, client.ReceiveBufferSize);
 
                         //if (bytesRead == 0)
@@ -539,6 +540,7 @@ namespace InHomeServer
                             //result.Add(receiveBuffer[i]);
                             result += (char)receiveBuffer[i];
                         }
+                      
                         if (result.Length >= expected) return result;
 
                     }
